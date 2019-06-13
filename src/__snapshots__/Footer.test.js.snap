@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Renders the Footer with Enzyme 1`] = `ShallowWrapper {}`;
+
+exports[`Navigation component Renders the navigation with Enzyme 1`] = `ShallowWrapper {}`;

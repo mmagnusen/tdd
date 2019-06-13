@@ -31,7 +31,7 @@ npm run test
 
 # it
 - We use the `it()` method for each scenario we want to cover in our test
-- describes what the test should actually achieve
+- states what the test should actually achieve
 - can also use `test()` method as an alternative
 
 ```
@@ -66,7 +66,27 @@ If we want to test child components too, this would be an integration test
 # Mount
 Allows us to test the full component tree
 
+# Key principle: Testing logic in isolation
+- focussing on isolation helps us to separate logic and tests
+- helps prevent code repetition
+- each component should do just one thing
+
+
+# Snapshot tests
+Detect changes in markup
+
+example of snapshot file: https://github.com/facebook/jest/blob/master/examples/snapshot/__tests__/__snapshots__/link.react.test.js.snap
+
+```
+expect(<MyComponent>).toMatchSnapshot();
+```
+
+# Simulating events
+
 # Resources
 https://medium.com/@rossbulat/test-driven-development-in-react-with-jest-and-enzyme-2a6cf2cc3071
 
 https://medium.com/@rossbulat/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8
+
+# Need help with:
+mock functions
