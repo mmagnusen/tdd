@@ -1,35 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `
-<div>
-  <h1>
-    Navigation here
-  </h1>
-</div>
-`;
-
-exports[`Navigation component Renders the navigation 1`] = `
-<div>
-  <h1>
-    Navigation here
-  </h1>
-</div>
-`;
-
-exports[`Navigation component Renders the navigation with Enzyme 1`] = `ShallowWrapper {}`;
-
 exports[`Navigation component Renders the navigation, with react test renderer 1`] = `
 <div>
   <h1>
     Navigation here
   </h1>
-</div>
-`;
-
-exports[`Navigation component does something 1`] = `
-<div>
-  <h1>
-    Navigation here
-  </h1>
+  <button
+    id="login"
+    onClick={[Function]}
+  >
+    Login
+  </button>
 </div>
 `;

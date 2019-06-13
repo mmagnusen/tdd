@@ -7,7 +7,9 @@ class Navigation extends Component {
       }
 
     toggleLoggedIn = () => {
+        const { onClick } = this.props
         this.setState({ loggedIn: !this.state.loggedIn})
+        onClick();
     }
 
     render() {
