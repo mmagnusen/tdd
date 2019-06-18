@@ -89,6 +89,10 @@ expect(<MyComponent>).toMatchSnapshot();
 https://medium.com/@rossbulat/test-driven-development-in-react-with-jest-and-enzyme-2a6cf2cc3071
 
 https://medium.com/@rossbulat/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8
+https://wanago.io/2018/09/17/javascript-testing-tutorial-part-four-mocking-api-calls-and-simulating-react-components-interactions/
+https://github.com/public-apis/public-apis 
+https://www.freecodecamp.org/news/rapid-development-via-mock-apis-e559087be066/
+https://www.npmjs.com/package/axios-mock-adapter
 
 # Need help with:
 mock functions

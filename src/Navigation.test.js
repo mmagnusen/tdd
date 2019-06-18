@@ -14,20 +14,20 @@ describe('Navigation component', () => {
         navigation
         .find('button#login')
         .simulate('click');
-        expect(navigation.state('loggedIn')).toEqual(true);
+        expect(navigation.state('loggedIn')).toEqual(false);
         navigation.unmount();
     }) 
 })
 
-const fnClick = jest.fn();
-
 describe('click event', () => {
-    // it('click button should be called', () => {
-    //     const component = mount(<Navigation onClick={fnClick} />);
+    const fnClick = jest.fn();
 
-    //     component
-    //     .find('button#login')
-    //     .simulate('click')
-    //     expect(fnClick).toHaveBeenCalled();
-    // });
+    it('click button should be called', () => {
+        const component = mount(<Navigation onClick={fnClick} />);
+        component
+        .find('button#login')
+        .simulate('click')
+        .simulate('click')
+        expect(fnClick).toHaveBeenCalledTimes(2);
+    });
 });

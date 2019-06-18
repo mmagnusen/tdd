@@ -7,7 +7,6 @@ exports[`Navigation component Renders the navigation, with react test renderer 1
   </h1>
   <button
     id="login"
-    onClick={[Function]}
   >
     Login
   </button>
