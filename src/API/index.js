@@ -1,5 +1,5 @@
 import axios from 'axios';
-//import MockAdapter from 'axios-mock-adapter'
+import MockAdapter from 'axios-mock-adapter'
 import data from '../__mocks__/data'
 
 class API {
@@ -17,7 +17,7 @@ class API {
         endpoints.getPosts = () => {
 
             if (useMock) {
-                var mock = new MockAdapter(axios);
+                let mock = new MockAdapter(axios);
 
                 mock.onGet('https://public-api.wordpress.com/wp/v2/sites/clearli.wordpress.com/posts/').reply(200, data)
             }

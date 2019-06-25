@@ -17,7 +17,7 @@ class Blog extends Component {
 
     getPosts = () => {
         const myApi = new API()
-        myApi.createEntity({name: 'posts', useMock: false})
+        myApi.createEntity({name: 'posts', useMock: true})
         myApi.endpoints.posts.getPosts('')
         .then(response => {
             this.setState({
