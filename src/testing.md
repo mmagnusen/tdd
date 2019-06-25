@@ -93,6 +93,7 @@ https://wanago.io/2018/09/17/javascript-testing-tutorial-part-four-mocking-api-c
 https://github.com/public-apis/public-apis 
 https://www.freecodecamp.org/news/rapid-development-via-mock-apis-e559087be066/
 https://www.npmjs.com/package/axios-mock-adapter
+https://codeburst.io/how-to-call-api-in-a-smart-way-2ca572c6fe86
 
 # Need help with:
 mock functions

@@ -1,4 +1,4 @@
-import { calculator } from './calculator'
+import { calculator } from './'
 
 describe('calculator', () => {
 

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts component when rendered renders without crashing if there are no posts 1`] = `
+<section
+  className="Blog-posts"
+>
+  <h4>
+    Posts:
+  </h4>
+  <p>
+    No posts
+  </p>
+</section>
+`;
+
+exports[`Posts component when rendered renders, showing posts if posts are passed as props 1`] = `
+<section
+  className="Blog-posts"
+>
+  <h4>
+    Posts:
+  </h4>
+  <h3>
+    1. title with post created from axios
+  </h3>
+  <h3>
+    2. title with post created from axios
+  </h3>
+  <h3>
+    3. title with post created from axios
+  </h3>
+</section>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog component when rendered renders without crashing 1`] = `
+<div
+  className="Blog"
+>
+  <section
+    className="Blog-title"
+  >
+    <h1>
+      Blog Search
+    </h1>
+  </section>
+  <button
+    id="Blog-fetch"
+    onClick={[Function]}
+  >
+    Fetch Posts
+  </button>
+  <section
+    className="Blog-posts"
+  >
+    <h4>
+      Posts:
+    </h4>
+    <p>
+      No posts
+    </p>
+  </section>
+</div>
+`;

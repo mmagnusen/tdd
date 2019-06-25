@@ -1,4 +1,4 @@
-export const data = [
+export default [
     {
         title: {
             rendered: "1. title with post created from axios"},

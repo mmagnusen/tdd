@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 
 class Navigation extends Component {
     state = {
@@ -15,7 +14,7 @@ class Navigation extends Component {
         const { loggedIn } = this.state
         const { onClick } = this.props
         return (
-            <div>
+            <div className='Navigation'>
                 <h1>Navigation here</h1>
                 <button id='login' onClick={onClick}>{loggedIn ? 'Logout' : 'Login'}</button>
             </div>

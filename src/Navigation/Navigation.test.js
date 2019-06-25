@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Navigation from './Navigation'
-import { mount, shallow } from 'enzyme';
+import Navigation from './'
+import { mount } from 'enzyme';
 
 describe('Navigation component', () => {
     it('Renders the navigation, with react test renderer', () => {
