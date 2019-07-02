@@ -44,6 +44,21 @@ footer {
   height: 50px;
 }
 
+.Intercept {
+  background: #c4c4dc;
+  min-height: 300px;
+}
+
+.Intercept button {
+  height: 40px;
+  width: 170px;
+  margin: 3rem 0;
+  background: blue;
+  color: white;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

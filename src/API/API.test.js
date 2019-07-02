@@ -4,7 +4,7 @@ import data from '../__mocks__/data'
 it('calls axios and returns posts', () => {
     const myApi = new API()
     let responseData = null;
-    myApi.createEntity({name: 'posts', useMock: true})
+    myApi.createEntity({name: 'posts'})
     myApi.endpoints.posts.getPosts('')
     .then(response => {
         responseData = response;
