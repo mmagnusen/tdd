@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
 import Blog from '../Blog';
-import Intercept from '../Intercept';
+import Try from '../Try';
 import './App.css';
 
 class App extends Component {
@@ -12,6 +12,7 @@ class App extends Component {
       <Navigation />
       <div className='main'>
         <Blog />
+        <Try />
       </div>
       <Footer />
     </div>

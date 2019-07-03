@@ -23,7 +23,8 @@ class API {
             if (useMock) {
                 let mock = new MockAdapter(axios);
 
-                mock.onGet('https://public-api.wordpress.com/wp/v2/sites/clearli.wordpress.com/posts/').reply(400, Error)
+                mock.onGet('https://public-api.wordpress.com/wp/v2/sites/clearli.wordpress.com/posts/')
+                .reply(400, Error)
             }
             return axios.get('https://public-api.wordpress.com/wp/v2/sites/clearli.wordpress.com/posts/').then(response => response)
         }

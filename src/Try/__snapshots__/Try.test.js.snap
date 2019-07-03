@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Try component when rendered clicks and mounts without crashing 1`] = `ReactWrapper {}`;
+
+exports[`Try component when rendered renders without crashing 1`] = `
+<div
+  className="Intercept"
+>
+  <h1
+    className="fudge"
+  >
+    Random Number: 
+    100
+  </h1>
+  <button
+    id="calculate"
+    onClick={[Function]}
+  >
+    Try me
+  </button>
+</div>
+`;
