@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Command, CodeBlock } from '../../components/'
+import { Command, CodeBlock, Link } from '../../components/';
+import { LINK_TYPE } from '../../constants/';
 import './Jest.scss';
 
 class Jest extends Component {
@@ -24,7 +25,7 @@ class Jest extends Component {
                     <section className='white-content'>
                         <h1>Starting with Jest</h1>
 
-                        <p>Writing our first test</p>
+                        <p>Writing our first test: <Link to='https://github.com/mmagnusen/calculator' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/calculator</Link></p>
                         <CodeBlock>
 {`
     describe('calculateArea', () => {
@@ -54,6 +55,7 @@ class Jest extends Component {
 
                     <section className='white-content'>
                     <h1>Running our test</h1>
+                    <p>Navigate to the root of your project</p>
                     <Command>npm run test</Command>
                     <ul>
                         <li>runs tests in 'watch mode' - this means any changes made to components will re-run tests associated with them</li>
