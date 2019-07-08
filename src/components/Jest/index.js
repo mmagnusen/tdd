@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Command, CodeBlock, Link } from '../../components/';
 import { LINK_TYPE } from '../../constants/';
+import calculate from '../../resources/calculate.png';
 import './Jest.scss';
 
 class Jest extends Component {
@@ -62,6 +63,7 @@ class Jest extends Component {
                         <li>can find any file with a `.test.js` or `.spec.js` suffix</li>
                         <li>jest can find any `.js` file within a `__tests__` folder</li>
                     </ul>
+                    <img src={calculate}/>
                 </section>
 
                 </div>
