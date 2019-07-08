@@ -1,22 +1,3 @@
-##Testing
-
-We do not need to test functions created by third party libraries, these have already been tested in those libraries
-We should only test code we write ourselves
-
-
-- The aim of testing is to minimise bugs in production and to make sure your application behaves as you expect it to
-- TDD treats testing as part of the development process, rather than an after-thought
-
-# Jest
-comes out of the box with every create-react-app project
-```
-npm run test
-```
-
-- runs tests in 'watch mode' - this means any changes made to components will re-run tests associated with them
-- jest can find any file with a `.test.js` or `.spec.js` suffix
-- jest can find any `.js` file within a `__tests__` folder
-
 # Describe
 - describe() is a built-in method
 - encapsulates a group of tests
@@ -84,16 +65,6 @@ expect(<MyComponent>).toMatchSnapshot();
 # Simulating events
 
 # Mock functions
-
-# Resources
-https://medium.com/@rossbulat/test-driven-development-in-react-with-jest-and-enzyme-2a6cf2cc3071
-
-https://medium.com/@rossbulat/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8
-https://wanago.io/2018/09/17/javascript-testing-tutorial-part-four-mocking-api-calls-and-simulating-react-components-interactions/
-https://github.com/public-apis/public-apis 
-https://www.freecodecamp.org/news/rapid-development-via-mock-apis-e559087be066/
-https://www.npmjs.com/package/axios-mock-adapter
-https://codeburst.io/how-to-call-api-in-a-smart-way-2ca572c6fe86
 
 # Need help with:
 mock functions

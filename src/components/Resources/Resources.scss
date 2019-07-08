@@ -1,0 +1,26 @@
+$module: 'Resources';
+
+.#{$module} { 
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 50px;
+    padding: 0 3rem;
+    margin: 1.5rem 0 0 0;
+
+    &-resources {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            height: 40px;
+            width: 100px;
+            background: navy;
+            color: white;
+          }
+    }
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
