@@ -71,3 +71,4 @@ mock functions
 
 // change here to test ghost inspector
 // commit on ghost branch
+// commit 2 on ghost
