@@ -68,3 +68,5 @@ expect(<MyComponent>).toMatchSnapshot();
 
 # Need help with:
 mock functions
+
+// change here to test ghost inspector
