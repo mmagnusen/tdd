@@ -70,3 +70,4 @@ expect(<MyComponent>).toMatchSnapshot();
 mock functions
 
 // change here to test ghost inspector
+// commit on ghost branch
