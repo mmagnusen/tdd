@@ -1,20 +1,28 @@
+@import '../../constants/styles/sass-variables/breakpoints';
+
+
 $module: 'Navigation';
 
 .#{$module} { 
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    height: 50px;
-    padding: 0 3rem;
-    margin: 1.5rem 0 0 0;
-    a, a:visited {
-        color: black;  
-        text-decoration: none;
+    &-inner {
+        height: 70px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        width: 90%;
+        margin: 0 auto;
+        @media screen and (min-width: $tabletBreakpoint) {
+            width: 70%;
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
     }
 
     &-resources {
         display: flex;
         justify-content: flex-end;
-
         button {
             height: 40px;
             width: 100px;
@@ -23,7 +31,7 @@ $module: 'Navigation';
           }
 
           a {
-              margin: 0 1rem;
+              margin-left: 1rem;
           }
     }
 }

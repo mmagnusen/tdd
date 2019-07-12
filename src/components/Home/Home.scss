@@ -1,18 +1,7 @@
+@import '../../constants/styles/sass-variables/breakpoints';
+
 $module: 'Home';
 
 .#{$module} { 
     background: #e5ecf1;
-}
-
-.container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 1rem 0;
-}
-
-.white-content {
-    background: #fff;
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 4px;
 }
