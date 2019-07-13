@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Command, Link } from '../../../components';
+import { Command, Link, CopyToClipboard } from '../../../components';
 import { NoTests, smoke, BlankSlate, AppTest } from '../../../assets';
 import { LINK_TYPE } from '../../../constants'; 
 
@@ -55,6 +55,12 @@ const SnapshotTests = () => (
             <p>We will see the result of our test being run:</p>
             <img src={smoke} alt='smoke test in terminal'/>
             <p>This informs us that the <span>{`<App/>`}</span> component was mounted without crashing.</p>
+        </section>
+        <section className='white-content'>
+            <h1>Writing our own snapshot test</h1>
+            <CopyToClipboard>
+                {`hello`}
+            </CopyToClipboard>
         </section>
     </Fragment>
 );

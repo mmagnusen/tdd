@@ -24,6 +24,11 @@ class Resources extends Component {
                                 </Link>
                             </li>
                             <li>
+                            <Link type={LINK_TYPE.EXTERNAL} to='https://picsum.photos/'> 
+                                https://picsum.photos/
+                            </Link>
+                            </li>
+                            <li>
                                 <Link type={LINK_TYPE.EXTERNAL} to='https://codeburst.io/how-to-call-api-in-a-smart-way-2ca572c6fe86'>
                                     https://codeburst.io/how-to-call-api-in-a-smart-way-2ca572c6fe86
                                 </Link>

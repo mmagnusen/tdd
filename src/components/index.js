@@ -1,7 +1,8 @@
 // atoms 
-export { default as Link } from './atom/Link'
+export { default as Link } from './atom/Link';
 export { default as CodeBlock } from './atom/CodeBlock';
 export { default as Command } from './atom/Command';
+export { default as CopyToClipboard } from './atom/CopyToClipboard';
 
 export { default as Footer } from './Footer';
 export { default as Home } from './Home';
