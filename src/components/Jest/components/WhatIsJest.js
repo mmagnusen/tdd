@@ -17,7 +17,6 @@ const WhatIsJest = () => (
             <p>Provides an overview of your code coverage - this means you know how much of your code is covered by tests. Generally, the higher this number, the better.</p>
         </section>
 
-
         <section className='white-content'>
             <h1>What can we test with Jest?</h1>
             <p>We can do things like check that our app renders correctly and doesn't crash when it loads.</p>
