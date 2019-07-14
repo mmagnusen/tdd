@@ -66,15 +66,37 @@ class Resources extends Component {
                             </li>
                         </ul>
                     </section>
+
                     <section className='white-content'>
-                    <h3>Git Repositories</h3>
-                    <ul>
-                        <li><Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js'>https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js</Link></li>
-                    </ul>
-                    <ul>
-                        <li><Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/friendlyfaces'>https://github.com/mmagnusen/friendlyfaces</Link></li>
-                    </ul>
-                </section>
+                        <h3>Selenium</h3>
+                        <ul>
+                            <li>
+                                <Link type={LINK_TYPE.EXTERNAL} to='https://www.guru99.com/introduction-to-selenium.html'>
+                                https://www.guru99.com/introduction-to-selenium.html
+                                </Link>
+                            </li>
+                        </ul>
+
+                    </section>
+                    <section className='white-content'>
+                        <h3>Git Repositories</h3>
+                        <ul>
+                            <li>
+                                <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js'>
+                                    https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js
+                                </Link>
+                            </li>
+                            <li>
+                                <p><Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/friendlyfaces'>
+                                    https://github.com/mmagnusen/friendlyfaces
+                                    
+                                </Link>,
+                                live project:
+                                <Link type={LINK_TYPE.EXTERNAL} to='https://romantic-mahavira-837983.netlify.com/'>https://romantic-mahavira-837983.netlify.com/</Link>
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
                 </section>
             </section>
         )    

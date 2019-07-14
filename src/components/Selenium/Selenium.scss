@@ -1,0 +1,14 @@
+$module: 'Selenium';
+
+.#{$module} { 
+    background: #e5ecf1;
+    img {
+        margin-top: 1rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-column-gap: 10px;
+    }
+}

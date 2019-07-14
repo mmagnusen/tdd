@@ -8,7 +8,7 @@ class Home extends Component {
         return (
             <div className='Home'>
                 <section className='container'>
-                <h1>Home</h1>
+                <h1 className='page-title'>Home</h1>
                     <section className='white-content'>
                         <h1>What is testing?</h1>
                         <p>The aim of testing is to minimise bugs in production and to make sure your application behaves as you expect it to.
