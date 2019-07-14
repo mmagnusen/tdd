@@ -6,7 +6,7 @@ import { calculate } from '../../../assets';
 const WritingATest = () => (
     <Fragment>
         <section className='white-content'>
-            <h1>Starting with Jest</h1>
+            <h1>Writing a test</h1>
 
             <p>Writing our first test - you can see the full code here: <Link to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/calculator</Link></p>
             <p>This is an example of a test:</p>
