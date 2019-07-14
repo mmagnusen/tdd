@@ -20,6 +20,9 @@ class Navigation extends Component {
                             <p>Enzyme</p>
                         </Link>
                         */}
+                        <Link to='/selenium' type={LINK_TYPE.INTERNAL}> 
+                        <p>Selenium</p>
+                        </Link>
                         <Link to='/resources' type={LINK_TYPE.INTERNAL}>
                             <p>Resources</p>
                         </Link>

@@ -13,9 +13,11 @@ export { default as PageNavigation } from './PageNavigation';
 
 export { default as Jest } from './Jest';
 export { default as Enzyme } from './Enzyme';
+export { default as Selenium } from './Selenium';
 
 //pages
 export { default as HomePage } from '../pages/HomePage';
 export { default as ResourcesPage } from '../pages/ResourcesPage';
 export { default as JestPage } from '../pages/JestPage';
 export { default as EnzymePage } from '../pages/EnzymePage';
+export { default as SeleniumPage } from '../pages/SeleniumPage';
