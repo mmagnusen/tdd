@@ -87,9 +87,13 @@ class Resources extends Component {
                                 </Link>
                             </li>
                             <li>
-                                <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/friendlyfaces'>
+                                <p><Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/friendlyfaces'>
                                     https://github.com/mmagnusen/friendlyfaces
-                                </Link>
+                                    
+                                </Link>,
+                                live project:
+                                <Link type={LINK_TYPE.EXTERNAL} to='https://romantic-mahavira-837983.netlify.com/'>https://romantic-mahavira-837983.netlify.com/</Link>
+                                </p>
                             </li>
                         </ul>
                     </section>
