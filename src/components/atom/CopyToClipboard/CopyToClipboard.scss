@@ -1,0 +1,36 @@
+@import '../../../constants/styles/sass-variables/colors';
+
+$module: 'CopyToClipboard';
+
+.#{$module} { 
+    background: black;
+    color: white;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+
+    &-copyIconContainer {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        i {
+            cursor: pointer;
+            font-size: 20px;
+         
+            &:hover {
+                color: $skyBlue;
+            }
+        }
+        p {
+            line-height: 0.5rem;
+            padding: 10px 0 0 0;
+            margin: 5px 0 0 0;
+        }
+
+    }
+
+    &-children {
+
+    }
+
+
+}

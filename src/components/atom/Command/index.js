@@ -5,7 +5,13 @@ class Command extends Component {
     render() {
         const { children } = this.props;
         return (
-            <div className='Command'>{children}</div>
+            <div className='Command'>
+                <pre>
+                    <code>
+                        {children}
+                    </code>
+                </pre>
+            </div>
         )    
     }
 }

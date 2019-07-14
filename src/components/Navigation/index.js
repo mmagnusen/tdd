@@ -8,15 +8,18 @@ class Navigation extends Component {
         return (
             <div className='Navigation'>
                 <div className='Navigation-inner'>
-                    <Link to='/' type={LINK_TYPE.INTERNAL}><h1>TDD</h1></Link>
+                    <Link to='/' type={LINK_TYPE.INTERNAL}>
+                        <h1>TDD</h1>
+                    </Link>
                     <div className='Navigation-resources'>
-                    <Link to='/jest' type={LINK_TYPE.INTERNAL}> 
-                        <p>Jest</p>
-                    </Link>
-                    {/* <Link to='/enzyme' type={LINK_TYPE.INTERNAL}>
-                        <p>Enzyme</p>
-                    </Link>
-        */}
+                        <Link to='/jest' type={LINK_TYPE.INTERNAL}> 
+                            <p>Jest</p>
+                        </Link>
+                        {/*
+                        <Link to='/enzyme' type={LINK_TYPE.INTERNAL}>
+                            <p>Enzyme</p>
+                        </Link>
+                        */}
                         <Link to='/resources' type={LINK_TYPE.INTERNAL}>
                             <p>Resources</p>
                         </Link>

@@ -13,6 +13,7 @@ class Resources extends Component {
                         <h3>General Testing</h3>
                         <ul>
                             <li><Link type={LINK_TYPE.EXTERNAL} to='https://codeburst.io/beginning-javascript-testing-part-1-42d72ac1c7d1'>https://codeburst.io/beginning-javascript-testing-part-1-42d72ac1c7d1</Link></li>
+                            <li><Link type={LINK_TYPE.EXTERNAL} to='https://reactjs.org/docs/test-renderer.html'>https://reactjs.org/docs/test-renderer.html</Link></li>
                         </ul>
                     </section>
                     <section className='white-content'>
@@ -22,6 +23,11 @@ class Resources extends Component {
                                 <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/public-apis/public-apis'> 
                                     https://github.com/public-apis/public-apis
                                 </Link>
+                            </li>
+                            <li>
+                            <Link type={LINK_TYPE.EXTERNAL} to='https://picsum.photos/'> 
+                                https://picsum.photos/
+                            </Link>
                             </li>
                             <li>
                                 <Link type={LINK_TYPE.EXTERNAL} to='https://codeburst.io/how-to-call-api-in-a-smart-way-2ca572c6fe86'>
@@ -60,6 +66,15 @@ class Resources extends Component {
                             </li>
                         </ul>
                     </section>
+                    <section className='white-content'>
+                    <h3>Git Repositories</h3>
+                    <ul>
+                        <li><Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js'>https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js</Link></li>
+                    </ul>
+                    <ul>
+                        <li><Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/friendlyfaces'>https://github.com/mmagnusen/friendlyfaces</Link></li>
+                    </ul>
+                </section>
                 </section>
             </section>
         )    
