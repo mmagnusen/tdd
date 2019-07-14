@@ -30,8 +30,8 @@ class Jest extends Component {
                     <PageNavigation>{this.navigation()}</PageNavigation>
 
                     <div className='Jest-rightSection'>
-                        {activeIndex === 1 && <WhatIsJest />}
-                        {activeIndex === 0 && <SnapshotTests />}
+                        {activeIndex === 0 && <WhatIsJest />}
+                        {activeIndex === 1 && <SnapshotTests />}
                         {activeIndex === 2 && <WritingATest />}
                     </div>
                 </div>
