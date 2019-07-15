@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link, Command } from '../../../components';
+import { Link, Command, CodeBlock } from '../../../components';
 import { ChromeDriver, ChromeIndex } from '../../../assets'
 import { LINK_TYPE } from '../../../constants';
 
@@ -7,25 +7,58 @@ const SeleniumAndReact = () => (
     <Fragment>
         <section className='white-content'>
             <h1>Testing React applications with Selenium</h1>
-            <p>Install npm package for Selenium:</p>
-            <Link type={LINK_TYPE.EXTERNAL} to='https://www.npmjs.com/package/selenium-webdriver'>https://www.npmjs.com/package/selenium-webdriver</Link>
+            <p>Create new site for testing:</p>
             <Command>
-                npm install selenium-webdriver
+                create-react-app authentication
+                <br/>
+                cd authentication
+                <br/>
+                npm start
             </Command>
+            <p>The site will be available at <Link type={LINK_TYPE.EXTERNAL} to='http://localhost:3000'>http://localhost:3000</Link></p>
         </section>
         <section className='white-content'>
-            <h1>Installing webdrivers</h1>
-            <p>We will need to install a driver for each of the major browsers we want to test with.</p>
-            <p>You should already have Chrome installed. We now need to install the Chromdriver. Go to <Link type={LINK_TYPE.EXTERNAL} to='https://sites.google.com/a/chromium.org/chromedriver/downloads'>https://sites.google.com/a/chromium.org/chromedriver/downloads</Link>, where you will find the following options for the download:</p>
-            <img src={ChromeDriver} alt='Chrome Driver'/>
-            <p>Click on the appropriate Chromedriver for the version of Chrome you currently have installed. You will then be directed to a page which looks something like this:</p>
-            <img src={ChromeIndex} alt='Chrome download options'/>
-            <p>Click on the appropriate option for the operating system you are on, and the download of the ZIP file will begin.</p>
-            <p>When the download is complete, you should go to your downloads folder, find the file and double-click on it to unzip it.</p>
-            <p>Navigate to your downloads folder within your terminal. Type in the following command:</p>
+            <p>Install our npm packages:</p>
+            <Link type={LINK_TYPE.EXTERNAL} to='https://www.npmjs.com/package/selenium-webdriver'>https://www.npmjs.com/package/selenium-webdriver</Link>
             <Command>
-                mv chromedriver /usr/local/bin
+                npm install --save-dev selenium-webdriver geckodriver chromedriver
             </Command>
+            <p>If you're on a Mac, you should have safari driver installed by default. You can test this by typing this into your terminal:</p>
+            <Command>
+                safaridriver --version
+            </Command>
+            <p>This should give you the output:</p>
+            <p className='variable'>Included with Safari 12.1 (12607.1.40.1.5)</p>
+        </section>
+        <section className='white-content'>
+            <h1>Writing our first test</h1>
+            <p>Create a file called <span className='variable'>seleniumTest.js</span> within the <span className='variable'>src</span> folder of your project.</p>
+            <p>Paste in the following:</p>
+            <CodeBlock>
+            {`
+const {Builder, By, Key, until} = require('selenium-webdriver');
+
+(async function example() {
+    let driver = await new Builder().forBrowser('chrome').build();
+    try {
+    await driver.get('http://www.google.com/ncr');
+    await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
+    await driver.wait(until.titleIs('webdriver - Google Search'), 8000);
+    } finally {
+    await driver.quit();
+    }
+})();
+            
+            `}
+                                    
+                    </CodeBlock>
+
+            <p>Let us now run the test:</p>
+            <p>In the terminal, navigate to the src folder of your project. Type in:</p>
+            <Command>
+                node seleniumTest.js
+            </Command>
+            <p>We have successfully created and run our first Selenium test!</p>
         </section>
     </Fragment>
 );
