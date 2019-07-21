@@ -8,7 +8,7 @@ class Resources extends Component {
         return (
             <section className='Resources'>
                 <section className='container'>
-                    <h1>Resources</h1>
+                    <h1 className='page-title'>Front-end Testing Resources</h1>
                     <section className='white-content'>
                         <h3>General Testing</h3>
                         <ul>

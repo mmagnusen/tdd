@@ -27,12 +27,18 @@ class Jest extends Component {
         return (
             <div className='Jest'>
                 <div className='container'> 
-                    <PageNavigation>{this.navigation()}</PageNavigation>
+                    <h1 className='page-title'>
+                        <div/>
+                        Testing With Jest
+                    </h1>
+                    <div className='Jest-content'>
+                        <PageNavigation>{this.navigation()}</PageNavigation>
 
-                    <div className='Jest-rightSection'>
-                        {activeIndex === 0 && <WhatIsJest />}
-                        {activeIndex === 1 && <SnapshotTests />}
-                        {activeIndex === 2 && <WritingATest />}
+                        <div className='Jest-rightSection'>
+                            {activeIndex === 0 && <WhatIsJest />}
+                            {activeIndex === 1 && <SnapshotTests />}
+                            {activeIndex === 2 && <WritingATest />}
+                        </div>
                     </div>
                 </div>
             </div>
