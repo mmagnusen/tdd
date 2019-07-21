@@ -5,7 +5,7 @@ class ResourcesPage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title='Front-end testing resources'/>
+        <Helmet title='Front-end testing resources || Clearli.io'/>
         <Resources />
       </Fragment>
     )

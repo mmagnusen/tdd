@@ -5,7 +5,7 @@ class EnzymePage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title='Enzyme Testing with React.js'/>
+        <Helmet title='Enzyme Testing with React.js || Clearli.io'/>
         <Enzyme />
       </Fragment>
     )

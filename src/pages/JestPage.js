@@ -5,7 +5,7 @@ class JestPage extends Component {
   render() {
     return (
       <Fragment>
-        <Helmet title='Jest Testing with React.js'/>
+        <Helmet title='Jest Testing with React.js || Clearli.io'/>
         <Jest />
       </Fragment>
     )

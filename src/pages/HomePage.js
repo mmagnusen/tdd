@@ -5,7 +5,7 @@ class HomePage extends Component {
   render() {
     return (
       <Fragment>
-          <Helmet title='Front-end Testing Tutorials'/>
+          <Helmet title='Front-end Testing Tutorials || Clearli.io'/>
           <Home />
       </Fragment>
     )
