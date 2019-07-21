@@ -9,6 +9,7 @@ export { default as Home } from './Home';
 export { default as Resources } from './Resources';
 export { default as Navigation } from './Navigation';
 export { default as PageNavigation } from './PageNavigation'; 
+export { default as Helmet } from './Helmet';
 
 
 export { default as Jest } from './Jest';

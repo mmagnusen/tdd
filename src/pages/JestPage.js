@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import { Jest } from '../components';
+import React, { Component, Fragment } from 'react';
+import { Jest, Helmet } from '../components';
 
 class JestPage extends Component {
   render() {
     return (
-      <Jest />
+      <Fragment>
+        <Helmet title='Jest Testing with React.js'/>
+        <Jest />
+      </Fragment>
     )
   }
 

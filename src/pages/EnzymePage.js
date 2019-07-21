@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import { Enzyme } from '../components'
+import React, { Component, Fragment } from 'react';
+import { Enzyme, Helmet } from '../components'
 
 class EnzymePage extends Component {
   render() {
     return (
-      <Enzyme />
+      <Fragment>
+        <Helmet title='Enzyme Testing with React.js'/>
+        <Enzyme />
+      </Fragment>
     )
   }
 
