@@ -28,13 +28,18 @@ class Selenium extends Component {
         return (
             <div className='Selenium'>
                 <div className='container'>
-                <PageNavigation>{this.navigation()}</PageNavigation>
+                    <h1 className='page-title'>
+                        <div/>
+                        Testing With Selenium
+                    </h1>
+                    <div className='Selenium-content'>
+                        <PageNavigation>{this.navigation()}</PageNavigation>
 
-                <div className='Selenium-rightSection'>
-                    {activeIndex === 0 && <WhatIsSelenium />}
-                    {activeIndex === 1 && <SeleniumAndReact />}
-
-            </div>
+                        <div className='Selenium-rightSection'>
+                            {activeIndex === 0 && <WhatIsSelenium />}
+                            {activeIndex === 1 && <SeleniumAndReact />}
+                        </div>
+                    </div>
                 </div>
             </div>
         )
