@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
-import { Command, CodeBlock, Link, CopyToClipboard } from '../../../components';
+import { Command, CodeBlock, Link } from '../../../components';
 import { NoTests, smoke, BlankSlate, AppTest, TestRenderer, AppSnapshot, AppSnapshotTerminal } from '../../../assets';
 import { LINK_TYPE } from '../../../constants'; 
-import { isTaggedTemplateExpression } from '@babel/types';
 
 const SnapshotTests = () => (
     <Fragment>

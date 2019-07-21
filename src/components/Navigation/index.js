@@ -12,6 +12,9 @@ class Navigation extends Component {
                         <h1>TDD</h1>
                     </Link>
                     <div className='Navigation-resources'>
+                        <Link to='/how-to' type={LINK_TYPE.INTERNAL}> 
+                            <p>How to Guides</p>
+                        </Link>
                         <Link to='/jest' type={LINK_TYPE.INTERNAL}> 
                             <p>Jest</p>
                         </Link>
@@ -21,7 +24,7 @@ class Navigation extends Component {
                         </Link>
                         */}
                         <Link to='/selenium' type={LINK_TYPE.INTERNAL}> 
-                        <p>Selenium</p>
+                            <p>Selenium</p>
                         </Link>
                         <Link to='/resources' type={LINK_TYPE.INTERNAL}>
                             <p>Resources</p>

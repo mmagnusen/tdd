@@ -9,6 +9,7 @@ export { default as Home } from './Home';
 export { default as Resources } from './Resources';
 export { default as Navigation } from './Navigation';
 export { default as PageNavigation } from './PageNavigation'; 
+export { default as HowTo } from './HowTo';
 export { default as Helmet } from './Helmet';
 
 
@@ -22,3 +23,4 @@ export { default as ResourcesPage } from '../pages/ResourcesPage';
 export { default as JestPage } from '../pages/JestPage';
 export { default as EnzymePage } from '../pages/EnzymePage';
 export { default as SeleniumPage } from '../pages/SeleniumPage';
+export { default as HowToPage } from '../pages/HowToPage';

@@ -8,6 +8,7 @@ import {
     JestPage,
     EnzymePage,
     SeleniumPage,
+    HowToPage
 } from '../../components';
 import './App.scss';
 
@@ -21,6 +22,7 @@ const AppRouter = (props) => {
                 <Route path='/enzyme' component={EnzymePage} exact={true}/>
                 <Route path='/selenium' component={SeleniumPage} exact={true}/>
                 <Route path='/resources' component={ResourcesPage} exact={true}/>
+                <Route path='/how-to' component={HowToPage} exact={true}/>
             </Switch>
             <Footer />
         </BrowserRouter>
