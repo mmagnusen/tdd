@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import { Resources } from '../components'
+import React, { Component, Fragment } from 'react';
+import { Resources, Helmet } from '../components'
 
 class ResourcesPage extends Component {
   render() {
     return (
-      <Resources />
+      <Fragment>
+        <Helmet title='Front-end testing resources'/>
+        <Resources />
+      </Fragment>
     )
   }
 }

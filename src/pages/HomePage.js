@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import { Home } from '../components'
+import React, { Component, Fragment } from 'react';
+import { Home, Helmet } from '../components'
 
 class HomePage extends Component {
   render() {
     return (
-      <Home />
+      <Fragment>
+          <Helmet title='Front-end Testing Tutorials'/>
+          <Home />
+      </Fragment>
     )
   }
 

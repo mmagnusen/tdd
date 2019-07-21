@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import { Selenium } from '../components'
+import React, { Component, Fragment } from 'react';
+import { Selenium, Helmet } from '../components'
 
 class SeleniumPage extends Component {
   render() {
     return (
-      <Selenium />
+      <Fragment>
+        <Helmet title='Selenium Testing with React.js'/>
+        <Selenium />
+      </Fragment>
     )
   }
 }
