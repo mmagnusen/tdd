@@ -1,4 +1,5 @@
 @import '../../constants/styles/sass-variables/breakpoints';
+@import '../../constants/styles/sass-variables/colors';
 
 
 $module: 'Navigation';
@@ -12,6 +13,10 @@ $module: 'Navigation';
         margin: 0 auto;
         @media screen and (min-width: $tabletBreakpoint) {
             width: 70%;
+        }
+
+        h1 {
+            color: $turquoise;    
         }
     }
 
