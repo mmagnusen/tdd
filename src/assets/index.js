@@ -9,3 +9,4 @@ export { default as AppSnapshot } from './app-snapshot.png';
 export { default as AppSnapshotTerminal } from './app-snapshot-terminal.png';
 export { default as ChromeDriver } from './chromedriver.png';
 export { default as ChromeIndex } from './chromeindex.png';
+export { default as BoilerPlate } from './boilerplate.png';

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Command, CodeBlock, Link } from '../../../components';
+import { Command, Link, Gist } from '../../../components';
 import { NoTests, smoke, BlankSlate, AppTest, TestRenderer, AppSnapshot, AppSnapshotTerminal } from '../../../assets';
 import { LINK_TYPE } from '../../../constants'; 
 
@@ -67,27 +67,9 @@ const SnapshotTests = () => (
             </Command>
             <p><Link type={LINK_TYPE.EXTERNAL} to='https://reactjs.org/docs/test-renderer.html'>React test renderer</Link> is a package which allows you to render React components to pure JavaScript objects.</p>
             <p>This is an example taken from the react-test-renderer documentation:</p>
-            <CodeBlock>
-            {`
-    import TestRenderer from 'react-test-renderer';
 
-    function Link(props) {
-        return <a href={props.page}>{props.children}</a>;
-    }
-    
-    const testRenderer = TestRenderer.create(
-        <Link page="https://www.facebook.com/">Facebook</Link>
-    );
-    
-    console.log(testRenderer.toJSON());
-    //  { 
-    //   type: 'a',
-    //   props: { href: 'https://www.facebook.com/' },
-    //   children: [ 'Facebook' ] 
-    //  }
+            <Gist id='27dc0ed8ab5b76a88e881641e8afe97b' />
 
-        `}
-            </CodeBlock>
             <p>Replace the contents of <span className='variable'>App.test.js</span> with the following:</p>
             <img src={TestRenderer} alt='test renderer screenshot'/>
             <p><Link type={LINK_TYPE.EXTERNAL} to='https://reactjs.org/docs/test-renderer.html#testrenderercreate'>Renderer.create()</Link> is a method which creates an instance of <span className='variable'>testRenderer</span> with the component which is passed to it.</p>

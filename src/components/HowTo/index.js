@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PageNavigation } from '../../components/';
-import { AddJavaScript } from './components';
+import { AddJavaScript, AddSass } from './components';
 import './HowTo.scss';
 
 class HowTo extends Component {
@@ -15,6 +15,7 @@ class HowTo extends Component {
     navigation = () => (
         <ul>
             <li onClick={() => this.updateActiveIndex(0)}> Add JavaScript</li>
+            <li onClick={() => this.updateActiveIndex(1)}> Add Sass</li>
         </ul>
     )
 
@@ -25,16 +26,12 @@ class HowTo extends Component {
         return (
             <div className='Jest'>
                 <div className='container'> 
-                    <h1 className='page-title'>
-                        <div/>
-                        Testing With Jest
-                    </h1>
                     <div className='Jest-content'>
                         <PageNavigation>{this.navigation()}</PageNavigation>
 
                         <div className='Jest-rightSection'>
                             {activeIndex === 0 && <AddJavaScript />}
-                            {activeIndex === 1 && <AddJavaScript />}
+                            {activeIndex === 1 && <AddSass />}
                             {activeIndex === 2 && <AddJavaScript />}
                         </div>
                     </div>

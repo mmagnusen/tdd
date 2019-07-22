@@ -1,8 +1,35 @@
 
+@import '../../constants/styles/sass-variables/colors';
+
 $module: 'Footer';
 
 .#{$module} { 
-    padding: 1rem 3rem;
-    display: none;
+    background: $ash;
+
+    .container {
+        padding: 1rem 3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        h4 {
+            color: rgb(159, 161, 167);
+        }
+        
+        ul {
+            margin-block-start: 0;
+            padding-inline-start: 0;
+          }
+
+        li {
+            list-style: none;
+            margin-bottom: 1rem;
+          }
+
+        a, a:visited {
+            color: $white;
+            font-weight: 400;
+        }
+    }
+ 
 }
   

@@ -11,6 +11,7 @@ export { default as Navigation } from './Navigation';
 export { default as PageNavigation } from './PageNavigation'; 
 export { default as HowTo } from './HowTo';
 export { default as Helmet } from './Helmet';
+export { default as Gist } from './Gist';
 
 
 export { default as Jest } from './Jest';

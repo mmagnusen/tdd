@@ -87,6 +87,11 @@ class Resources extends Component {
                                 </Link>
                             </li>
                             <li>
+                            <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/boilerplate'>
+                                https://github.com/mmagnusen/boilerplate
+                            </Link>
+                        </li>
+                            <li>
                                 <p><Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/friendlyfaces'>
                                     https://github.com/mmagnusen/friendlyfaces
                                     

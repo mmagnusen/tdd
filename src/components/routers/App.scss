@@ -1,4 +1,5 @@
 @import '../../constants/styles/sass-variables/breakpoints';
+@import '../../constants/styles/sass-variables/colors';
 
 body {
   margin: 0;
@@ -29,7 +30,7 @@ code {
 }
 
 .App {
-  color: black;
+  color: $black;
   margin: 0;
 }
 
@@ -67,4 +68,6 @@ a:visited {
   margin: 0 0 1rem  0;
 }
 
-
+li  {
+  margin: 0.6rem 0;
+}
