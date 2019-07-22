@@ -14,9 +14,7 @@ class HowTo extends Component {
 
     navigation = () => (
         <ul>
-            <li onClick={() => this.updateActiveIndex(0)}> What is Jest?</li>
-            <li onClick={() => this.updateActiveIndex(1)}> Snapshot tests</li>
-            <li onClick={() => this.updateActiveIndex(2)}> Writing a test</li>
+            <li onClick={() => this.updateActiveIndex(0)}> Add JavaScript</li>
         </ul>
     )
 
