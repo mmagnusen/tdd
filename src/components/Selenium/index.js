@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { PageNavigation } from '../../components/';
 import { WhatIsSelenium, SeleniumAndReact } from './components';
-
 import './Selenium.scss';
 
 class Selenium extends Component {

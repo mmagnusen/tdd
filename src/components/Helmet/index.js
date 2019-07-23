@@ -7,6 +7,6 @@ const Helmet = ({ title }) => (
         <title>{ title }</title>
         <meta name="description" content="Front-end testing tutorials for Jest, Enzyme and React.js" />
     </ReactHelmet>
-)
+);
 
 export default Helmet;

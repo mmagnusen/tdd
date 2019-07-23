@@ -27,10 +27,6 @@ class Jest extends Component {
         return (
             <div className='Jest'>
                 <div className='container'> 
-                    <h1 className='page-title'>
-                        <div/>
-                        Testing With Jest
-                    </h1>
                     <div className='Jest-content'>
                         <PageNavigation>{this.navigation()}</PageNavigation>
 

@@ -1,5 +1,7 @@
+@import '../../constants/styles/sass-variables/colors';
+
 $module: 'Enzyme';
 
 .#{$module} { 
-    background: #e5ecf1;
+    background: $ash;
 }

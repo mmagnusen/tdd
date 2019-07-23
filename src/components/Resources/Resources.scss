@@ -1,7 +1,9 @@
+@import '../../constants/styles/sass-variables/colors';
+
 $module: 'Resources';
 
 .#{$module} { 
-    background: #e5ecf1;
+    background: $ash;
     li {
         margin: 1rem 0;
     }

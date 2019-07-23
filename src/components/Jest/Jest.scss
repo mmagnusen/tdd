@@ -1,7 +1,12 @@
+@import '../../constants/styles/sass-variables/colors';
+
 $module: 'Jest';
 
 .#{$module} { 
-    background: #e5ecf1;
+    background: $ash;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    
     img {
         margin-top: 1rem;
     }

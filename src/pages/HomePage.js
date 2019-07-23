@@ -1,16 +1,11 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Home, Helmet } from '../components'
 
-class HomePage extends Component {
-  render() {
-    return (
-      <Fragment>
-          <Helmet title='Front-end Testing Tutorials || Clearli.io'/>
-          <Home />
-      </Fragment>
-    )
-  }
-
-}
+const HomePage = () => (
+  <Fragment>
+      <Helmet title='Front-end Testing Tutorials || Clearli.io'/>
+      <Home />
+  </Fragment>
+);
 
 export default HomePage;
