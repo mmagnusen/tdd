@@ -1,7 +1,9 @@
+@import '../../constants/styles/sass-variables/colors';
+
 $module: 'Selenium';
 
 .#{$module} { 
-    background: #e5ecf1;
+    background: $ash;
     img {
         margin-top: 1rem;
     }

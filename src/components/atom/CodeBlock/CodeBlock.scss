@@ -1,5 +1,7 @@
+@import '../../../constants/styles/sass-variables/colors';
+
 $module: 'CodeBlock';
 
 .#{$module} { 
-    background: #96969612;
+    background: $black;
 }

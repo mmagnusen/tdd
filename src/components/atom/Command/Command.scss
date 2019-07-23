@@ -1,8 +1,10 @@
+@import '../../../constants/styles/sass-variables/colors';
+
 $module: 'Command';
 
 .#{$module} { 
-    background: black;
-    color: white;
+    background: $black;
+    color: $white;
     padding: 0.5rem;
     margin: 0.5rem 0;
 }

@@ -16,9 +16,9 @@ const WhatIsJest = () => (
                 <li>Find the location of the project we've just cloned and double-click on the <span className='variable'>index.html</span> file</li>
                 <li>If you open the inspector, you should be able to see two console logs</li>
             </ul>
+
             <p>Let's find out where these logs are coming from.</p>
             <img src={BoilerPlate} alt='Boilerplate html console log' />
-            <p></p>
         </section>
 
         <section className='white-content'>
@@ -29,6 +29,7 @@ const WhatIsJest = () => (
             <p>Lines 16-18: This is where we are seeing <span className='variable'>console.log('hello, this is a log coming from index.html')</span></p>
 
             <Gist id='3d9570d44cb13490e12accb265f27647' />
+            
             <script src="https://gist.github.com/mmagnusen/3d9570d44cb13490e12accb265f27647.js"></script>
             <h4>2. The second (and better) way is to put your JavaScript code inside a separate file, and link to it from your index file.</h4>
             <span className='variable'> src="main.js"</span>

@@ -4,7 +4,7 @@
 $module: 'Footer';
 
 .#{$module} { 
-    background: $ash;
+    background: $ashGrey;
 
     .container {
         padding: 1rem 3rem;
@@ -12,7 +12,7 @@ $module: 'Footer';
         grid-template-columns: repeat(3, 1fr);
 
         h4 {
-            color: rgb(159, 161, 167);
+            color: $grey;
         }
         
         ul {
@@ -30,6 +30,5 @@ $module: 'Footer';
             font-weight: 400;
         }
     }
- 
 }
   

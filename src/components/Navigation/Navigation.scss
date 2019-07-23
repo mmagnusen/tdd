@@ -1,5 +1,5 @@
 @import '../../constants/styles/sass-variables/breakpoints';
-
+@import '../../constants/styles/sass-variables/colors';
 
 $module: 'Navigation';
 
@@ -23,12 +23,6 @@ $module: 'Navigation';
     &-resources {
         display: flex;
         justify-content: flex-end;
-        button {
-            height: 40px;
-            width: 100px;
-            background: navy;
-            color: white;
-          }
 
           a {
               margin-left: 1rem;
