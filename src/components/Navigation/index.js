@@ -7,7 +7,7 @@ const Navigation = () => (
     <div className='Navigation'>
         <div className='Navigation-inner'>
             <Link to='/' type={LINK_TYPE.INTERNAL}>
-                <h1>TDD</h1>
+                <h1>Clearli</h1>
             </Link>
             <div className='Navigation-resources'>
                 <Link to='/how-to' type={LINK_TYPE.INTERNAL}> 

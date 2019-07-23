@@ -7,7 +7,6 @@ import './Resources.scss';
 const Resources = () => (
     <section className='Resources'>
         <section className='container'>
-            <h1 className='page-title'>Front-end Testing Resources</h1>
             <ScrollableAnchor id='GeneralTesting'>
                 <section className='white-content'>
                     <h3>General Testing</h3>
