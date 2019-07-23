@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PageNavigation } from '../../components/';
-import { AddJavaScript, AddSass } from './components';
+import { AddJavaScript, AddSass, RunServer } from './components';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import './HowTo.scss';
 
@@ -14,6 +14,7 @@ class HowTo extends Component {
         <ul>
             <li onClick={() => this.updateActiveIndex(0)}> Add JavaScript</li>
             <li onClick={() => this.updateActiveIndex(1)}> Add Sass</li>
+            <li onClick={() => this.updateActiveIndex(2)}> Run Local Server</li>
         </ul>
     )
 
@@ -30,6 +31,7 @@ class HowTo extends Component {
                         <div className='HowTo-rightSection'>
                             {activeIndex === 0 && <AddJavaScript />}
                             {activeIndex === 1 && <AddSass />}
+                            {activeIndex === 2 && <RunServer />}
                         </div>
 
                     </div>
