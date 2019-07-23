@@ -13,3 +13,4 @@ export { default as BoilerPlate } from './boilerplate.png';
 export { default as PackageInit } from './package-init.png';
 export { default as PackageInitFinished } from './package-init-finished.png';
 export { default as PackageInitJson } from './package-init-json.png';
+export { default as serve } from './serve.png';
