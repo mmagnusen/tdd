@@ -7,12 +7,12 @@ const AddSass = () => (
     <Fragment>
         <section className='white-content'>
             <h1>How to add Sass to a vanilla project</h1>
-            <p>You can view a boilerplate template here: <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/boilerplate'>https://github.com/mmagnusen/boilerplate</Link></p>
+            <p>You can view and clone the starter project here <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/sassy'>https://github.com/mmagnusen/sassy</Link></p>
         </section>
 
         <section className='white-content'>
             <h1>What is Sass?</h1>
-            <p>Sass (Syntactically Awesome Sylesheet) is a CSS preprocessor. It makes it easier to create styles by reducing the amount of repetition in your code.</p>
+            <p>Sass (Syntactically Awesome Stylesheet) is a CSS preprocessor. It makes it easier to create styles by reducing the amount of repetition in your code.</p>
         </section>
 
         <section className='white-content'>
