@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { PageNavigation } from '../../components/';
 import { WhatIsJest, SnapshotTests, WritingATest } from './components';
+import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import './Jest.scss';
 
 class Jest extends Component {
-    state = {
-        activeIndex: 0
-    }
-
     updateActiveIndex = (activeIndex) => {
-        this.setState({ activeIndex })
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'jest', activeIndex}))
     }
 
     navigation = () => (
@@ -22,7 +20,7 @@ class Jest extends Component {
 
     render() {
 
-        const { activeIndex } = this.state;
+        const { activeIndex } = this.props;
 
         return (
             <div className='Jest'>
@@ -40,6 +38,12 @@ class Jest extends Component {
             </div>
         )
     }
-}
+};
 
-export default Jest;
+const mapStateToProps = (state) => {
+    return {
+        activeIndex: state.navigation.jest
+    }
+};
+
+export default connect(mapStateToProps)(Jest);
