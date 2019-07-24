@@ -35,6 +35,10 @@ class Footer extends Component {
                     <li onClick={() => this.updateActiveIndex('howTo', 1)}><Link to='/how-to' type={LINK_TYPE.INTERNAL}>Add Sass to project</Link></li>
                     <li onClick={() => this.updateActiveIndex('howTo', 2)}><Link to='/how-to' type={LINK_TYPE.INTERNAL}>Run local server</Link></li>
                 </ul>
+                <ul>
+                    <h4>Concepts</h4>
+                    <li onClick={() => this.updateActiveIndex('concepts', 0)}><Link to='/concepts' type={LINK_TYPE.INTERNAL}>Scope</Link></li>
+                </ul>
             </div>
         </footer>
     )}
