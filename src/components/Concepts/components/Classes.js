@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link, Gist, CodeBlock } from '../../../components';
 import { LINK_TYPE } from '../../../constants';
+import { inherited } from '../../../assets';
 
 const Class = () => (
     <Fragment>
@@ -49,6 +50,30 @@ const Class = () => (
             <Gist id='6c710c9ec32fa3e2fb521ec2bb9d7264' />
             <p>'Blue' is the default hair color. When we created 'anonymousPerson' and 'Marilyn', we passed in the arguments for <span className='variable'>hairColor</span> so they have been used by the class when creating the object.</p>
             <p>'Davina' and 'Judy' were not passed arguments for hairColor, so the defaults have been used.</p>
+        </section>
+
+        <section className='white-content'>
+            <h1>Methods</h1>
+            <p>A method is what we call a function, when it is a property of a class:</p>
+            <Gist id='dd60590386c3f3583865aef44ce5536c' />
+        </section>
+
+        <section className='white-content'>
+            <h1>Inheritance</h1>
+            <p>To make <span className='variable'>classes</span> reusable, we can create new classes which have the same properties of another class.</p>
+            <p>To create a class which inherits the attributes of another class, we use the <span className='varibale'>extend</span> keyword.</p>
+            <Gist id='eb0f53796f0acbbdbde096877d0a36ff' />
+            <p>We can see here that our new <span className='variable'>class</span> <span className='variable'>Athlete</span> inherits from the <span className='variable'>Person</span> <span>class</span>.</p>
+            <p><span className='variable'>Mo</span>, which is an instance of <span className='variable'>Athlete</span>, which itself inherits from <span className='variable'>Person</span>, has all the attributes of the <span className='variable'>Person</span> class.</p>
+            
+            <h5>super()</h5>
+            <p>How do we give our new class attributes which the parent does not have?</p>
+            <p>In our first class, we simply used the this keyword to give our class attributes. Let's try the same with the child class:</p>
+            <Gist id='517b7afcc811ef963bcc55f0dffe99b7' />
+            <p>When we run this code, we get the following error:</p>
+
+            <img src={inherited} alt='inherited class error'/>
+            <p><span className='variable'>super</span> must be called before you can access <span className='variable'>this</span> on the child class.</p>
         </section>
     </Fragment>
 );
