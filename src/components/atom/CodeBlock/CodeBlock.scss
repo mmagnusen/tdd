@@ -3,5 +3,7 @@
 $module: 'CodeBlock';
 
 .#{$module} { 
-    background: $black;
+    background: $lightGrey;
+    padding: 1rem;
+    box-sizing: border-box
 }

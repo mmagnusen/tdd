@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PageNavigation } from '../../components/';
-import { Scope } from './components';
+import { Classes } from './components';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import './Concepts.scss';
 
@@ -12,7 +12,7 @@ class Concepts extends Component {
 
     updateNavigation = () => (
         <ul>
-            <li onClick={() => this.updateActiveIndex(0)}>Scope</li>
+            <li onClick={() => this.updateActiveIndex(0)}>Classes</li>
         </ul>
     )
 
@@ -27,7 +27,7 @@ class Concepts extends Component {
                         <PageNavigation>{this.updateNavigation()}</PageNavigation>
 
                         <div className='Concepts-rightSection'>
-                            {activeIndex === 0 && <Scope />}
+                            {activeIndex === 0 && <Classes />}
                         </div>
 
                     </div>
