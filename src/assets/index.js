@@ -14,4 +14,5 @@ export { default as PackageInit } from './package-init.png';
 export { default as PackageInitFinished } from './package-init-finished.png';
 export { default as PackageInitJson } from './package-init-json.png';
 export { default as serve } from './serve.png';
-export { default as inherited} from './inherited.png'
+export { default as inherited} from './inherited.png';
+export { default as UndefinedLocalScope } from './undefined-local-scope.png';
