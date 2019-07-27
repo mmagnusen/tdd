@@ -9,7 +9,7 @@ $module: 'Footer';
     .container {
         padding: 1rem 3rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
 
         h4 {
             color: $grey;

@@ -91,9 +91,14 @@ const Resources = () => (
                     <h3>Git Repositories</h3>
                     <ul>
                         <li>
-                            <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js'>
-                                https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js
+                            <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/classy'>
+                            https://github.com/mmagnusen/classy
                             </Link>
+                        </li>
+                        <li>
+                        <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js'>
+                            https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js
+                        </Link>
                         </li>
                         <li>
                         <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/boilerplate'>
