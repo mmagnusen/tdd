@@ -6,7 +6,7 @@ import { inherited } from '../../../assets';
 const Class = () => (
     <Fragment>
         <section className='white-content'>
-            <h1>What is a class</h1>
+            <h1>What is a class?</h1>
             <p>For this tutorial, you can view the demo project here: <Link to='https://github.com/mmagnusen/classy' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/classy</Link></p>
             <p>We create a class with the <span className='variable'>class</span> keyword.</p>
             <p>What data type is a <span className='variable'>class</span>? We can do a simple test to verify this.</p>
@@ -73,7 +73,14 @@ const Class = () => (
             <p>When we run this code, we get the following error:</p>
 
             <img src={inherited} alt='inherited class error'/>
+            
             <p><span className='variable'>super</span> must be called before you can access <span className='variable'>this</span> on the child class.</p>
+        </section>
+
+        <section className='white-content'>
+            <h1>Static Methods</h1>
+            <p>A <span className='variable'>static method</span> is a method which can only be called on the class itself, not by any of its instances.</p>
+            <Gist id='be493d27e3d59520e4c7acc84a673f1a' />
         </section>
     </Fragment>
 );

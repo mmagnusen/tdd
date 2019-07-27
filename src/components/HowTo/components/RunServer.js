@@ -5,7 +5,7 @@ import { serve } from '../../../assets';
 
 const RunServer = () => (
     <section className='white-content'>
-        <h1>How to add Sass to a vanilla project</h1>
+        <h1>How to run a local server</h1>
         <p>You can view clone the demo project here: <Link to='https://github.com/mmagnusen/boilerplate' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/boilerplate</Link></p>
         <p>Navigate to the root of the project and run:</p>
         
