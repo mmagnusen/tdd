@@ -72,6 +72,11 @@ const Scope = () => (
             <p>The value of age is 13.</p>
             <p>The problem here is that any function can alter the age value. Because age is declared globally, its value also changes each time the birthday function is called.</p>
 
+            <p>By creating a closure, we ensure that:</p>
+            <ul>
+                <li><span>age</span> can only be accessed within the <span className='variable'>birthday</span> function</li>
+                <li>The value of age is reset each time the  <span className='variable'>birthday</span> function is called</li>
+            </ul>
             <Gist id='c608ad0ae7574331bcc0f892b5cb37cf' />
         </section>
     </Fragment>
