@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PageNavigation } from '../../components/';
-import { Classes, Scope, This } from './components';
+import { Classes, Scope, This, VarLetConst } from './components';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import './Concepts.scss';
 
@@ -15,6 +15,7 @@ class Concepts extends Component {
             <li onClick={() => this.updateActiveIndex(0)}>Classes</li>
             <li onClick={() => this.updateActiveIndex(1)}>Scope</li>
             <li onClick={() => this.updateActiveIndex(2)}>This</li>
+            <li onClick={() => this.updateActiveIndex(3)}>Var, Let, Const</li>
         </ul>
     )
 
@@ -32,6 +33,7 @@ class Concepts extends Component {
                             {activeIndex === 0 && <Classes />}
                             {activeIndex === 1 && <Scope />}
                             {activeIndex === 2 && <This />}
+                            {activeIndex === 3 && <VarLetConst />}
                         </div>
 
                     </div>
