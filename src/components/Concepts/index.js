@@ -17,7 +17,6 @@ class Concepts extends Component {
             <li onClick={() => this.updateActiveIndex(2)}>This</li>
             <li onClick={() => this.updateActiveIndex(3)}>Var, Let, Const</li>
             <li onClick={() => this.updateActiveIndex(4)}>Data types</li>
-            <li onClick={() => this.updateActiveIndex(5)}>Prototypes</li>
         </ul>
     )
 

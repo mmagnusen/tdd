@@ -44,7 +44,7 @@ const Scope = () => (
             <p>You should be careful when creating variables.</p>
             <p>Variables created inside a function will automatically become global if it is not created using <span className='variable'>let</span>, <span className='variable'>const</span>, or <span className='variable'>var</span>.</p>
             
-            <h5>Using 'strict' mode</h5>
+            <h4>Using 'strict' mode</h4>
             <p>Strict mode will stop undeclared variables created inside a function from being automatically global.</p>
         </section>
 

@@ -47,7 +47,7 @@ const This = () => (
             <h1>Call, Bind and Apply</h1>
             <p><span className='variable'>Call</span>, <span className='variable'>bind</span> and <span className='variable'>apply</span>are JavaScript methods.</p>
 
-            <h5>Bind</h5>
+            <h4>Bind</h4>
             <p>We have already been using the bind method in our examples.</p>
             <p>In the example below, we bind 'name' to the instance of the object which is created. This is called implicit binding.</p>
             <Gist id='986fb6ac5c083a1e7644e23c5720df13' />
@@ -57,11 +57,11 @@ const This = () => (
 
             <p>In the example given above, at the point of line 14, <span>myHouse</span> is bound to roomOne but the function is not invoked. Nothing will be logged to the console.</p>
             
-            <h5>Call</h5>
+            <h4>Call</h4>
             <p>Call allows you to specify the context of <span className='variable'>this</span>, and immediately invokes that function.</p>
             <Gist id='fd9694a0b8cf404151bc363158a710e4' />
 
-            <h5>Apply</h5>
+            <h4>Apply</h4>
             <p>Apply works in the same way as <span>call</span>.</p>
             <p>The difference between <span className='variable'>call</span> and <span className='variable'>apply</span> is that <span className='variable'>call</span> will accept the first agument to be the context, then the rest of the expected arguments to be passed one by one</p>
             <p><span className='variable'>Apply</span> expects the first argument to be the context, then the second argument will be an array of the expected arguments.</p>

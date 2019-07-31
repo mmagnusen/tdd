@@ -30,7 +30,7 @@ const Class = () => (
             <p>When we think of a person, we think of attributes like name and hair color. Let's give our <span className='variable'>Person</span> these attributes.</p>
             <Gist id='3c43343ca73a615f3d4af4d82374c7d8' />
             
-            <h5>How to access attributes</h5>
+            <h4>How to access attributes</h4>
             <p>We know that each new instance of a <span className='variable'>class</span> is an <span className='variable'>object</span>. So each attribute we have given our <span className='variable'>Person</span> is actually a key, with a value. The key is 'name' and the value is 'Marilyn'.</p>
             <p>To access these attributes, we do so in the same way you would to access a key:value pair for an object- using object notation.</p>
             <p>To access the name attribute of our <span className='variable'>anonymousPerson</span>, we would write:</p>
@@ -41,7 +41,7 @@ const Class = () => (
             <p>A constructor defines which parameters the class is expecting, and how those values will be used within the <span className='variable'>class</span>.</p>
             <Gist id='d0696661e9ce1276706a670420d7dde2' />
 
-            <h5>Default Values</h5>
+            <h4>Default Values</h4>
             <p>To pass a default value in a regular function, we would use the <span className='variable'>assignment operator</span> and write something like this:</p>
             <CodeBlock>
                 const calculateArea = (length = 2, width = 5) => return length * width;
@@ -66,7 +66,7 @@ const Class = () => (
             <p>We can see here that our new <span className='variable'>class</span> <span className='variable'>Athlete</span> inherits from the <span className='variable'>Person</span> <span>class</span>.</p>
             <p><span className='variable'>Mo</span>, which is an instance of <span className='variable'>Athlete</span>, which itself inherits from <span className='variable'>Person</span>, has all the attributes of the <span className='variable'>Person</span> class.</p>
             
-            <h5>super()</h5>
+            <h4>super()</h4>
             <p>How do we give our new class attributes which the parent does not have?</p>
             <p>In our first class, we simply used the this keyword to give our class attributes. Let's try the same with the child class:</p>
             <Gist id='517b7afcc811ef963bcc55f0dffe99b7' />
