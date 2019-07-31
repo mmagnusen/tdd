@@ -41,6 +41,7 @@ class Footer extends Component {
                     <li onClick={() => this.updateActiveIndex('concepts', 1)}><Link to='/concepts' type={LINK_TYPE.INTERNAL}>Scope</Link></li>
                     <li onClick={() => this.updateActiveIndex('concepts', 2)}><Link to='/concepts' type={LINK_TYPE.INTERNAL}>This</Link></li>
                     <li onClick={() => this.updateActiveIndex('concepts', 3)}><Link to='/concepts' type={LINK_TYPE.INTERNAL}>Var, Let, Const</Link></li>
+                    <li onClick={() => this.updateActiveIndex('concepts', 4)}><Link to='/concepts' type={LINK_TYPE.INTERNAL}>Data Types</Link></li>
                 </ul>
             </div>
         </footer>

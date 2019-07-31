@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
-import { Command, Link, Gist } from '../../../components';
-import { ThisWindow, ThisEventHandler } from '../../../assets';
-import { LINK_TYPE } from '../../../constants/';
+import { Gist } from '../../../components';
 
 const VarLetConst = () => (
     <Fragment>
