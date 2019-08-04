@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
-import { Jest, Helmet } from '../components';
+import { Jest } from '../components';
 
-const JestPage = () => (
+const JestPage = (props) => (
   <Fragment>
-    <Helmet title='Jest Testing with React.js || Clearli.io'/>
-    <Jest />
+    <Jest {...props} />
   </Fragment>
 );
 

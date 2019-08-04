@@ -10,13 +10,13 @@ const Navigation = () => (
                 <h1>Clearli</h1>
             </Link>
             <div className='Navigation-resources'>
-                <Link to='/how-to' type={LINK_TYPE.INTERNAL}> 
+                <Link to='/how-to/add-javascript' type={LINK_TYPE.INTERNAL}> 
                     <p>How to Guides</p>
                 </Link>
-                <Link to='/concepts' type={LINK_TYPE.INTERNAL}> 
+                <Link to='/concepts/classes' type={LINK_TYPE.INTERNAL}> 
                     <p>Concepts</p>
                 </Link>
-                <Link to='/jest' type={LINK_TYPE.INTERNAL}> 
+                <Link to='/jest/what-is-jest' type={LINK_TYPE.INTERNAL}> 
                     <p>Jest</p>
                 </Link>
                 <Link to='/resources' type={LINK_TYPE.INTERNAL}>

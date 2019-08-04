@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
-import { HowTo, Helmet } from '../components'
+import { HowTo } from '../components'
 
-const HowToPage = () => (
+const HowToPage = (props) => (
   <Fragment>
-      <Helmet title='Front-end How-to Tutorials || Clearli.io'/>
-      <HowTo />
+      <HowTo {...props} />
   </Fragment>
 );
 
