@@ -24,9 +24,15 @@ class HowTo extends Component {
 
     updateNavigation = () => (
         <ul>
-            <li onClick={() => this.updateActiveIndex(0)}><Link to='/how-to/add-javascript' type={LINK_TYPE.INTERNAL}> Add JavaScript</Link></li>
-            <li onClick={() => this.updateActiveIndex(1)}><Link to='/how-to/add-sass' type={LINK_TYPE.INTERNAL}> Add Sass</Link></li>
-            <li onClick={() => this.updateActiveIndex(2)}><Link to='/how-to/run-a-local-server' type={LINK_TYPE.INTERNAL}> Run Local Server</Link></li>
+            <Link to='/how-to/add-javascript' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(0)}> Add JavaScript</li>
+            </Link>
+            <Link to='/how-to/add-sass' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(1)}> Add Sass</li>
+            </Link>
+            <Link to='/how-to/run-a-local-server' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(2)}>Run Local Server</li>
+            </Link>
         </ul>
     )
 

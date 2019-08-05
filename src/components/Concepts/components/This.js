@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
-import { Command, Link, Gist } from '../../../components';
+import { Command, Link, Gist, Helmet } from '../../../components';
 import { ThisWindow, ThisEventHandler } from '../../../assets';
 import { LINK_TYPE } from '../../../constants/';
 
 const This = () => (
     <Fragment>
+        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
         <section className='white-content'>
             <h1>What is this?</h1>
             <p><span className='variable'>This</span> always refers to and holds the value of an <span className='variable'>object</span>.</p>

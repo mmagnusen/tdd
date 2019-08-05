@@ -25,9 +25,15 @@ class Jest extends Component {
 
     navigation = () => (
         <ul>
-            <li onClick={() => this.updateActiveIndex(0)}><Link to='/jest/what-is-jest' type={LINK_TYPE.INTERNAL}> What is Jest?</Link></li>
-            <li onClick={() => this.updateActiveIndex(1)}><Link to='/jest/snapshot-tests' type={LINK_TYPE.INTERNAL}> Snapshot tests</Link></li>
-            <li onClick={() => this.updateActiveIndex(2)}><Link to='/jest/writing-a-test' type={LINK_TYPE.INTERNAL}> Writing a test</Link></li>
+            <Link to='/jest/what-is-jest' type={LINK_TYPE.INTERNAL}> 
+                <li onClick={() => this.updateActiveIndex(0)}>What is Jest?</li>
+            </Link>
+            <Link to='/jest/snapshot-tests' type={LINK_TYPE.INTERNAL}>   
+                <li onClick={() => this.updateActiveIndex(1)}>Snapshot tests</li>
+            </Link>
+            <Link to='/jest/writing-a-test' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(2)}> Writing a test</li>
+            </Link>
         </ul>
     )
 

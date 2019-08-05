@@ -24,12 +24,24 @@ class Concepts extends Component {
 
     updateNavigation = () => (
         <ul>
-            <li onClick={() => this.updateActiveIndex(0)}><Link to='/concepts/classes' type={LINK_TYPE.INTERNAL}>Classes</Link></li>
-            <li onClick={() => this.updateActiveIndex(1)}><Link to='/concepts/scope' type={LINK_TYPE.INTERNAL}>Scope</Link></li>
-            <li onClick={() => this.updateActiveIndex(2)}><Link to='/concepts/this' type={LINK_TYPE.INTERNAL}>This</Link></li>
-            <li onClick={() => this.updateActiveIndex(3)}><Link to='/concepts/var-let-const' type={LINK_TYPE.INTERNAL}>Var, Let, Const</Link></li>
-            <li onClick={() => this.updateActiveIndex(4)}><Link to='/concepts/data-types' type={LINK_TYPE.INTERNAL}>Data types</Link></li>
-            <li onClick={() => this.updateActiveIndex(5)}><Link to='/concepts/prototypes' type={LINK_TYPE.INTERNAL}>Prototypes</Link></li>
+            <Link to='/concepts/classes' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(0)}>Classes</li>
+            </Link>
+            <Link to='/concepts/scope' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(1)}>Scope</li>
+            </Link>
+            <Link to='/concepts/this' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(2)}>This</li>
+            </Link>
+            <Link to='/concepts/var-let-const' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(3)}>Var, Let, Const</li>
+            </Link>
+            <Link to='/concepts/data-types' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(4)}>Data types</li>
+            </Link>
+            <Link to='/concepts/prototypes' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(5)}>Prototypes</li>
+            </Link>
         </ul>
     )
 

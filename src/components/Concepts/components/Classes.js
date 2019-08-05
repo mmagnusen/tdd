@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import { Link, Gist, CodeBlock } from '../../../components';
-import { LINK_TYPE } from '../../../constants';
+import { Gist, CodeBlock, Helmet } from '../../../components';
 import { inherited } from '../../../assets';
 
 const Class = () => (
     <Fragment>
+        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
         <section className='white-content'>
             <h1>What is a class?</h1>
             <p>We create a class with the <span className='variable'>class</span> keyword.</p>

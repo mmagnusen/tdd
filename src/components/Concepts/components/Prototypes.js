@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
-import { Gist } from '../../../components';
+import { Gist, Helmet } from '../../../components';
 
 const Prototypes = () => (
     <Fragment>
+        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
         <section className='white-content'>
             <h1>Prototypes</h1>
             <p>We've already discovered there are two types of data in JavaScript:</p>
