@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
 import { Link } from '../index';
 import { LINK_TYPE } from '../../constants/'
 import './Resources.scss';
@@ -7,7 +6,6 @@ import './Resources.scss';
 const Resources = () => (
     <section className='Resources'>
         <section className='container'>
-            <ScrollableAnchor id='GeneralTesting'>
                 <section className='white-content'>
                     <h3>General Testing</h3>
                     <ul>
@@ -15,9 +13,7 @@ const Resources = () => (
                         <li><Link type={LINK_TYPE.EXTERNAL} to='https://reactjs.org/docs/test-renderer.html'>https://reactjs.org/docs/test-renderer.html</Link></li>
                     </ul>
                 </section>
-            </ScrollableAnchor>
 
-            <ScrollableAnchor id='ForBeginners'>
                 <section className='white-content'>
                     <h3>Generally helpful for beginners</h3>
                     <ul>
@@ -38,9 +34,7 @@ const Resources = () => (
                         </li>
                     </ul>
                 </section>
-            </ScrollableAnchor>
 
-            <ScrollableAnchor id='Jest'>
                 <section className='white-content'>
                 <h3>Jest</h3>
                     <ul>
@@ -71,9 +65,7 @@ const Resources = () => (
                         </li>
                     </ul>
                 </section>
-            </ScrollableAnchor>
 
-            <ScrollableAnchor id='Selenium'>
                 <section className='white-content'>
                     <h3>Selenium</h3>
                     <ul>
@@ -84,9 +76,7 @@ const Resources = () => (
                         </li>
                     </ul>
                 </section>
-            </ScrollableAnchor>
 
-            <ScrollableAnchor id='GitRepos'>
                 <section className='white-content'>
                     <h3>Git Repositories</h3>
                     <ul>
@@ -116,7 +106,7 @@ const Resources = () => (
                         </li>
                     </ul>
                 </section>
-            </ScrollableAnchor>
+
         </section>
     </section>
 );

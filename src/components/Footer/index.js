@@ -8,6 +8,10 @@ import './Footer.scss';
 class Footer extends Component {
     updateActiveIndex  = (item, activeIndex) => {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item, activeIndex}))
+        this.scrollToTop();
+    }
+
+    scrollToTop() {
         window.scrollTo(0, 0)
     }
 
@@ -23,11 +27,7 @@ class Footer extends Component {
                 </ul>
                 <ul>
                     <h4>Resources</h4>
-                    <li><Link to='/resources/#GeneralTesting' type={LINK_TYPE.ANCHOR}>General testing</Link></li>
-                    <li><Link to='/resources/#ForBeginners' type={LINK_TYPE.ANCHOR}>Helpful for beginners</Link></li>
-                    <li><Link to='/resources/#Jest' type={LINK_TYPE.ANCHOR}>Jest</Link></li>
-                    <li><Link to='/resources/#Selenium' type={LINK_TYPE.ANCHOR}>Selenium</Link></li>
-                    <li><Link to='/resources/#GitRepos' type={LINK_TYPE.ANCHOR}>Git repositories</Link></li>
+                    <li onClick={this.scrollToTop}><Link to='/resources' type={LINK_TYPE.ANCHOR}>Resources</Link></li>
                 </ul>
                 <ul>
                     <h4>How To Guides</h4>
