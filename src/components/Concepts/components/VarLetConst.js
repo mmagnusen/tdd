@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
-import { Gist } from '../../../components';
+import { Gist, Helmet } from '../../../components';
 
 const VarLetConst = () => (
     <Fragment>
+        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
         <section className='white-content'>
             <h1>var, let, const</h1>
             <p><span className='variable'>var</span>, <span className='variable'>let</span> and <span className='variable'>const</span> are the three types of variables in JavaScript.</p>

@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
-import { Link, Gist, CodeBlock } from '../../../components';
-import { LINK_TYPE } from '../../../constants';
+import { Gist, CodeBlock, Helmet } from '../../../components';
 import { inherited } from '../../../assets';
 
 const Class = () => (
     <Fragment>
+        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
         <section className='white-content'>
             <h1>What is a class?</h1>
-            <p>For this tutorial, you can view the demo project here: <Link to='https://github.com/mmagnusen/classy' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/classy</Link></p>
             <p>We create a class with the <span className='variable'>class</span> keyword.</p>
             <p>What data type is a <span className='variable'>class</span>? We can do a simple test to verify this.</p>
             <Gist id='7199d0607eaac1a6501076e9539d3baa' />

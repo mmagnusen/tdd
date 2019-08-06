@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
-import { Link, Command } from '../../';
+import { Link, Command, Helmet } from '../../';
 import { LINK_TYPE } from '../../../constants';
 import { PackageInit, PackageInitJson } from '../../../assets';
 
 const AddSass = () => (
     <Fragment>
+        <Helmet title='add sass'/>
         <section className='white-content'>
             <h1>How to add Sass to a vanilla project</h1>
             <p>You can view and clone the starter project here <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/sassy'>https://github.com/mmagnusen/sassy</Link></p>

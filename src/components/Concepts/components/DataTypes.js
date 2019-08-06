@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
-import { Link, Gist } from '../../../components';
+import { Link, Gist, Helmet } from '../../../components';
 import { LINK_TYPE } from '../../../constants';
 
 const DataTypes = () => (
     <Fragment>
+        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
         <section className='white-content'>
             <h1>Primitives and Objects</h1>
             <p>There are two types of data in JavaScript:</p>

@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
-import { Link, Gist } from '../../../components';
+import { Link, Gist, Helmet } from '../../../components';
 import { LINK_TYPE } from '../../../constants';
 import { BoilerPlate } from '../../../assets';
 
-const WhatIsJest = () => (
+const AddJavaScript = () => (
     <Fragment>
+        <Helmet title='add javascript'/>
         <section className='white-content'>
             <h1>How to add JavaScript to a project</h1>
             <p>You can view a boilerplate template here: <Link to='https://github.com/mmagnusen/boilerplate' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/boilerplate</Link></p>
@@ -38,4 +39,4 @@ const WhatIsJest = () => (
     </Fragment>
 );
 
-export default WhatIsJest;
+export default AddJavaScript;

@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
-import { Concepts, Helmet } from '../components'
+import { Concepts } from '../components'
 
-const ConceptsPage = () => (
+const ConceptsPage = (props) => (
   <Fragment>
-    <Helmet title='Understanding JavaScript Concepts || Clearli.io'/>
-    <Concepts />
+    <Concepts {...props} />
   </Fragment>
 );
 
