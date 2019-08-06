@@ -7,7 +7,7 @@ const Resources = () => (
     <Fragment>
     <Helmet 
         title='JavaScript Front-end Testing Resources'
-        description='Resources for front-end projects. Includes Git repositories for demo projects and external resources'
+        description='Resources for front-end projects. Includes Git repositories for demo projects and external resources.'
     />
     <section className='Resources'>
         <section className='container'>
