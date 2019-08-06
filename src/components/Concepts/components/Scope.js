@@ -5,7 +5,10 @@ import { LINK_TYPE } from '../../../constants/'
 
 const Scope = () => (
     <Fragment>
-        <Helmet title='JavaScript Scope'/>
+        <Helmet 
+            title='JavaScript Scope'
+            description='What is Scope in JavaScript? What are the different types of scope and how does it affect how code is executed?'
+        />
         <section className='white-content'>
             <h1>What is scope?</h1>
             <p>Scope determines how and from where a variable can be accessed. Whether or not you can access a variable depends on:</p>

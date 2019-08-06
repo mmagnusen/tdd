@@ -1,11 +1,8 @@
-import React, { Fragment } from 'react';
-import { Enzyme, Helmet } from '../components'
+import React from 'react';
+import { Enzyme } from '../components'
 
 const EnzymePage = () => (
-  <Fragment>
-    <Helmet title='Enzyme Testing with React.js'/>
-    <Enzyme />
-  </Fragment>
+  <Enzyme />
 );
 
 export default EnzymePage;

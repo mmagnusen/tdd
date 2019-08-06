@@ -5,7 +5,10 @@ import './Home.scss';
 
 const Home = () => (
     <Fragment>
-        <Helmet title='Front-end JavaScript Tutorials'/>
+        <Helmet 
+            title='Front-end JavaScript Tutorials'
+            description='Clearli will help you gain a deeper understanding of JavaScript, from beginning to the more complex concepts. There is a range of guides and resources to help you become confident in ES6 syntax, testing, frameworks and vanilla JavaScript.'
+        />
         <div className='Home'>
             <section className='container'>
             <h1 className='page-title'>Welcome to the home of Front-end Testing</h1>

@@ -4,7 +4,10 @@ import { LINK_TYPE } from '../../../constants';
 
 const DataTypes = () => (
     <Fragment>
-        <Helmet title='JavaScript Data Types'/>
+        <Helmet 
+            title='JavaScript Data Types'
+            description='Learn about the different data types in JavaScript'
+        />
         <section className='white-content'>
             <h1>Primitives and Objects</h1>
             <p>There are two types of data in JavaScript:</p>

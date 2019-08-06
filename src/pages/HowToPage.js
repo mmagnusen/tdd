@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HowTo } from '../components'
 
 const HowToPage = (props) => (
-  <Fragment>
-      <HowTo {...props} />
-  </Fragment>
+  <HowTo {...props} />
 );
 
 export default HowToPage;

@@ -5,7 +5,10 @@ import { calculate } from '../../../assets';
 
 const WritingATest = () => (
     <Fragment>
-        <Helmet title='Writing a Test with Jest: JavaScript'/>
+        <Helmet 
+            title='Writing a Test with Jest: JavaScript'
+            description='Learn how to write unit tests with the Jest testing framework for JavaScript projects.'
+        />
         <section className='white-content'>
             <h1>Writing a test</h1>
 

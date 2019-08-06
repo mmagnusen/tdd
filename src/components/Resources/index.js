@@ -5,7 +5,10 @@ import './Resources.scss';
 
 const Resources = () => (
     <Fragment>
-    <Helmet title='JavaScript Front-end Testing Resources'/>
+    <Helmet 
+        title='JavaScript Front-end Testing Resources'
+        description='Resources for front-end projects. Includes Git repositories for demo projects and external resources'
+    />
     <section className='Resources'>
         <section className='container'>
                 <section className='white-content'>

@@ -5,7 +5,10 @@ import { LINK_TYPE } from '../../../constants/';
 
 const This = () => (
     <Fragment>
-        <Helmet title='This in JavaScript'/>
+        <Helmet 
+            title='This in JavaScript'
+            description='What is "this" in JavaScript? How does "this" change in different circumstances?'
+        />
         <section className='white-content'>
             <h1>What is this?</h1>
             <p><span className='variable'>This</span> always refers to and holds the value of an <span className='variable'>object</span>.</p>

@@ -1,11 +1,8 @@
-import React, { Fragment } from 'react';
-import { Resources, Helmet } from '../components'
+import React from 'react';
+import { Resources } from '../components'
 
 const ResourcesPage = () => (
-  <Fragment>
-    <Helmet title='Front-end testing resources'/>
-    <Resources />
-  </Fragment>
+  <Resources />
 );
 
 export default ResourcesPage;

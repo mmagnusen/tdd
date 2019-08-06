@@ -3,7 +3,10 @@ import { Gist, Helmet } from '../../../components';
 
 const Prototypes = () => (
     <Fragment>
-        <Helmet title='JavaScript Prototypes'/>
+        <Helmet 
+            title='JavaScript Prototypes'
+            description='What are JavaScript prototypes? What is prototypal inheritance and how does it differ from class inheritance?'
+        />
         <section className='white-content'>
             <h1>Prototypes</h1>
             <p>We've already discovered there are two types of data in JavaScript:</p>
