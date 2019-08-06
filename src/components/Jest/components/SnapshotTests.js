@@ -5,7 +5,10 @@ import { LINK_TYPE } from '../../../constants';
 
 const SnapshotTests = () => (
     <Fragment>
-        <Helmet title='Jest Snapshots: JavaScript Testing'/>
+        <Helmet 
+            title='Jest Snapshots: JavaScript Testing'
+            description='Snapshot tests can help you detect changes in the html structure of your components. Learn more about how they work and how to implement them on your JavaScript project.'
+        />
         <section className='white-content'>
             <h1>What are snapshot tests?</h1>
             <p>Snapshots tests are tests which tells you if the html structure of your component has changed.</p>

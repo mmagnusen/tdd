@@ -4,7 +4,10 @@ import { inherited } from '../../../assets';
 
 const Class = () => (
     <Fragment>
-        <Helmet title='JavaScript Classes '/>
+        <Helmet 
+            title='JavaScript Classes'
+            description='Understand Classes in JavaScript and learn about Class inheritance.'
+        />
         <section className='white-content'>
             <h1>What is a class?</h1>
             <p>We create a class with the <span className='variable'>class</span> keyword.</p>

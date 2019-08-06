@@ -5,7 +5,10 @@ import { PackageInit, PackageInitJson } from '../../../assets';
 
 const AddSass = () => (
     <Fragment>
-        <Helmet title='How to add Sass'/>
+        <Helmet 
+            title='How to add Sass'
+            description='Sass is a CSS pre-processor, which makes it easier to create styles for your project. Learn how to add it to your project using NPM.'
+        />
         <section className='white-content'>
             <h1>How to add Sass to a vanilla project</h1>
             <p>You can view and clone the starter project here <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/sassy'>https://github.com/mmagnusen/sassy</Link></p>

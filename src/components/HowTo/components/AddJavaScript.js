@@ -5,7 +5,10 @@ import { BoilerPlate } from '../../../assets';
 
 const AddJavaScript = () => (
     <Fragment>
-        <Helmet title='How to add JavaScript'/>
+        <Helmet 
+            title='How to add JavaScript'
+            description='How do you add JavaScript to a project without using a framework? Learn how to add JavaScript code to your project.'
+        />
         <section className='white-content'>
             <h1>How to add JavaScript to a project</h1>
             <p>You can view a boilerplate template here: <Link to='https://github.com/mmagnusen/boilerplate' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/boilerplate</Link></p>

@@ -1,11 +1,8 @@
-import React, { Fragment } from 'react';
-import { Home, Helmet } from '../components'
+import React from 'react';
+import { Home } from '../components'
 
 const HomePage = () => (
-  <Fragment>
-      <Helmet title='Front-end Testing Tutorials'/>
-      <Home />
-  </Fragment>
+  <Home />
 );
 
 export default HomePage;

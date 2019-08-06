@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Concepts } from '../components'
 
 const ConceptsPage = (props) => (
-  <Fragment>
-    <Concepts {...props} />
-  </Fragment>
+  <Concepts {...props} />
 );
 
 export default ConceptsPage;

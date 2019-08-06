@@ -5,7 +5,10 @@ import { serve } from '../../../assets';
 
 const RunServer = () => (
     <Fragment>
-        <Helmet title='How to run a local server using JavaScript'/>
+        <Helmet 
+            title='How to run a local server using JavaScript'
+            description='Guides you through how to run your vanilla project on a local server without using a framework.'
+        />
         <section className='white-content'>
             <h1>How to run a local server</h1>
             <p>You can view clone the demo project here: <Link to='https://github.com/mmagnusen/boilerplate' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/boilerplate</Link></p>

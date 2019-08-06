@@ -4,7 +4,10 @@ import { LINK_TYPE } from '../../../constants';
 
 const WhatIsJest = () => (
     <Fragment>
-        <Helmet title='What is Jest: JavaScript Testing'/>
+        <Helmet 
+            title='What is Jest: JavaScript Testing'
+            description='Jest is a JavaScript testing framework created by the team at Facebook. Learn about how it works and what it can do.'
+        />
         <section className='white-content'>
             <h1>What is Jest?</h1>
             <p><Link to='https://jestjs.io/' type={LINK_TYPE.EXTERNAL}>Jest</Link> is a test runner. This means that it runs the tests you have written and tells you if the code passes or fails those tests.</p>
