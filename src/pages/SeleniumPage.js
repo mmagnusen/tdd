@@ -3,7 +3,7 @@ import { Selenium, Helmet } from '../components'
 
 const SeleniumPage = () => (
   <Fragment>
-    <Helmet title='Selenium Testing with React.js || Clearli.io'/>
+    <Helmet title='Selenium Testing with React.js'/>
     <Selenium />
   </Fragment>
 );

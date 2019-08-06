@@ -3,7 +3,7 @@ import { Resources, Helmet } from '../components'
 
 const ResourcesPage = () => (
   <Fragment>
-    <Helmet title='Front-end testing resources || Clearli.io'/>
+    <Helmet title='Front-end testing resources'/>
     <Resources />
   </Fragment>
 );

@@ -4,7 +4,7 @@ import { LINK_TYPE } from '../../../constants';
 
 const DataTypes = () => (
     <Fragment>
-        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
+        <Helmet title='JavaScript Data Types'/>
         <section className='white-content'>
             <h1>Primitives and Objects</h1>
             <p>There are two types of data in JavaScript:</p>

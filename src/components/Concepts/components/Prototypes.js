@@ -3,7 +3,7 @@ import { Gist, Helmet } from '../../../components';
 
 const Prototypes = () => (
     <Fragment>
-        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
+        <Helmet title='JavaScript Prototypes'/>
         <section className='white-content'>
             <h1>Prototypes</h1>
             <p>We've already discovered there are two types of data in JavaScript:</p>

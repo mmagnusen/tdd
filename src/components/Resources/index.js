@@ -1,9 +1,11 @@
-import React from 'react';
-import { Link } from '../index';
+import React, { Fragment }  from 'react';
+import { Link, Helmet } from '../index';
 import { LINK_TYPE } from '../../constants/'
 import './Resources.scss';
 
 const Resources = () => (
+    <Fragment>
+    <Helmet title='JavaScript Front-end Testing Resources'/>
     <section className='Resources'>
         <section className='container'>
                 <section className='white-content'>
@@ -109,6 +111,7 @@ const Resources = () => (
 
         </section>
     </section>
+    </Fragment>
 );
 
 export default Resources;

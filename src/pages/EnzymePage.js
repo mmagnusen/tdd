@@ -3,7 +3,7 @@ import { Enzyme, Helmet } from '../components'
 
 const EnzymePage = () => (
   <Fragment>
-    <Helmet title='Enzyme Testing with React.js || Clearli.io'/>
+    <Helmet title='Enzyme Testing with React.js'/>
     <Enzyme />
   </Fragment>
 );

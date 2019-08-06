@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
-import { Command, Gist, Link } from '../../../components';
+import { Command, Gist, Link, Helmet } from '../../../components';
 import { LINK_TYPE } from '../../../constants';
 import { calculate } from '../../../assets';
 
 const WritingATest = () => (
     <Fragment>
+        <Helmet title='Writing a Test with Jest: JavaScript'/>
         <section className='white-content'>
             <h1>Writing a test</h1>
 

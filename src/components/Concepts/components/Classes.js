@@ -4,7 +4,7 @@ import { inherited } from '../../../assets';
 
 const Class = () => (
     <Fragment>
-        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
+        <Helmet title='JavaScript Classes '/>
         <section className='white-content'>
             <h1>What is a class?</h1>
             <p>We create a class with the <span className='variable'>class</span> keyword.</p>

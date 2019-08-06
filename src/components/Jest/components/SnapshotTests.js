@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
-import { Command, Link, Gist } from '../../../components';
+import { Command, Link, Gist, Helmet } from '../../../components';
 import { NoTests, smoke, BlankSlate, AppTest, TestRenderer, AppSnapshot, AppSnapshotTerminal } from '../../../assets';
 import { LINK_TYPE } from '../../../constants'; 
 
 const SnapshotTests = () => (
     <Fragment>
+        <Helmet title='Jest Snapshots: JavaScript Testing'/>
         <section className='white-content'>
             <h1>What are snapshot tests?</h1>
             <p>Snapshots tests are tests which tells you if the html structure of your component has changed.</p>

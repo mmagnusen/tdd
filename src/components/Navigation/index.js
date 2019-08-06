@@ -13,7 +13,7 @@ const Navigation = () => (
                 <Link to='/how-to/add-javascript' type={LINK_TYPE.INTERNAL}> 
                     <p>How to Guides</p>
                 </Link>
-                <Link to='/concepts/classes' type={LINK_TYPE.INTERNAL}> 
+                <Link to='/concepts/javascript/classes' type={LINK_TYPE.INTERNAL}> 
                     <p>Concepts</p>
                 </Link>
                 <Link to='/jest/what-is-jest' type={LINK_TYPE.INTERNAL}> 

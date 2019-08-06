@@ -5,19 +5,63 @@
 
 <url> 
     <loc>https://www.clearli.io/</loc> 
-      <lastmod>2019-07-21T01:52:41+00:00</lastmod>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
 </url>
 <url> 
-    <loc>https://www.clearli.io/jest</loc>
-    <lastmod>2019-07-21T01:52:41+00:00</lastmod>
+    <loc>https://www.clearli.io/how-to/add-javascript</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/how-to/add-sass</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/how-to/run-a-local-server</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/concepts/javascript/classes</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/concepts/javascript/scope</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/concepts/javascript/this</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/concepts/javascript/var-let-const</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/concepts/javascript/data-types</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/concepts/javascript/prototypes</loc>
+    <lastmod>2019-08-06T01:52:41+00:000</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/jest/what-is-jest</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/jest/snapshot-tests</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
+</url>
+<url> 
+    <loc>https://www.clearli.io/jest/writing-a-test</loc>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
 </url>
 <url> 
     <loc>https://www.clearli.io/selenium</loc>
-    <lastmod>2019-07-21T01:52:41+00:00</lastmod>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
 </url>
 <url> 
     <loc>https://www.clearli.io/resources</loc>
-    <lastmod>2019-07-21T01:52:41+00:00</lastmod>
+    <lastmod>2019-08-06T01:52:41+00:00</lastmod>
 </url>
 
 </urlset>

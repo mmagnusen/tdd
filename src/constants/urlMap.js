@@ -5,12 +5,12 @@ export const URL_MAP = {
         2: 'run-a-local-server',
     },
     concepts: {
-        0: 'classes',
-        1: 'scope',
-        2: 'this',
-        3: 'var-let-const',
-        4: 'data-types',
-        5: 'prototypes',
+        0: 'javascript/classes',
+        1: 'javascript/scope',
+        2: 'javascript/this',
+        3: 'javascript/var-let-const',
+        4: 'javascript/data-types',
+        5: 'javascript/prototypes',
     },
     jest: {
         0: 'what-is-jest',
