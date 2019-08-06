@@ -37,12 +37,12 @@ class Footer extends Component {
                 </ul>
                 <ul>
                     <h4>Concepts</h4>
-                    <li onClick={() => this.updateActiveIndex('concepts', 0)}><Link to='/concepts/classes' type={LINK_TYPE.INTERNAL}>Classes</Link></li>
-                    <li onClick={() => this.updateActiveIndex('concepts', 1)}><Link to='/concepts/scope' type={LINK_TYPE.INTERNAL}>Scope</Link></li>
-                    <li onClick={() => this.updateActiveIndex('concepts', 2)}><Link to='/concepts/this' type={LINK_TYPE.INTERNAL}>This</Link></li>
-                    <li onClick={() => this.updateActiveIndex('concepts', 3)}><Link to='/concepts/var-let-const' type={LINK_TYPE.INTERNAL}>Var, Let, Const</Link></li>
-                    <li onClick={() => this.updateActiveIndex('concepts', 4)}><Link to='/concepts/data-types' type={LINK_TYPE.INTERNAL}>Data Types</Link></li>
-                    <li onClick={() => this.updateActiveIndex('concepts', 5)}><Link to='/concepts/prototypes' type={LINK_TYPE.INTERNAL}>Prototypes</Link></li>
+                    <li onClick={() => this.updateActiveIndex('concepts', 0)}><Link to='/concepts/javascript/classes' type={LINK_TYPE.INTERNAL}>Classes</Link></li>
+                    <li onClick={() => this.updateActiveIndex('concepts', 1)}><Link to='/concepts/javascript/scope' type={LINK_TYPE.INTERNAL}>Scope</Link></li>
+                    <li onClick={() => this.updateActiveIndex('concepts', 2)}><Link to='/concepts/javascript/this' type={LINK_TYPE.INTERNAL}>This</Link></li>
+                    <li onClick={() => this.updateActiveIndex('concepts', 3)}><Link to='/concepts/javascript/var-let-const' type={LINK_TYPE.INTERNAL}>Var, Let, Const</Link></li>
+                    <li onClick={() => this.updateActiveIndex('concepts', 4)}><Link to='/concepts/javascript/data-types' type={LINK_TYPE.INTERNAL}>Data Types</Link></li>
+                    <li onClick={() => this.updateActiveIndex('concepts', 5)}><Link to='/concepts/javascript/prototypes' type={LINK_TYPE.INTERNAL}>Prototypes</Link></li>
                 </ul>
             </div>
         </footer>

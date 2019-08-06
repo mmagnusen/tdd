@@ -10,12 +10,13 @@ import './Concepts.scss';
 class Concepts extends Component {
     componentDidMount() {
         const slug = this.props.match.params.slug;
-        this.updateActiveIndex(getNavigationIndex('concepts', slug));
+        const activeIndex = getNavigationIndex('concepts', slug)
+        this.updateActiveIndex(activeIndex);
     }
 
     componentDidUpdate() {
         const slug = this.props.match.params.slug;
-        this.updateActiveIndex(getNavigationIndex('concepts', slug));
+        this.updateActiveIndex(getNavigationIndex('concepts', `javascript/${slug}`));
     }
 
     updateActiveIndex = (activeIndex) => {
@@ -24,22 +25,22 @@ class Concepts extends Component {
 
     updateNavigation = () => (
         <ul>
-            <Link to='/concepts/classes' type={LINK_TYPE.INTERNAL}>
+            <Link to='/concepts/javascript/classes' type={LINK_TYPE.INTERNAL}>
                 <li onClick={() => this.updateActiveIndex(0)}>Classes</li>
             </Link>
-            <Link to='/concepts/scope' type={LINK_TYPE.INTERNAL}>
+            <Link to='/concepts/javascript/scope' type={LINK_TYPE.INTERNAL}>
                 <li onClick={() => this.updateActiveIndex(1)}>Scope</li>
             </Link>
-            <Link to='/concepts/this' type={LINK_TYPE.INTERNAL}>
+            <Link to='/concepts/javascript/this' type={LINK_TYPE.INTERNAL}>
                 <li onClick={() => this.updateActiveIndex(2)}>This</li>
             </Link>
-            <Link to='/concepts/var-let-const' type={LINK_TYPE.INTERNAL}>
+            <Link to='/concepts/javascript/var-let-const' type={LINK_TYPE.INTERNAL}>
                 <li onClick={() => this.updateActiveIndex(3)}>Var, Let, Const</li>
             </Link>
-            <Link to='/concepts/data-types' type={LINK_TYPE.INTERNAL}>
+            <Link to='/concepts/javascript/data-types' type={LINK_TYPE.INTERNAL}>
                 <li onClick={() => this.updateActiveIndex(4)}>Data types</li>
             </Link>
-            <Link to='/concepts/prototypes' type={LINK_TYPE.INTERNAL}>
+            <Link to='/concepts/javascript/prototypes' type={LINK_TYPE.INTERNAL}>
                 <li onClick={() => this.updateActiveIndex(5)}>Prototypes</li>
             </Link>
         </ul>

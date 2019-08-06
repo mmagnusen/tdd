@@ -5,7 +5,7 @@ import { LINK_TYPE } from '../../../constants/'
 
 const Scope = () => (
     <Fragment>
-        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
+        <Helmet title='JavaScript Scope'/>
         <section className='white-content'>
             <h1>What is scope?</h1>
             <p>Scope determines how and from where a variable can be accessed. Whether or not you can access a variable depends on:</p>

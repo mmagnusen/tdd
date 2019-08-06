@@ -29,7 +29,7 @@ class AppRouter extends Component {
                         <Route path='/selenium' component={SeleniumPage} exact={true}/>
                         <Route path='/resources' component={ResourcesPage} exact={true}/>
                         <Route path='/how-to/:slug' component={HowToPage} />
-                        <Route path='/concepts/:slug' component={ConceptsPage} />
+                        <Route path='/concepts/javascript/:slug' component={ConceptsPage} />
                     </Switch>
                     <Footer />
                 </BrowserRouter>

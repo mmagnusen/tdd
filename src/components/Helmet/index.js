@@ -5,7 +5,7 @@ import { Helmet as ReactHelmet } from 'react-helmet';
 const Helmet = ({ title, description }) => (
     <ReactHelmet>
         <meta charSet="utf-8" />
-        <title>{ title }</title>
+        <title>{`${title} || Clearli.io` }</title>
         <meta name="description" content={description} />
     </ReactHelmet>
 );
@@ -16,7 +16,7 @@ Helmet.propTypes = {
 }
 
 Helmet.defaultProps = {
-    title: 'Front-end tutorials for JavaScript || Clearli.io',
+    title: 'Front-end tutorials for JavaScript',
     description: 'Master JavaScript with a range of tutorials to help you understand the core concepts.',
 }
 

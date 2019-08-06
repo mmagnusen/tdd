@@ -5,7 +5,7 @@ import { LINK_TYPE } from '../../../constants/';
 
 const This = () => (
     <Fragment>
-        <Helmet title='What is a Class: JavaScript || Clearli.io'/>
+        <Helmet title='This in JavaScript'/>
         <section className='white-content'>
             <h1>What is this?</h1>
             <p><span className='variable'>This</span> always refers to and holds the value of an <span className='variable'>object</span>.</p>
