@@ -1,4 +1,9 @@
 export const URL_MAP = {
+    'javascript-mechanics': {
+        0: 'syntax-parser',
+        1: 'lexical-environment',
+        2: 'execution-context',
+    },
     'how-to': {
         0: 'add-javascript',
         1: 'add-sass',

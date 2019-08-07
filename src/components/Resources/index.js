@@ -41,6 +41,15 @@ const Resources = () => (
                     </section>
 
                     <section className='white-content'>
+                        <h3>Online courses:</h3>
+                        <li>
+                            <Link type={LINK_TYPE.EXTERNAL} to='https://www.udemy.com/share/1000n6BUUfeVpVQHg=/?xref=E0cddVZWQnkFSUQvCz0GJVUWTx4dChQ%2BVFE='>
+                                'JavaScript, understanding the weird parts' by Anthony Alicea
+                            </Link>
+                        </li>
+                    </section>
+
+                    <section className='white-content'>
                     <h3>Jest</h3>
                         <ul>
                             <li>

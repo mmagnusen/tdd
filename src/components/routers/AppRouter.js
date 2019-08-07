@@ -13,6 +13,7 @@ import {
     SeleniumPage,
     HowToPage,
     ConceptsPage,
+    MechanicsPage
 } from '../../components';
 import './App.scss';
 
@@ -28,6 +29,7 @@ class AppRouter extends Component {
                         <Route path='/enzyme' component={EnzymePage} exact={true}/>
                         <Route path='/selenium' component={SeleniumPage} exact={true}/>
                         <Route path='/resources' component={ResourcesPage} exact={true}/>
+                        <Route path='/javascript-mechanics/:slug' component={MechanicsPage} />
                         <Route path='/how-to/:slug' component={HowToPage} />
                         <Route path='/concepts/javascript/:slug' component={ConceptsPage} />
                     </Switch>

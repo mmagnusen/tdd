@@ -11,6 +11,7 @@ export { default as Navigation } from './Navigation';
 export { default as PageNavigation } from './PageNavigation'; 
 export { default as Helmet } from './Helmet';
 
+export { default as Mechanics } from './Mechanics';
 export { default as HowTo } from './HowTo';
 export { default as Concepts } from './Concepts';
 export { default as Jest } from './Jest';
@@ -25,3 +26,4 @@ export { default as EnzymePage } from '../pages/EnzymePage';
 export { default as SeleniumPage } from '../pages/SeleniumPage';
 export { default as HowToPage } from '../pages/HowToPage';
 export { default as ConceptsPage } from '../pages/ConceptsPage';
+export { default as MechanicsPage } from '../pages/MechanicsPage';

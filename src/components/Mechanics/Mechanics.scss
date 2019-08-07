@@ -1,0 +1,25 @@
+@import '../../constants/styles/sass-variables/colors';
+
+$module: 'Mechanics';
+
+.#{$module} { 
+    background: $ash;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    
+    img {
+        margin-top: 1rem;
+    }
+
+    .page-title {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-column-gap: 10px;
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-column-gap: 10px;
+    }
+}
