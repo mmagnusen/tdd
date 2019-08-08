@@ -12,16 +12,23 @@ const ExecutionContext = () => (
             <section className='container'>
                 <section className='white-content'>
                     <h1>What is the Execution Context?</h1>
-                    <p>Lexical: "Relating to the words or vocabulary of a language" - <Link type={LINK_TYPE.EXTERNAL} to='https://www.lexico.com/en/definition/lexical'>Oxford English Dictionary</Link></p>
-                    <p>In programming, this means wh</p>
+                    <p>We already know there can be multple lexical environments. The current lexical environment is determined by execution contexts.</p>
+                    <p>Execution contexts </p>
+                    <p>When your code is run by the JavaScript engine, it will be run in an execution context.</p>
+                    <p>There are two types of execution contexts:</p>
+                    <ul>  
+                        <li>Global execution context</li>
+                        <li>Function execution context</li>
+                    </ul>
                 </section>
                 <section className='white-content'>
+                    <h1>Global execution context</h1>
+                    <p>This is created before any code is executed.</p>
                 </section>
                 <section className='white-content'>
-                    <h1>Further reading</h1>
-                    <p><Link type={LINK_TYPE.EXTERNAL} to='https://medium.com/@easyexpresssoft/javascript-syntax-parser-4b7f3f320ebe'>Javascript Syntax Parser</Link></p>
+                    <h1>Function execution context</h1>
+                    <p>A new function execution context is created each time a function is called.</p>
                 </section>
-                
             </section>
         </div>
     </Fragment>

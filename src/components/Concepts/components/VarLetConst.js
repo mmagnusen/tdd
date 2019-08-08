@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-import { Gist, Helmet } from '../../../components';
+import { Gist, Helmet, Link } from '../../../components';
+import { LINK_TYPE } from '../../../constants';
 
 const VarLetConst = () => (
     <Fragment>
@@ -35,6 +36,11 @@ const VarLetConst = () => (
             <p><span className='variable'>const</span> means the variable cannot be re-declared and a new value cannot be assigned to it.</p>
             <p>You should use <span className='variable'>const</span> for values you know will never change, like 24 hours in a day or 7 days in a week.</p>
             <Gist id='36a21bc1cec55584ee5f91aa361d0f3c' />
+        </section>
+
+        <section className='white-content'>
+            <h1>Further reading</h1>
+            <p><Link type={LINK_TYPE.EXTERNAL} to='https://medium.com/@js_tut/javascript-tutorial-lexical-environment-3ee161bb2295'>how var, const, let relates to lexical environment</Link></p>
         </section>
     </Fragment>
 );
