@@ -40,12 +40,12 @@ class Mechanics extends Component {
         const { activeIndex } = this.props;
 
         return (
-            <div className='HowTo'>
+            <div className='Mechanics'>
                 <div className='container'> 
-                    <div className='HowTo-content'>
+                    <div className='Mechanics-content'>
                         <PageNavigation>{this.updateNavigation()}</PageNavigation>
 
-                        <div className='HowTo-rightSection'>
+                        <div className='Mechanics-rightSection'>
                             {activeIndex === 0 && <SyntaxParser />}
                             {activeIndex === 1 && <LexicalEnvironment />}
                             {activeIndex === 2 && <ExecutionContext />}

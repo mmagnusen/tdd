@@ -38,8 +38,8 @@ const AddJavaScript = () => (
                     <li>Link to seperate JavaScript file</li>
                 </ul>
             <br/>
-
         </section>
+        
         <section className='white-content'>
             <h1>Write your JavaScript code directly within the script tags</h1>
             <h4>Script tag in head</h4>
