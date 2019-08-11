@@ -88,8 +88,9 @@ const ExecutionContext = () => (
             <h4>Undefined</h4>
             <p>Another process during the creation stage is that all variables are allocated a value of undefined. Read more about <Link type={LINK_TYPE.INTERNAL} to='/concepts/javascript/data-types'> JavaScript data types</Link></p>
             
-            <h4>Code execution</h4>
-            <p>The second phase of the execution context is <span className='variable'>code execution</span></p>
+            <h4>Execution Phase </h4>
+            <p>The second phase of the execution context is <span className='variable'>code execution</span>.</p>
+            <p>This is where the JavaScript engine goes through your code line by line and executes each line.</p>
            
 
         </section>

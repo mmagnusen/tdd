@@ -16,6 +16,7 @@ export const URL_MAP = {
         3: 'javascript/var-let-const',
         4: 'javascript/data-types',
         5: 'javascript/prototypes',
+        6: 'javascript/synchronous',
     },
     jest: {
         0: 'what-is-jest',
