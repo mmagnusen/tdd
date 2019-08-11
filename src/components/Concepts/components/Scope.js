@@ -59,16 +59,6 @@ const Scope = () => (
         </section>
 
         <section className='white-content'>
-            <h1>Hoisting</h1>
-            <p>Normally when code runs, it runs from top to bottom, left to right.</p>
-            <p>Hoisting is the process whereby variable declarations are hoisted to the top, meaning it can be accessed at any time. For example:</p>
-            <Gist id='dc704a65525c5cfe7966d519810076e7' />
-            <p><span className='variable'>birthday()</span> is being called before it is declared. This works because the <span className='variable'>birthday()</span> function has been hoisted to the top, and so is available from the first line of the script.</p>
-            <p>Important: only function declarations are hoisted, not function expressions. Our example above works because it is a function declaration. The code below does not work because it is a function expression:</p>
-            <Gist id='819e065edf475397490f610147fdb1b6' />
-        </section>
-
-        <section className='white-content'>
             <h1>Closures</h1>
             <p>A definition taken from <Link type={LINK_TYPE.EXTERNAL} to='https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition'>'Secrets of the JavaScript Ninja'</Link>: A closure is a way to access and manipulate external variables from within a function.</p>
             <p>Consider this function. What would you expect age to be?</p>

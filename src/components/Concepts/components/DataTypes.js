@@ -40,11 +40,15 @@ const DataTypes = () => (
             <Gist id='c6f92438f6ea8d0551cc1fb1fe9f590a' />
 
             <h4>Undefined</h4>
-            <p><span className='variable'>Undefined</span> means the value is not assigned.</p>
+            <p><span className='variable'>Undefined</span> means the value is not set.</p>
+            <p>During the creation phase of the global execution context, all variables initially have an <span className='variable'>undefined</span> value.</p>
             <p>You should avoid assigning <span className='variable'>undefined</span> to variables, but instead use <span className='variable'>null</span>.</p>
             <p>We use <span className='variable'>undefined</span> to check if a variable has been declared and if a value is assigned to it.</p>
             <Gist id='15962fde83805b1c8a4ec4bf9cba75dc' />
-
+            <p>We see here that <span className='variable'>undefined</span> means the variable is declared, but a value has not been assigned to it:</p>
+            <Gist id='4ee7ff59abaa5bb6220686e9abe1715e' />
+            <p>It is only when a value is assigned to it, that it stops being <span className='variable'>undefined</span> :</p>
+            <Gist id='400983ad9f32cc6f7c753979fb106f0b' />
             <h4>Symbol</h4>
             <p>For a detailed explanation:</p>
             <Link type={LINK_TYPE.EXTERNAL} to='https://www.keithcirkel.co.uk/metaprogramming-in-es6-symbols/'>https://www.keithcirkel.co.uk/metaprogramming-in-es6-symbols/</Link>
