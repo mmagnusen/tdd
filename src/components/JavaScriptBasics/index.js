@@ -16,11 +16,6 @@ class JavaScriptBasics extends Component {
         this.updateActiveIndex(chapter, activeIndex);
     }
 
-    componentDidUpdate() {
-        // const slug = this.props.match.params.slug;
-        // this.updateActiveIndex(getNavigationIndex('javascriptBasics', `javascript/${slug}`));
-    }
-
     updateActiveIndex = (chapter, activeIndex) => {
       this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'javascriptBasics', chapter, activeIndex}))
     }
@@ -66,14 +61,14 @@ class JavaScriptBasics extends Component {
 
         return (
             <div className='JavaScriptBasics'>
-                <div className='wide-container'> 
+                <div className='container'> 
                     <div className='JavaScriptBasics-content'>
                         <CourseNavigation courseTitle='JavaScript Basics'>{this.updateNavigation()}</CourseNavigation>
 
                         <div className='JavaScriptBasics-rightSection'>
                             {activeChapter.chapter === 'introduction' && <Introduction activeChapter={activeChapter} slug={match.params.slug} />}
-                            {activeChapter.chapter === 'adding-javascript' && <AddingJavaScript activeIndex={activeChapter.activeIndex} slug={match.params.slug} />}
-                            {activeChapter.chapter === 'document-object-model' && <DocumentObjectModel activeIndex={activeChapter.activeIndex} slug={match.params.slug} />}
+                            {activeChapter.chapter === 'adding-javascript' && <AddingJavaScript activeChapter={activeChapter} slug={match.params.slug} />}
+                            {activeChapter.chapter === 'document-object-model' && <DocumentObjectModel activeChapter={activeChapter} slug={match.params.slug} />}
                         </div>
 
                     </div>

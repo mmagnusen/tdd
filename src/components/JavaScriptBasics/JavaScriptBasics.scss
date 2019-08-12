@@ -11,10 +11,10 @@ $module: 'JavaScriptBasics';
         margin-top: 1rem;
     }
 
-    .page-title {
-        display: grid;
-        grid-template-columns: 180px 1fr;
-        grid-column-gap: 10px;
+    &-pageTitle {
+     background: $ashGrey;;
+     color: $white;
+     padding: 0.5rem 1rem;
     }
 
     &-content {

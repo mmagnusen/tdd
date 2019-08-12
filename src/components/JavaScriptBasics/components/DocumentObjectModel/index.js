@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import WhatIsTheDom from './WhatIsTheDom';
+import ManipulatingDom from './ManipulatingDom';
 
 class DocumentObjectModel extends Component {
     renderPageTitle = () => {
@@ -11,18 +13,19 @@ class DocumentObjectModel extends Component {
         }
 
         return   (
-            <div>
-                <h1>The DOM: {`${titleMap[slug]}`}</h1>
+            <div className='JavaScriptBasics-pageTitle'>
+                <h4>The DOM: {`${titleMap[slug]}`}</h4>
             </div>
         )
     }
     render() {
-        const { activeIndex } = this.props;
+        const { activeChapter } = this.props;
 
         return (
             <div>
                 {this.renderPageTitle()}
-
+                {activeChapter.activeIndex === 0 && <WhatIsTheDom />}
+                {activeChapter.activeIndex === 1 && <ManipulatingDom />}
             </div>
         )
     }   

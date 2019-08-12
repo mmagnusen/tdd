@@ -17,9 +17,9 @@ class CourseNavigationChapter extends Component {
 
          return (
             <div>
-                <div className='CourseNavigation-chapterHeading'>
+                <div className='CourseNavigation-chapterHeading' onClick={this.toggleChapter}>
                     <h4>{chapterHeading}</h4>
-                    {<i className={chapterOpen ? "fas fa-chevron-up" : "fas fa-chevron-down"} onClick={this.toggleChapter}/>}
+                    {<i className={chapterOpen ? "fas fa-chevron-up" : "fas fa-chevron-down"} />}
                 </div>
                 {chapterOpen ? children : null}
             </div>

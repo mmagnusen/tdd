@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import WhatIsJavaScript from './WhatIsJavaScript';
+import WhatCanYouDo from './WhatCanYouDo';
 
 class Introduction extends Component {
     renderPageTitle = () => {
@@ -11,18 +13,19 @@ class Introduction extends Component {
         }
 
         return   (
-            <div>
-                <h1>Introduction: {`${titleMap[slug]}`}</h1>
+            <div className='JavaScriptBasics-pageTitle'>
+                <h4>Introduction: {`${titleMap[slug]}`}</h4>
             </div>
         )
     }
     render() {
-        const { activeIndex } = this.props;
+        const { activeChapter } = this.props;
 
         return (
             <div>
                 {this.renderPageTitle()}
-
+                {activeChapter.activeIndex === 0 && <WhatIsJavaScript />}
+                {activeChapter.activeIndex === 1 && <WhatCanYouDo />}
             </div>
         )
     }   

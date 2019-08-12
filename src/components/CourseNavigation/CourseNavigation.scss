@@ -19,12 +19,7 @@ $module: 'CourseNavigation';
         display: flex;
         justify-content: space-between;
         align-items: center;
-        i {
-            cursor: pointer;
-        }
-        // h4 {
-        //     margin: 0.5rem 0;
-        // }
+        cursor: pointer;
     }
 
     ul {

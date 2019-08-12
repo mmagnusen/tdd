@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ScriptTags from './ScriptTags';
+import SeparateFile from './SeparateFile';
 
 class AddingJavaScript extends Component {
     renderPageTitle = () => {
@@ -11,18 +13,19 @@ class AddingJavaScript extends Component {
         }
 
         return   (
-            <div>
-                <h1>Adding JavaScript to a project: {`${titleMap[slug]}`}</h1>
+            <div className='JavaScriptBasics-pageTitle'>
+                <h4>Adding JavaScript to a project: {`${titleMap[slug]}`}</h4>
             </div>
         )
     }
     render() {
-        const { activeIndex } = this.props;
+        const { activeChapter } = this.props;
 
         return (
             <div>
                 {this.renderPageTitle()}
-
+                {activeChapter.activeIndex === 0 && <ScriptTags />}
+                {activeChapter.activeIndex === 1 && <SeparateFile />}
             </div>
         )
     }   

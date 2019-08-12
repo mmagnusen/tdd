@@ -5,13 +5,13 @@ $module: 'Navigation';
 
 .#{$module} { 
     &-inner {
-        height: 70px;
+        height: 90px;
         display: grid;
         grid-template-columns: 200px 1fr;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
         @media screen and (min-width: $tabletBreakpoint) {
-            width: 70%;
+            width: 80%;
         }
 
         h1 {
