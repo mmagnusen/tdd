@@ -22,3 +22,5 @@ export { default as NameGlobal } from './name-global.png';
 export { default as ReturnNameGlobal } from './return-name-global.png';
 export { default as HoistedGreetingOne } from './hoisted-greeting-one.png';
 export { default as HoistingReferenceError } from './hoisting-reference-error.png';
+export { default as ExecutionStackOne } from './execution-stack-one.png';
+export { default as ExecutionStackTwo } from './execution-stack-two.png';

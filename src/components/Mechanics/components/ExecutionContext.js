@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Helmet, Gist, Command, Link } from '../../';
-import { ThisGlobal, NameGlobal, ReturnNameGlobal, HoistedGreetingOne, HoistingReferenceError } from '../../../assets/';
+import { ThisGlobal, NameGlobal, ReturnNameGlobal, HoistedGreetingOne, HoistingReferenceError, ExecutionStackOne, ExecutionStackTwo } from '../../../assets/';
 import { LINK_TYPE } from '../../../constants/';
 
 const ExecutionContext = () => (
@@ -96,7 +96,33 @@ const ExecutionContext = () => (
         </section>
         <section className='white-content'>
             <h1>Function execution context</h1>
+
+            <p>There are two parts to any function:</p>
+            <ul>
+                <li>Creating the function</li>
+                <li>Invoking the function</li>
+            </ul>
+
+            <h4>Function invocation</h4>
+            <p>Function invocation means to call a function. This is also known as executing a funtion.</p>
+            <p>We call a function by typing out the name of the function, followed immediately by a set of paranthesis eg <span className='variable'>myFunction()</span></p>
+        
+            <Gist id='6c3c0eb5cf27c42c964d13840c932da9' />
+            <p>We create the function on line 1</p>
+            <p>We call the function on line 5</p>
+                    
+            <h4>The function execution stack</h4>
             <p>A new function execution context is created each time a function is called.</p>
+            <p>What would you expect to see logged to the console here?</p>
+            <Gist id='1522666fba5dde6a63e3440e491282cb' />
+            <p>answer:</p>
+            <img src={ExecutionStackOne} alt='execution stack logged to console'/>
+
+            <p>Let's switch up the order of the calls</p>
+            <Gist id='19b66672a107347a1b4288b8d07188c7' />
+            <p>Can you guess what will be printed to the console?</p>
+            <p>answer:</p>
+            <img src={ExecutionStackTwo} alt='execution stack logged to console'/>
         </section>
     </Fragment>
 );
