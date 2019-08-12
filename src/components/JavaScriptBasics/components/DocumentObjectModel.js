@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 
-class Introduction extends Component {
+class DocumentObjectModel extends Component {
     renderPageTitle = () => {
         
         const { slug } = this.props;
 
         const titleMap = {
-            'what-is-javascript': 'What is JavaScript',
-            'what-can-you-do-with-javascript': 'What can you do with JavaScript'
+            'what-is-the-dom': 'What is the DOM',
+            'manipulating-the-dom': 'Manipulating the DOM',
         }
 
         return   (
             <div>
-                <h1>Introduction: {`${titleMap[slug]}`}</h1>
+                <h1>The DOM: {`${titleMap[slug]}`}</h1>
             </div>
         )
     }
@@ -27,5 +27,4 @@ class Introduction extends Component {
         )
     }   
 }
-
-export default Introduction;
+export default DocumentObjectModel;

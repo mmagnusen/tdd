@@ -61,7 +61,7 @@ class Jest extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.jest
+        activeIndex: state.navigation.jest.activeIndex
     }
 };
 

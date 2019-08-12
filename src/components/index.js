@@ -7,6 +7,7 @@ export { default as Gist } from './atom/Gist';
 // larger components
 export { default as Concepts } from './Concepts';
 export { default as CourseNavigation } from './CourseNavigation';
+export { default as CourseNavigationChapter } from './CourseNavigation/Chapter';
 export { default as Enzyme } from './Enzyme';
 export { default as Footer } from './Footer';
 export { default as Helmet } from './Helmet';

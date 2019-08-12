@@ -78,7 +78,7 @@ class Concepts extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.concepts
+        activeIndex: state.navigation.concepts.activeIndex
     }
 };
 

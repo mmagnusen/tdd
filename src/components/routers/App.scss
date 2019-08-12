@@ -55,6 +55,16 @@ a:visited {
   }
 }
 
+.wide-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  @media screen and (min-width: $tabletBreakpoint) {
+      width: 80%;
+  }
+}
+
+
 .white-content {
   background: $white;
   margin-bottom: 1rem;

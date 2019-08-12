@@ -60,7 +60,7 @@ class Mechanics extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.mechanics
+        activeIndex: state.navigation.mechanics.activeIndex
     }
 };
 

@@ -1,9 +1,24 @@
 const defaultNavigationState = {
-    jest: 0,
-    howTo: 0,
-    concepts: 0,
-    mechanics: 0,
-    javascriptBasics: 0,
+    jest: {
+        chapter: null,
+        activeIndex: 0,
+    },
+    howTo: {
+        chapter: null,
+        activeIndex: 0,
+    },
+    concepts: {
+        chapter: null,
+        activeIndex: 0,
+    },
+    mechanics: {
+        chapter: null,
+        activeIndex: 0,
+    },
+    javascriptBasics: {
+        chapter: 'introduction',
+        activeIndex: 0,
+    },
 };
 
 export default defaultNavigationState
