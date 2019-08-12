@@ -22,5 +22,11 @@ export const URL_MAP = {
         0: 'what-is-jest',
         1: 'snapshot-tests',
         2: 'writing-a-test',    
+    },
+    courses: {
+        'javascript-basics': {
+            0: 'introduction',
+        }
     }
+
 }

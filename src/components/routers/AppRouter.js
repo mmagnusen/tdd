@@ -11,7 +11,8 @@ import {
     SeleniumPage,
     HowToPage,
     ConceptsPage,
-    MechanicsPage
+    MechanicsPage,
+    JavaScriptBasicsPage
 } from '../../components';
 import './App.scss';
 
@@ -29,6 +30,7 @@ class AppRouter extends Component {
                         <Route path='/javascript-mechanics/:slug' component={MechanicsPage} />
                         <Route path='/how-to/:slug' component={HowToPage} />
                         <Route path='/concepts/javascript/:slug' component={ConceptsPage} />
+                        <Route path='/courses/javascript-basics/:slug' component={JavaScriptBasicsPage} />
                     </Switch>
                 </BrowserRouter>
             </Provider>

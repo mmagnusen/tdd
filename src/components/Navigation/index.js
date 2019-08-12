@@ -10,6 +10,9 @@ const Navigation = () => (
                 <h1>Clearli</h1>
             </Link>
             <div className='Navigation-resources'>
+            <Link to='/courses/javascript-basics/introduction' type={LINK_TYPE.INTERNAL}> 
+                    <p>Basics Course</p>
+                </Link>
                 <Link to='/javascript-mechanics/syntax-parser' type={LINK_TYPE.INTERNAL}> 
                     <p>Mechanics</p>
                 </Link>

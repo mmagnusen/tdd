@@ -1,0 +1,25 @@
+@import '../../constants/styles/sass-variables/colors';
+
+$module: 'CourseNavigation';
+
+.#{$module} { 
+    background: $white;
+    height: min-content;
+    min-height: 300px;
+    border-radius: 4px;
+
+    ul {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    li {
+        list-style: none;
+        margin: 1rem 0;
+        padding: 0.5rem;
+        cursor: pointer;
+        &:hover {
+            background: $lightGrey;
+        }
+    }
+}
