@@ -26,8 +26,9 @@ export const URL_MAP = {
     courses: {
         'javascript-basics': {
             introduction: {
-                0: 'what-is-javascript',
-                1: 'what-can-you-do-with-javascript'
+                0: 'overview',
+                1: 'what-is-javascript',
+                2: 'what-can-you-do-with-javascript'
             },
             'adding-javascript': {
                 0: 'script-tags',

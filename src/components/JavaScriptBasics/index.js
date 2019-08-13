@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { CourseNavigation, CourseNavigationChapter, Link } from '../../components/';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import { LINK_TYPE } from '../../constants';
-import { Introduction, AddingJavaScript, DocumentObjectModel } from './components';
+import { Overview, Introduction, AddingJavaScript, DocumentObjectModel } from './components';
 import { getNavigationIndex } from '../../utils';
 import './JavaScriptBasics.scss';
 
@@ -24,15 +24,83 @@ class JavaScriptBasics extends Component {
         <Fragment>
             <CourseNavigationChapter chapterHeading='Introduction'>
                 <ul>
+                    <Link to='/courses/javascript-basics/introduction/overview' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('introduction', 0)}>Overview</li>
+                    </Link>
                     <Link to='/courses/javascript-basics/introduction/what-is-javascript' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('introduction', 0)}>What is JavaScript</li>
+                        <li onClick={() => this.updateActiveIndex('introduction', 1)}>What is JavaScript</li>
                     </Link>
                     <Link to='/courses/javascript-basics/introduction/what-can-you-do-with-javascript' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('introduction', 1)}>What can you do with JavaScript</li>
+                        <li onClick={() => this.updateActiveIndex('introduction', 2)}>What can you do with JavaScript</li>
                     </Link>
                 </ul>
             </CourseNavigationChapter>
             <CourseNavigationChapter chapterHeading='Adding JavaScript to a project'>
+                <ul>
+                    <Link to='/courses/javascript-basics/adding-javascript/script-tags' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 0)}>Within script tags</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Separate file</li>
+                    </Link>
+                </ul>
+            </CourseNavigationChapter>
+            <CourseNavigationChapter chapterHeading='Operators'>
+                <ul>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Assignment operator</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Comparison operator</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/script-tags' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 0)}>Maths operators</li>
+                    </Link>
+                    
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Logical operators</li>
+                    </Link>
+                </ul>
+            </CourseNavigationChapter>
+            <CourseNavigationChapter chapterHeading='Data Types'>
+                <ul>
+                    <Link to='/courses/javascript-basics/adding-javascript/script-tags' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 0)}>Strings</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Numbers</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Booleans</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Arrays</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Functions</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Undefined</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Null</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Objects</li>
+                    </Link>
+                </ul>
+            </CourseNavigationChapter>
+            <CourseNavigationChapter chapterHeading='Classes'>
+                <ul>
+                    <Link to='/courses/javascript-basics/adding-javascript/script-tags' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 0)}>Within script tags</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Separate file</li>
+                    </Link>
+                </ul>
+            </CourseNavigationChapter>
+            <CourseNavigationChapter chapterHeading='Conditionals'>
                 <ul>
                     <Link to='/courses/javascript-basics/adding-javascript/script-tags' type={LINK_TYPE.INTERNAL}>
                         <li onClick={() => this.updateActiveIndex('adding-javascript', 0)}>Within script tags</li>

@@ -1,0 +1,19 @@
+@import '../../../constants/styles/sass-variables/colors';
+
+$module: 'Table';
+
+.#{$module} { 
+  &-head {
+      background: $ash;
+      padding: 0.6rem 0.5rem;
+      border-radius: 4px;
+      h4 {
+          margin: 0;
+      }
+  }
+
+  td {
+      padding: 0.5rem;
+  }
+  margin-bottom: 1rem;
+}
