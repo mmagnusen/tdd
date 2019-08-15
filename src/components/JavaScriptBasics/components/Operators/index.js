@@ -15,8 +15,9 @@ class Operators extends Component {
             'introduction': 'Introduction',
             'type-inference': 'Type inference',
             'assignment-operator': 'Assignment Operator',
-            'comparison-operator': 'Comparison Operator',
-            'logical-operator': 'Logical Operator',
+            'comparison-operator': 'Comparison Operators',
+            'logical-operator': 'Logical Operators',
+            'maths-operator': 'Maths Operators',
         }
 
         return   (
