@@ -20,7 +20,6 @@ class Navigation extends Component {
     }
 }
 
-
   render() {
 
     const { navigationDropDownOpen } = this.state;
