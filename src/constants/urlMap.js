@@ -41,10 +41,11 @@ export const URL_MAP = {
             },
             'operators': {
                 0: 'introduction',
-                1: 'assignment-operator',
-                2: 'comparison-operator',
-                3: 'logical-operator',
-                4: 'maths-operator'
+                1: 'type-inference',
+                2: 'assignment-operator',
+                3: 'comparison-operator',
+                4: 'logical-operator',
+                5: 'maths-operator'
             },
             'document-object-model': {
                 0: 'what-is-the-dom',

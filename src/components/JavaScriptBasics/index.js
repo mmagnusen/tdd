@@ -64,17 +64,20 @@ class JavaScriptBasics extends Component {
                     <Link to='/courses/javascript-basics/operators/introduction' type={LINK_TYPE.INTERNAL}>
                         <li onClick={() => this.updateActiveIndex('operators', 0)}>Introduction</li>
                     </Link>
+                    <Link to='/courses/javascript-basics/operators/type-inference' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('operators', 1)}>Type inference</li>
+                    </Link>
                     <Link to='/courses/javascript-basics/operators/assignment-operator' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('operators', 1)}>Assignment operator</li>
+                        <li onClick={() => this.updateActiveIndex('operators', 2)}>Assignment operator</li>
                     </Link>
                     <Link to='/courses/javascript-basics/operators/comparison-operator' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('operators', 2)}>Comparison operator</li>
+                        <li onClick={() => this.updateActiveIndex('operators', 3)}>Comparison operator</li>
                     </Link>
                     <Link to='/courses/javascript-basics/operators/logical-operator' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('operators', 3)}>Logical operator</li>
+                        <li onClick={() => this.updateActiveIndex('operators', 4)}>Logical operator</li>
                     </Link>
                     <Link to='/courses/javascript-basics/operators/maths-operator' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('operators', 4)}>Maths operator</li>
+                        <li onClick={() => this.updateActiveIndex('operators', 5)}>Maths operator</li>
                     </Link>
                 </ul>
             </CourseNavigationChapter>

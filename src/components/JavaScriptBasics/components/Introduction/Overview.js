@@ -50,14 +50,18 @@ const Overview = () => (
             </tr>
             <tr>
                 <td>10</td>
-                <td>Assignment operator</td>
+                <td>Type inference</td>
             </tr>
             <tr>
                 <td>11</td>
-                <td>Comparison operator</td>
+                <td>Assignment operator</td>
             </tr>
             <tr>
                 <td>12</td>
+                <td>Comparison operator</td>
+            </tr>
+            <tr>
+                <td>13</td>
                 <td>Logical operators</td>
             </tr>
             <tr>

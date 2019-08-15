@@ -4,6 +4,7 @@ import ComparisonOperator from './ComparisonOperator';
 import Introduction from './Introduction';
 import LogicalOperator from './LogicalOperator';
 import MathsOperator from './MathsOperator';
+import TypeInference from './TypeInference';
 
 class Operators extends Component {
     renderPageTitle = () => {
@@ -12,6 +13,7 @@ class Operators extends Component {
 
         const titleMap = {
             'introduction': 'Introduction',
+            'type-inference': 'Type inference',
             'assignment-operator': 'Assignment Operator',
             'comparison-operator': 'Comparison Operator',
             'logical-operator': 'Logical Operator',
@@ -30,10 +32,11 @@ class Operators extends Component {
             <div>
                 {this.renderPageTitle()}
                 {activeChapter.activeIndex === 0 && <Introduction />}
-                {activeChapter.activeIndex === 1 && <AssignmentOperator />}
-                {activeChapter.activeIndex === 2 && <ComparisonOperator />}
-                {activeChapter.activeIndex === 3 && <LogicalOperator />}
-                {activeChapter.activeIndex === 4 && <MathsOperator />}
+                {activeChapter.activeIndex === 1 && <TypeInference />}
+                {activeChapter.activeIndex === 2 && <AssignmentOperator />}
+                {activeChapter.activeIndex === 3 && <ComparisonOperator />}
+                {activeChapter.activeIndex === 4 && <LogicalOperator />}
+                {activeChapter.activeIndex === 5 && <MathsOperator />}
             </div>
         )
     }   
