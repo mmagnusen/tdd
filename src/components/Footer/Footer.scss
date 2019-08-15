@@ -1,5 +1,6 @@
 
 @import '../../constants/styles/sass-variables/colors';
+@import '../../constants/styles/sass-variables/breakpoints';
 
 $module: 'Footer';
 
@@ -7,9 +8,18 @@ $module: 'Footer';
     background: $ashGrey;
 
     .container {
-        padding: 1rem 3rem;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        box-sizing: border-box;
+        @media screen and (min-width: $tabletBreakpoint) {
+            grid-column-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (min-width: $computerBreakpoint) {
+            grid-column-gap: 30px;
+            grid-template-columns: repeat(5, 1fr);
+        }
 
         h4 {
             color: $grey;

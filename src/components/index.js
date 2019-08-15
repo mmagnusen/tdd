@@ -20,6 +20,8 @@ export { default as Navigation } from './Navigation';
 export { default as PageNavigation } from './PageNavigation'; 
 export { default as Resources } from './Resources';
 export { default as Selenium } from './Selenium';
+export { default as MobileNavigation } from './Navigation/MobileNavigation/';
+export { default as DesktopNavigation } from './Navigation/DesktopNavigation/';
 
 // courses
 export { default as JavaScriptBasics } from './JavaScriptBasics';
