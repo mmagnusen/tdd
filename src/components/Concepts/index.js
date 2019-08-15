@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PageNavigation, Link } from '../../components/';
-import { Classes, Scope, This, VarLetConst, DataTypes, Prototypes } from './components';
+import { Classes, Scope, This, VarLetConst, DataTypes, Prototypes, Synchronous } from './components';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import { LINK_TYPE } from '../../constants';
 import { getNavigationIndex } from '../../utils';
@@ -43,6 +43,9 @@ class Concepts extends Component {
             <Link to='/concepts/javascript/prototypes' type={LINK_TYPE.INTERNAL}>
                 <li onClick={() => this.updateActiveIndex(5)}>Prototypes</li>
             </Link>
+            <Link to='/concepts/javascript/synchronous' type={LINK_TYPE.INTERNAL}>
+                <li onClick={() => this.updateActiveIndex(6)}>Synchronous</li>
+            </Link>
         </ul>
     )
 
@@ -63,6 +66,7 @@ class Concepts extends Component {
                             {activeIndex === 3 && <VarLetConst />}
                             {activeIndex === 4 && <DataTypes />}
                             {activeIndex === 5 && <Prototypes />}
+                            {activeIndex === 6 && <Synchronous />}
                         </div>
 
                     </div>
@@ -74,7 +78,7 @@ class Concepts extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.concepts
+        activeIndex: state.navigation.concepts.activeIndex
     }
 };
 

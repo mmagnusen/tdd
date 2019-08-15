@@ -51,9 +51,10 @@ a:visited {
   margin: 0 auto;
   padding: 1rem 0;
   @media screen and (min-width: $tabletBreakpoint) {
-      width: 70%;
+      width: 80%;
   }
 }
+
 
 .white-content {
   background: $white;

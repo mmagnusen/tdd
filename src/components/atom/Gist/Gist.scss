@@ -1,0 +1,11 @@
+@import '../../../constants/styles/sass-variables/colors';
+
+$module: 'Gist';
+
+.#{$module} { 
+    &-short {
+        iframe {
+            height: 100px !important;
+        }
+    }
+}

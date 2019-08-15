@@ -61,7 +61,7 @@ class HowTo extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.howTo
+        activeIndex: state.navigation.howTo.activeIndex
     }
 };
 
