@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react';
-import { Gist } from '../../../../components/';
+import { Gist, Helmet } from '../../../../components/';
 import { LogicalOr, LogicalAnd } from '../../../../assets/';
 
 const LogicalOperator = () => (
     <Fragment>
+        <Helmet 
+            title='JavaScript logical operator'
+            description='What is the logical operator and how can you use it to create expressions in your code?'
+        />
         <section className='white-content'>
             <h4>Logical Operators</h4>
 

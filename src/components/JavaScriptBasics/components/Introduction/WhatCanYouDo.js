@@ -1,7 +1,12 @@
 import React, { Fragment } from 'react';
+import { Helmet } from '../../../../components/';
 
 const WhatCanYouDo = () => (
     <Fragment>
+        <Helmet 
+            title='What can you do with JavaScript: JavaScript Basics Course'
+            description="Learn about the range of amazing things you can do with JavaScript such as websites, apps and games."
+        />
         <section className='white-content'>
         <h4>What can you do with JavaScript?</h4>
         <p>The possibilities of what you can do with JavaScript are almost endless. These are just a few of the awesome things you can do with it:</p>

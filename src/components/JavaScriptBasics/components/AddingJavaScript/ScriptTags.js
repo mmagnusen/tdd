@@ -6,8 +6,8 @@ import { BoilerPlate } from '../../../../assets';
 const ScriptTags = () => (
     <Fragment>
         <Helmet 
-            title='How to add JavaScript'
-            description='How do you add JavaScript to a project without using a framework? Learn how to add JavaScript code to your project.'
+            title='Add JavaScript to your project using a script tag'
+            description='How do you add JavaScript to a project without using a framework? Learn how to add JavaScript code to your project using script tags.'
         />
         <section className='white-content'>
             <h4>Adding JavaScript using script tags.</h4>

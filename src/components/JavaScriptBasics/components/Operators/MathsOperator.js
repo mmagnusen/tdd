@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react';
-import { Gist } from '../../../../components/';
+import { Gist, Helmet } from '../../../../components/';
 
 const MathsOperator = () => (
     <Fragment>
+    <Helmet 
+        title='JavaScript maths operators'
+        description='Learn all about the different types of maths operators and how you can use them to perfom calculations in your code.'
+    />
         <section className='white-content'>
             <h4>Maths operator</h4>
             <p>Maths operators allow us to make calculations on numbers (and in some cases, strings).</p>

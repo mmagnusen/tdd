@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react';
-import { Link } from '../../../../components/';
+import { Link, Helmet } from '../../../../components/';
 import { LINK_TYPE } from '../../../../constants/';
 
 const WhatIsJavaScript = () => (
     <Fragment>
+        <Helmet 
+            title='What is JavaScript: JavaScript Basics Course'
+            description="What is JavaScript and how can it help you with your software development?"
+        />
         <section className='white-content'>
             <p>JavaScript is a programming language.</p>
             <p>It is supported by most web browsers and powers almost all web applications.</p>
