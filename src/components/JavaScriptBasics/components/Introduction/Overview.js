@@ -60,6 +60,7 @@ const Overview = () => (
                 <td>12</td>
                 <td>Comparison operator</td>
             </tr>
+            {/*
             <tr>
                 <td>13</td>
                 <td>Logical operators</td>
@@ -68,7 +69,9 @@ const Overview = () => (
                 <td>13</td>
                 <td>Maths operators</td>
             </tr>
+            */}
         </Table>
+        {/*
         <Table tableHead='Data Types'>
             <tr>
                 <td>13</td>
@@ -103,6 +106,7 @@ const Overview = () => (
                 <td>Objects</td>
             </tr>
         </Table>
+        */}
         <Table tableHead='Classes'></Table>
         <Table tableHead='Conditionals'></Table>
         <Table tableHead='The DOM'></Table>

@@ -81,6 +81,7 @@ class JavaScriptBasics extends Component {
                     </Link>
                 </ul>
             </CourseNavigationChapter>
+            {/*
             <CourseNavigationChapter chapterHeading='Data Types'>
                 <ul>
                     <Link to='/courses/javascript-basics/adding-javascript/script-tags' type={LINK_TYPE.INTERNAL}>
@@ -139,6 +140,7 @@ class JavaScriptBasics extends Component {
                     </Link>
                 </ul>
             </CourseNavigationChapter>
+            */}
         </Fragment>
     )
 
