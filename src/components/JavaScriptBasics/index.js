@@ -71,13 +71,13 @@ class JavaScriptBasics extends Component {
                         <li onClick={() => this.updateActiveIndex('operators', 2)}>Assignment operator</li>
                     </Link>
                     <Link to='/courses/javascript-basics/operators/comparison-operator' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('operators', 3)}>Comparison operator</li>
+                        <li onClick={() => this.updateActiveIndex('operators', 3)}>Comparison operators</li>
                     </Link>
                     <Link to='/courses/javascript-basics/operators/logical-operator' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('operators', 4)}>Logical operator</li>
+                        <li onClick={() => this.updateActiveIndex('operators', 4)}>Logical operators</li>
                     </Link>
                     <Link to='/courses/javascript-basics/operators/maths-operator' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('operators', 5)}>Maths operator</li>
+                        <li onClick={() => this.updateActiveIndex('operators', 5)}>Maths operators</li>
                     </Link>
                 </ul>
             </CourseNavigationChapter>

@@ -32,3 +32,5 @@ export { default as ConsoleWarning } from './console-warning.png';
 export { default as Ages } from './ages.png';
 export { default as EqualAges } from './equal-ages.png';
 export { default as StrictlyEqualAges } from './strictly-equal-ages.png';
+export { default as LogicalOr } from './logical-or.png';
+export { default as LogicalAnd } from './logical-and.png';
