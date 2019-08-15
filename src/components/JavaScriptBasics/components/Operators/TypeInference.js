@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react';
-import { Gist } from '../../../../components/';
+import { Gist, Helmet } from '../../../../components/';
 
 const TypeInference = () => (
     <Fragment>
+        <Helmet 
+            title='JavaScript type inference'
+            description='Learn what type inference is and how the JavaScript compiler uses it to interpret and execute your code.'
+        />
         <section className='white-content'>
             <h4>The JavaScript compiler</h4>
             <p>When we write code, there is a compiler which reads the code we have written, interprets that code and executes it. "Execute" means to carry out the instructions we have written.</p>

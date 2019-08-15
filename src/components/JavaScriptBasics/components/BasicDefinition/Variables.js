@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react';
 import { Helmet, Gist } from '../../../../components/';
-import { BoilerPlate } from '../../../../assets';
 
 const Variables = () => (
     <Fragment>
         <Helmet 
-            title='How to add JavaScript'
-            description='How do you add JavaScript to a project without using a framework? Learn how to add JavaScript code to your project.'
+            title='JavaScript variables'
+            description='What is a variable? How do you create one and what values can it hold? Learn all about JavaScript variables.'
         />
         <section className='white-content'>
             <h4>What is a variable</h4>

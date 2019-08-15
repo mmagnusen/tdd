@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react';
-import { Gist } from '../../../../components/';
+import { Gist, Helmet } from '../../../../components/';
 import { Ages, EqualAges, StrictlyEqualAges } from '../../../../assets/';
 
 const ComparisonOperator = () => (
     <Fragment>
+        <Helmet 
+            title='JavaScript comparison operator'
+            description='Learn about the comparison operator and how you use it to compare two values.'
+        />
         <section className='white-content'>
             <h4>Comparison Operators</h4>
             <p>Comparison operators help us to compare one value against another. It will return <span className='variable'>true</span> if the two values are equal or <span className='variable'>false</span> if they are not equal.</p>

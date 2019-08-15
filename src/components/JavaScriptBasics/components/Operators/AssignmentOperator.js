@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react';
-import { Gist } from '../../../../components/';
+import { Gist, Helmet } from '../../../../components/';
 
 const AssignmentOperator = () => (
     <Fragment>
+        <Helmet 
+            title='JavaScript assignment operator'
+            description='What is the assignment operator and how do you use it to assign values to variables?'
+        />
         <section className='white-content'>
             <h4>Assignment Operator</h4>
             <p>Definition: to transfer to another</p>

@@ -6,8 +6,8 @@ import { LINK_TYPE } from '../../../../constants/';
 const ConsoleMessages = () => (
     <Fragment>
         <Helmet 
-            title='How to add JavaScript'
-            description='How do you add JavaScript to a project without using a framework? Learn how to add JavaScript code to your project.'
+            title='Console messages in JavaScript'
+            description='What is a console message? Learn all about the different types of console messages in JavaScript and how you can use them to help debug your code.'
         />
         <section className='white-content'>
             <p>Console messages are messages we can print to the console from our code, to give us information about what is happening within our code.</p>
