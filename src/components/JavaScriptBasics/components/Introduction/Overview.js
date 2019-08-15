@@ -58,7 +58,7 @@ const Overview = () => (
             </tr>
             <tr>
                 <td>12</td>
-                <td>Comparison operator</td>
+                <td>Comparison operators</td>
             </tr>
             {/*
             <tr>
