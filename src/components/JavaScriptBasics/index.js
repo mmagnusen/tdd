@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import { CourseNavigation, CourseNavigationChapter, Link } from '../../components/';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import { LINK_TYPE } from '../../constants';
-import { Overview, Introduction, AddingJavaScript, DocumentObjectModel } from './components';
+import { Introduction, AddingJavaScript, DocumentObjectModel, Operators } from './components';
 import { getNavigationIndex } from '../../utils';
 import './JavaScriptBasics.scss';
+import BasicDefinition from './components/BasicDefinition';
 
 class JavaScriptBasics extends Component {
     componentDidMount() {
@@ -35,6 +36,16 @@ class JavaScriptBasics extends Component {
                     </Link>
                 </ul>
             </CourseNavigationChapter>
+            <CourseNavigationChapter chapterHeading='Basic definitions'>
+                <ul>
+                    <Link to='/courses/javascript-basics/basic-definition/variables' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('basic-definition', 0)}>Variables</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/basic-definition/console-messages' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('basic-definition', 1)}>Console messages</li>
+                    </Link>
+                </ul>
+            </CourseNavigationChapter>
             <CourseNavigationChapter chapterHeading='Adding JavaScript to a project'>
                 <ul>
                     <Link to='/courses/javascript-basics/adding-javascript/script-tags' type={LINK_TYPE.INTERNAL}>
@@ -43,22 +54,27 @@ class JavaScriptBasics extends Component {
                     <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
                         <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Separate file</li>
                     </Link>
+                    <Link to='/courses/javascript-basics/adding-javascript/summary' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('adding-javascript', 2)}>Summary</li>
+                    </Link>
                 </ul>
             </CourseNavigationChapter>
             <CourseNavigationChapter chapterHeading='Operators'>
                 <ul>
-                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Assignment operator</li>
+                    <Link to='/courses/javascript-basics/operators/introduction' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('operators', 0)}>Introduction</li>
                     </Link>
-                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Comparison operator</li>
+                    <Link to='/courses/javascript-basics/operators/assignment-operator' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('operators', 1)}>Assignment operator</li>
                     </Link>
-                    <Link to='/courses/javascript-basics/adding-javascript/script-tags' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('adding-javascript', 0)}>Maths operators</li>
+                    <Link to='/courses/javascript-basics/operators/comparison-operator' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('operators', 2)}>Comparison operator</li>
                     </Link>
-                    
-                    <Link to='/courses/javascript-basics/adding-javascript/separate-file' type={LINK_TYPE.INTERNAL}>
-                        <li onClick={() => this.updateActiveIndex('adding-javascript', 1)}>Logical operators</li>
+                    <Link to='/courses/javascript-basics/operators/logical-operator' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('operators', 3)}>Logical operator</li>
+                    </Link>
+                    <Link to='/courses/javascript-basics/operators/maths-operator' type={LINK_TYPE.INTERNAL}>
+                        <li onClick={() => this.updateActiveIndex('operators', 4)}>Maths operator</li>
                     </Link>
                 </ul>
             </CourseNavigationChapter>
@@ -135,7 +151,9 @@ class JavaScriptBasics extends Component {
 
                         <div className='JavaScriptBasics-rightSection'>
                             {activeChapter.chapter === 'introduction' && <Introduction activeChapter={activeChapter} slug={match.params.slug} />}
+                            {activeChapter.chapter === 'basic-definition' && <BasicDefinition activeChapter={activeChapter} slug={match.params.slug} />}
                             {activeChapter.chapter === 'adding-javascript' && <AddingJavaScript activeChapter={activeChapter} slug={match.params.slug} />}
+                            {activeChapter.chapter === 'operators' && <Operators activeChapter={activeChapter} slug={match.params.slug} />}
                             {activeChapter.chapter === 'document-object-model' && <DocumentObjectModel activeChapter={activeChapter} slug={match.params.slug} />}
                         </div>
 

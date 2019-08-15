@@ -28,15 +28,27 @@ export const URL_MAP = {
             introduction: {
                 0: 'overview',
                 1: 'what-is-javascript',
-                2: 'what-can-you-do-with-javascript'
+                2: 'what-can-you-do-with-javascript',
             },
             'adding-javascript': {
                 0: 'script-tags',
-                1: 'separate-file'
+                1: 'separate-file',
+                2: 'summary',
+            },
+            'basic-definition': {
+                0: 'variables',
+                1: 'console-messages',
+            },
+            'operators': {
+                0: 'introduction',
+                1: 'assignment-operator',
+                2: 'comparison-operator',
+                3: 'logical-operator',
+                4: 'maths-operator'
             },
             'document-object-model': {
                 0: 'what-is-the-dom',
-                1: 'manipulating-the-dom'
+                1: 'manipulating-the-dom',
             }
         },
     }

@@ -24,3 +24,8 @@ export { default as HoistedGreetingOne } from './hoisted-greeting-one.png';
 export { default as HoistingReferenceError } from './hoisting-reference-error.png';
 export { default as ExecutionStackOne } from './execution-stack-one.png';
 export { default as ExecutionStackTwo } from './execution-stack-two.png';
+export { default as ConsoleLog } from './console-log.png';
+export { default as ConsoleInfo } from './console-info.png';
+export { default as ConsoleMessage } from './console-log.png';
+export { default as ConsoleError } from './console-error.png';
+export { default as ConsoleWarning } from './console-warning.png';

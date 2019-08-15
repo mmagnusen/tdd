@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ScriptTags from './ScriptTags';
 import SeparateFile from './SeparateFile';
+import Summary from './Summary';
 
 class AddingJavaScript extends Component {
     renderPageTitle = () => {
@@ -10,6 +11,7 @@ class AddingJavaScript extends Component {
         const titleMap = {
             'script-tags': 'Script tags',
             'separate-file': 'Separate file',
+            'summary': 'Summary',
         }
 
         return   (
@@ -26,6 +28,7 @@ class AddingJavaScript extends Component {
                 {this.renderPageTitle()}
                 {activeChapter.activeIndex === 0 && <ScriptTags />}
                 {activeChapter.activeIndex === 1 && <SeparateFile />}
+                {activeChapter.activeIndex === 2 && <Summary />}
             </div>
         )
     }   
