@@ -21,6 +21,32 @@ const TypeInference = () => (
             
             <h4>Finding out the type of a value</h4>
             <p>JavaScript has a handy feature called <span className='variable'>type of</span> which lets us find out the what data type a value is.</p>
+            <p>Let us use this to find out the data type of <span className='variable'>name</span> and <span className='variable'>age</span></p>
+            <Gist id='5d24c42ecddde7e949bdf76446369e6a'/>
+
+            <p>We can see that the data type of 'name' is a string and the data type of 'age' is a number.</p>
+
+            <p>Now let us look at another example. What would you expect the output to be here?:</p>
+            <Gist id='/503a73c9d4629197ea205ac021a7f92e'/>
+            <ol>
+                <li><span>An error. You cannot subtract a string from a number</span></li>
+                <li><span>15</span></li>
+            </ol>
+            
+            <p>The correct answer is 15. Strictly speaking, you cannot subtract a string from a number. But the compiler is reading the code and has inferred that in this scenario, <span className='variable'>lengthTwo</span> should be treated as a number when carrying out the calculation.</p>
+
+            <p>Let us look at another example</p>
+            <Gist id='/4663d58820752a845fc10e82c945af12'/>
+            <p>What do you expect the output to be here?</p>
+            <ol>
+                <li><span>15</span>: the compiler will infer that 'lengthTwo' should be a number.</li>
+                <li><span>An error</span>: you cannot add a string to a number </li>
+                <li><span>'105'</span>: the compiler will infer that because it is an addition, you are trying to join two strings </li>
+            </ol>
+        
+            <p>The correct answer is '105'. The compiler has interpreted that if we are adding a string to a number, we are trying to join two strings.</p>
+
+            <p>It is important to remember that type inference is always at play. This will help you if the value of an output is not what you expected.</p>
         </section>
 
     </Fragment>
