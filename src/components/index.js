@@ -1,3 +1,4 @@
+
 // atoms 
 export { default as CodeBlock } from './atom/CodeBlock';
 export { default as Command } from './atom/Command';
@@ -22,6 +23,7 @@ export { default as Resources } from './Resources';
 export { default as Selenium } from './Selenium';
 export { default as MobileNavigation } from './Navigation/MobileNavigation/';
 export { default as DesktopNavigation } from './Navigation/DesktopNavigation/';
+export { default as MaterialNavigation } from './Navigation/MobileNavigation/MaterialNavigation';
 
 // courses
 export { default as JavaScriptBasics } from './JavaScriptBasics';

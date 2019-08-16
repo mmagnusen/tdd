@@ -1,0 +1,18 @@
+@import '../../../../constants/styles/sass-variables/breakpoints';
+@import '../../../../constants/styles/sass-variables/colors';
+
+$module: 'MaterialNavigation';
+
+.#{$module} { 
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    i {
+        font-size: 24px;
+    }
+    @media screen and (min-width: $tabletBreakpoint) {
+        width: 80%;
+    }
+
+}
