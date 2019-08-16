@@ -22,10 +22,10 @@ class AppRouter extends Component {
             <Provider store={store}>
                 <BrowserRouter>
                     <Switch>
-                        <Route path='/' component={HomePage} exact={true}/>
+                        <Route path='/' component={HomePage} exact={true} />
                         <Route path='/jest/:slug' component={JestPage} />
-                        <Route path='/enzyme' component={EnzymePage} exact={true}/>
-                        <Route path='/selenium' component={SeleniumPage} exact={true}/>
+                        <Route path='/enzyme/:slug' component={EnzymePage} />
+                        <Route path='/selenium/:slug' component={SeleniumPage} />
                         <Route path='/resources' component={ResourcesPage} exact={true}/>
                         <Route path='/javascript-mechanics/:slug' component={MechanicsPage} />
                         <Route path='/how-to/:slug' component={HowToPage} />

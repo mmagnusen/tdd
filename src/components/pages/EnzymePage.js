@@ -1,9 +1,9 @@
 import React from 'react';
 import { Enzyme, GlobalLayout } from '../'
 
-const EnzymePage = () => (
+const EnzymePage = (props) => (
   <GlobalLayout>
-    <Enzyme />
+    <Enzyme {...props} />
   </GlobalLayout>
 );
 

@@ -3,6 +3,14 @@ const defaultNavigationState = {
         chapter: null,
         activeIndex: 0,
     },
+    selenium: {
+        chapter: null,
+        activeIndex: 0,
+    },
+    enzyme: {
+        chapter: null,
+        activeIndex: 0,
+    },
     howTo: {
         chapter: null,
         activeIndex: 0,

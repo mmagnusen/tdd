@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PageNavigation, Link } from '../../components/';
+import { PageNavigation } from '../../components/';
 import { AddJavaScript, AddSass, RunServer } from './components';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import { LINK_TYPE } from '../../constants';
@@ -22,19 +22,26 @@ class HowTo extends Component {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'howTo', activeIndex}))
     }
 
-    updateNavigation = () => (
-        <ul>
-            <Link to='/how-to/add-javascript' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(0)}> Add JavaScript</li>
-            </Link>
-            <Link to='/how-to/add-sass' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(1)}> Add Sass</li>
-            </Link>
-            <Link to='/how-to/run-a-local-server' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(2)}>Run Local Server</li>
-            </Link>
-        </ul>
-    )
+    navigationLinks = [
+        {
+            to: '/how-to/add-javascript',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(0),
+            text: 'Add JavaScript'
+        },
+        {
+            to: '/how-to/add-sass',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(1),
+            text: 'Add Sass'
+        },
+        {
+            to: '/how-to/run-a-local-server',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(2),
+            text: 'Run Local Server'
+        },
+    ]
 
     render() {
 
@@ -44,7 +51,7 @@ class HowTo extends Component {
             <div className='HowTo'>
                 <div className='container'> 
                     <div className='HowTo-content'>
-                        <PageNavigation>{this.updateNavigation()}</PageNavigation>
+                        <PageNavigation links={this.navigationLinks} />
 
                         <div className='HowTo-rightSection'>
                             {activeIndex === 0 && <AddJavaScript />}

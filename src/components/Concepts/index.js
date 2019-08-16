@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PageNavigation, Link } from '../../components/';
+import { PageNavigation } from '../../components/';
 import { Classes, Scope, This, VarLetConst, DataTypes, Prototypes, Synchronous } from './components';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import { LINK_TYPE } from '../../constants';
@@ -23,31 +23,50 @@ class Concepts extends Component {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'concepts', activeIndex}))
     }
 
-    updateNavigation = () => (
-        <ul>
-            <Link to='/concepts/javascript/classes' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(0)}>Classes</li>
-            </Link>
-            <Link to='/concepts/javascript/scope' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(1)}>Scope</li>
-            </Link>
-            <Link to='/concepts/javascript/this' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(2)}>This</li>
-            </Link>
-            <Link to='/concepts/javascript/var-let-const' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(3)}>Var, Let, Const</li>
-            </Link>
-            <Link to='/concepts/javascript/data-types' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(4)}>Data types</li>
-            </Link>
-            <Link to='/concepts/javascript/prototypes' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(5)}>Prototypes</li>
-            </Link>
-            <Link to='/concepts/javascript/synchronous' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(6)}>Synchronous</li>
-            </Link>
-        </ul>
-    )
+    navigationLinks = [
+        {
+            to: '/concepts/javascript/classes',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(0),
+            text: 'Classes'
+        },
+        {
+            to: '/concepts/javascript/scope',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(1),
+            text: 'Scope'
+        },
+        {
+            to: '/concepts/javascript/this',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(2),
+            text: 'This'
+        },
+        {
+            to: '/concepts/javascript/var-let-const',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(3),
+            text: 'Var, Let, Const'
+        },
+        {
+            to: '/concepts/javascript/data-types',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(4),
+            text: 'Data types'
+        },
+        {
+            to: '/concepts/javascript/prototypes',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(5),
+            text: 'Prototypes'
+        },
+        {
+            to: '/concepts/javascript/synchronous',
+            type: LINK_TYPE.INTERNAL,
+            onClick:this.updateActiveIndex(6),
+            text: 'Synchronous'
+        }
+    ]  
 
     render() {
 
@@ -57,7 +76,7 @@ class Concepts extends Component {
             <div className='Concepts'>
                 <div className='container'> 
                     <div className='Concepts-content'>
-                        <PageNavigation>{this.updateNavigation()}</PageNavigation>
+                        <PageNavigation links={this.navigationLinks} />
 
                         <div className='Concepts-rightSection'>
                             {activeIndex === 0 && <Classes />}

@@ -1,4 +1,11 @@
 export const URL_MAP = {
+    'selenium': {
+        0: 'what-is-selenium',
+        1: 'selenium-and-react',
+    },
+    'enzyme': {
+        0: 'what-is-enzyme'
+    },
     'javascript-mechanics': {
         0: 'syntax-parser',
         1: 'lexical-environment',
