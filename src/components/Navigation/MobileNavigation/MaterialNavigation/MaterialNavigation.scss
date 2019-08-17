@@ -7,12 +7,15 @@ $module: 'MaterialNavigation';
     position: fixed;
     right: 10px;
     bottom: 10px;
+    cursor: pointer;
+    width: fit-content;
 
     i {
-        font-size: 24px;
+        font-size: 30px;
+        cursor: pointer;
     }
     @media screen and (min-width: $tabletBreakpoint) {
-        width: 80%;
+
     }
 
 }

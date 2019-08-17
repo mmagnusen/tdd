@@ -1,11 +1,10 @@
 import React from 'react';
-import { MaterialNavigation, Link} from '../';
-import {  } from '../../components/';
+import { MaterialNavigation, Link } from '../';
 import './PageNavigation.scss';
 
 const PageNavigation = ({ links }) => (
     <div className='PageNavigation'>
-        <MaterialNavigation />
+        <MaterialNavigation links={links}/>
             <ul>
                 {links.map((link) => (
                     <Link type={link.type} to={link.to} key={link.text}>

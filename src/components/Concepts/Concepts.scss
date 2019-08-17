@@ -16,10 +16,4 @@ $module: 'Concepts';
         grid-template-columns: 180px 1fr;
         grid-column-gap: 10px;
     }
-
-    &-content {
-        display: grid;
-        grid-template-columns: 180px 1fr;
-        grid-column-gap: 10px;
-    }
 }

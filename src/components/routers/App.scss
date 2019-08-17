@@ -72,3 +72,12 @@ a:visited {
 .page-title {
   margin: 0 0 1rem  0;
 }
+
+.page-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  @media screen and (min-width: $tabletBreakpoint) {
+    grid-template-columns: 180px 1fr;
+  }
+}

@@ -52,7 +52,7 @@ class Jest extends Component {
         return (
             <div className='Jest'>
                 <div className='container'> 
-                    <div className='Jest-content'>
+                    <div className='page-content'>
                         <PageNavigation links={this.navigationLinks} />
 
                         <div className='Jest-rightSection'>

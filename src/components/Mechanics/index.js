@@ -27,20 +27,23 @@ class Mechanics extends Component {
         {
             to: '/javascript-mechanics/syntax-parser',
             type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex(0),
-            text: 'Syntax Parser'
+            onClick: this.updateActiveIndex,
+            text: 'Syntax Parser',
+            activeIndex: 0
         },
         {
             to: '/javascript-mechanics/lexical-environment',
             type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex(1),
-            text: 'Lexical Environment'
+            onClick: this.updateActiveIndex,
+            text: 'Lexical Environment',
+            activeIndex: 1
         },
         {
             to: '/javascript-mechanics/execution-context',
             type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex(2),
-            text: 'Execution Context'
+            onClick: this.updateActiveIndex,
+            text: 'Execution Context',
+            activeIndex: 2
         },
     ]
 
@@ -50,7 +53,7 @@ class Mechanics extends Component {
         return (
             <div className='Mechanics'>
                 <div className='container'> 
-                    <div className='Mechanics-content'>
+                    <div className='page-content'>
                     <PageNavigation links={this.navigationLinks} />
 
                         <div className='Mechanics-rightSection'>

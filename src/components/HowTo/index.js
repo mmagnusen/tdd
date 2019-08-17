@@ -26,20 +26,23 @@ class HowTo extends Component {
         {
             to: '/how-to/add-javascript',
             type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex(0),
-            text: 'Add JavaScript'
+            onClick:this.updateActiveIndex,
+            text: 'Add JavaScript',
+            activeIndex: 0
         },
         {
             to: '/how-to/add-sass',
             type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex(1),
-            text: 'Add Sass'
+            onClick:this.updateActiveIndex,
+            text: 'Add Sass',
+            activeIndex: 1
         },
         {
             to: '/how-to/run-a-local-server',
             type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex(2),
-            text: 'Run Local Server'
+            onClick:this.updateActiveIndex,
+            text: 'Run Local Server',
+            activeIndex: 2
         },
     ]
 
@@ -50,7 +53,7 @@ class HowTo extends Component {
         return (
             <div className='HowTo'>
                 <div className='container'> 
-                    <div className='HowTo-content'>
+                    <div className='page-content'>
                         <PageNavigation links={this.navigationLinks} />
 
                         <div className='HowTo-rightSection'>
