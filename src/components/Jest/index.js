@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PageNavigation, Link } from '../../components/';
+import { PageNavigation } from '../../components/';
 import { WhatIsJest, SnapshotTests, WritingATest } from './components';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import { LINK_TYPE } from '../../constants';
@@ -20,32 +20,38 @@ class Jest extends Component {
 
 
     updateActiveIndex = (activeIndex) => {
-        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'jest', activeIndex}))
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'jest', activeIndex}));
     }
 
-    navigation = () => (
-        <ul>
-            <Link to='/jest/what-is-jest' type={LINK_TYPE.INTERNAL}> 
-                <li onClick={() => this.updateActiveIndex(0)}>What is Jest?</li>
-            </Link>
-            <Link to='/jest/snapshot-tests' type={LINK_TYPE.INTERNAL}>   
-                <li onClick={() => this.updateActiveIndex(1)}>Snapshot tests</li>
-            </Link>
-            <Link to='/jest/writing-a-test' type={LINK_TYPE.INTERNAL}>
-                <li onClick={() => this.updateActiveIndex(2)}> Writing a test</li>
-            </Link>
-        </ul>
-    )
+    navigationLinks = [
+        {
+            to: '/jest/what-is-jest',
+            type: LINK_TYPE.INTERNAL,
+            onClick: this.updateActiveIndex(0),
+            text: 'What is Jest?',
+        },
+        {
+            to: '/jest/snapshot-tests',
+            type: LINK_TYPE.INTERNAL,
+            onClick: this.updateActiveIndex(1),
+            text: 'Snapshot tests',
+        },
+        {
+            to: '/jest/writing-a-test',
+            type: LINK_TYPE.INTERNAL,
+            onClick: this.updateActiveIndex(2),
+            text: 'Writing a test',
+        },
+    ]
 
     render() {
-
         const { activeIndex } = this.props;
 
         return (
             <div className='Jest'>
                 <div className='container'> 
-                    <div className='Jest-content'>
-                        <PageNavigation>{this.navigation()}</PageNavigation>
+                    <div className='page-content'>
+                        <PageNavigation links={this.navigationLinks} />
 
                         <div className='Jest-rightSection'>
                             {activeIndex === 0 && <WhatIsJest />}
@@ -61,7 +67,7 @@ class Jest extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.jest.activeIndex
+        activeIndex: state.navigation.jest.activeIndex,
     }
 };
 

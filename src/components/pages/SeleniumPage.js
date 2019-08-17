@@ -1,9 +1,9 @@
 import React from 'react';
 import { Selenium, GlobalLayout } from '../'
 
-const SeleniumPage = () => (
+const SeleniumPage = (props) => (
     <GlobalLayout>
-        <Selenium />
+        <Selenium {...props}/>
     </GlobalLayout>
 );
 

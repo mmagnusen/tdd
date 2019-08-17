@@ -1,39 +1,51 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { PageNavigation } from '../../components/';
 import { WhatIsSelenium, SeleniumAndReact } from './components';
+import { LINK_TYPE } from '../../constants';
+import { getNavigationIndex } from '../../utils';
+import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import './Selenium.scss';
 
 class Selenium extends Component {
-    state = {
-        activeIndex: 0
+    componentDidMount() {
+        const slug = this.props.match.params.slug;
+        this.updateActiveIndex(getNavigationIndex('selenium', slug));
     }
+
+    componentDidUpdate() {
+        const slug = this.props.match.params.slug;
+        this.updateActiveIndex(getNavigationIndex('selenium', slug));
+    }
+
 
     updateActiveIndex = (activeIndex) => {
-        this.setState({ activeIndex })
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'selenium', activeIndex}));
     }
 
-    navigation = () => (
-        <ul>
-            <li onClick={() => this.updateActiveIndex(0)}> What is Selenium?</li>
-            <li onClick={() => this.updateActiveIndex(1)}> Selenium and React</li>
-
-        </ul>
-    )
+    navigationLinks = [
+        {
+            to: '/selenium/what-is-selenium',
+            type: LINK_TYPE.INTERNAL,
+            onClick: this.updateActiveIndex(0),
+            text: 'What is Selenium?',
+        },
+        {
+            to: '/selenium/selenium-and-react',
+            type: LINK_TYPE.INTERNAL,
+            onClick: this.updateActiveIndex(1),
+            text: 'Selenium and React',
+        },
+    ]
     
     render() {
-
-        const { activeIndex } = this.state;
+        const { activeIndex } = this.props;
 
         return (
             <div className='Selenium'>
                 <div className='container'>
-                    <h1 className='page-title'>
-                        <div/>
-                        Testing With Selenium
-                    </h1>
                     <div className='Selenium-content'>
-                        <PageNavigation>{this.navigation()}</PageNavigation>
-
+                        <PageNavigation links={this.navigationLinks} />
                         <div className='Selenium-rightSection'>
                             {activeIndex === 0 && <WhatIsSelenium />}
                             {activeIndex === 1 && <SeleniumAndReact />}
@@ -45,4 +57,10 @@ class Selenium extends Component {
     }
 }
 
-export default Selenium;
+const mapStateToProps = (state) => {
+    return {
+        activeIndex: state.navigation.selenium.activeIndex,
+    }
+};
+
+export default connect(mapStateToProps)(Selenium);

@@ -1,0 +1,8 @@
+@import './colors.scss';
+@import './breakpoints.scss';
+
+@mixin pageMixin {
+   padding: 0;
+  }
+
+  // @include pageMixin

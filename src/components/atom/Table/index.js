@@ -7,7 +7,9 @@ const Table = ({tableHead, children}) => (
             <h4>{tableHead}</h4>
         </div>
         <table>
-            {children}
+            <tbody>
+                {children}
+            </tbody>
         </table>
     </div>
    
