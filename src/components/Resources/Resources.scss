@@ -6,10 +6,6 @@ $module: 'Resources';
 .#{$module} { 
     background: $ash;
 
-    a {
-        overflow-wrap: break-word;
-    }
-
     ul {
         padding-inline-start: 20px;
     }
