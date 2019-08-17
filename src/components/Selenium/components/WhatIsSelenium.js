@@ -6,7 +6,7 @@ const WhatIsSelenium = () => (
     <Fragment>
         <section className='white-content'>
             <h1>What is Selenium?</h1>
-            <p>You deploy your app. You check the homepage, you click on links to other pages, you check login, register and other functionality. You discover a bug. You fix it an ddeploy and do all your checks again.</p>
+            <p>You deploy your app. You check the homepage, you click on links to other pages, you check login, register and other functionality. You discover a bug. You fix it and deploy and do all your checks again.</p>
             <p><Link to='https://jestjs.io/' type={LINK_TYPE.EXTERNAL}>Selenium</Link> is a tool which allows you to automate this testing.</p>
         </section>
 
