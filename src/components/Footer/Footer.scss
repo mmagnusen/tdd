@@ -1,8 +1,44 @@
 
+@import '../../constants/styles/sass-variables/colors';
+@import '../../constants/styles/sass-variables/breakpoints';
+
 $module: 'Footer';
 
 .#{$module} { 
-    padding: 1rem 3rem;
-    display: none;
+    background: $ashGrey;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        box-sizing: border-box;
+        @media screen and (min-width: $tabletBreakpoint) {
+            grid-column-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (min-width: $computerBreakpoint) {
+            grid-column-gap: 30px;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        h4 {
+            color: $grey;
+        }
+        
+        ul {
+            margin-block-start: 0;
+            padding-inline-start: 0;
+          }
+
+        li {
+            list-style: none;
+            margin-bottom: 1rem;
+          }
+
+        a, a:visited {
+            color: $white;
+            font-weight: 400;
+        }
+    }
 }
   

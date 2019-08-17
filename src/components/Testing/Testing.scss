@@ -1,0 +1,7 @@
+@import '../../constants/styles/sass-variables/colors';
+
+$module: 'Testing';
+
+.#{$module} { 
+    background: $ash;
+}

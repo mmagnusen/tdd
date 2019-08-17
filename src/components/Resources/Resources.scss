@@ -1,7 +1,19 @@
+@import '../../constants/styles/sass-variables/colors';
+@import '../../constants/styles/sass-variables/breakpoints';
+
 $module: 'Resources';
 
 .#{$module} { 
-    background: #e5ecf1;
+    background: $ash;
+
+    a {
+        overflow-wrap: break-word;
+    }
+
+    ul {
+        padding-inline-start: 20px;
+    }
+
     li {
         margin: 1rem 0;
     }

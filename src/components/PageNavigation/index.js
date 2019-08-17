@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { MaterialNavigation, Link } from '../';
 import './PageNavigation.scss';
 
-class PageNavigation extends Component {
-    render() {
-        const { children } = this.props
-        return (
-            <div className='PageNavigation'>
-                {children}
-            </div>
-        )
-    }
-}
+const PageNavigation = ({ links }) => (
+    <div className='PageNavigation'>
+        <MaterialNavigation links={links}/>
+            <ul>
+                {links.map((link) => (
+                    <Link type={link.type} to={link.to} key={link.text}>
+                        <li onClick={link.onClick}>{link.text}</li>
+                    </Link>
+                ))}
+            </ul>
+    </div>
+);
 
 export default PageNavigation;

@@ -1,0 +1,17 @@
+@import '../../../../constants/styles/sass-variables/breakpoints';
+@import '../../../../constants/styles/sass-variables/colors';
+
+$module: 'MaterialNavigation';
+
+.#{$module} { 
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    width: fit-content;
+
+    i {
+        font-size: 30px;
+        cursor: pointer;
+    }
+}

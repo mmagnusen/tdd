@@ -1,0 +1,25 @@
+@import '../../constants/styles/sass-variables/colors';
+
+$module: 'JavaScriptBasics';
+
+.#{$module} { 
+    background: $ash;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    
+    img {
+        margin-top: 1rem;
+    }
+
+    &-pageTitle {
+     background: $ashGrey;;
+     color: $white;
+     padding: 0.5rem 1rem;
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        grid-column-gap: 10px;
+    }
+}

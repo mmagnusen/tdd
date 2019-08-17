@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
-import { Link } from '../index';
+import React, { Fragment }  from 'react';
+import { Link, Helmet } from '../index';
 import { LINK_TYPE } from '../../constants/'
 import './Resources.scss';
 
-class Resources extends Component {
-    render() {
-        return (
-            <section className='Resources'>
-                <section className='container'>
-                    <h1>Resources</h1>
+const Resources = () => (
+    <Fragment>
+        <Helmet 
+            title='JavaScript Front-end Testing Resources'
+            description='Resources for front-end projects. Includes Git repositories for demo projects and external resources.'
+        />
+        <section className='Resources'>
+            <section className='container'>
                     <section className='white-content'>
                         <h3>General Testing</h3>
                         <ul>
@@ -16,6 +18,7 @@ class Resources extends Component {
                             <li><Link type={LINK_TYPE.EXTERNAL} to='https://reactjs.org/docs/test-renderer.html'>https://reactjs.org/docs/test-renderer.html</Link></li>
                         </ul>
                     </section>
+
                     <section className='white-content'>
                         <h3>Generally helpful for beginners</h3>
                         <ul>
@@ -36,6 +39,16 @@ class Resources extends Component {
                             </li>
                         </ul>
                     </section>
+
+                    <section className='white-content'>
+                        <h3>Online courses:</h3>
+                        <li>
+                            <Link type={LINK_TYPE.EXTERNAL} to='https://www.udemy.com/share/1000n6BUUfeVpVQHg=/?xref=E0cddVZWQnkFSUQvCz0GJVUWTx4dChQ%2BVFE='>
+                                'JavaScript, understanding the weird parts' by Anthony Alicea
+                            </Link>
+                        </li>
+                    </section>
+
                     <section className='white-content'>
                     <h3>Jest</h3>
                         <ul>
@@ -76,16 +89,26 @@ class Resources extends Component {
                                 </Link>
                             </li>
                         </ul>
-
                     </section>
+
                     <section className='white-content'>
                         <h3>Git Repositories</h3>
                         <ul>
                             <li>
-                                <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js'>
-                                    https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js
+                                <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/classy'>
+                                https://github.com/mmagnusen/classy
                                 </Link>
                             </li>
+                            <li>
+                            <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js'>
+                                https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js
+                            </Link>
+                            </li>
+                            <li>
+                            <Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/boilerplate'>
+                                https://github.com/mmagnusen/boilerplate
+                            </Link>
+                        </li>
                             <li>
                                 <p><Link type={LINK_TYPE.EXTERNAL} to='https://github.com/mmagnusen/friendlyfaces'>
                                     https://github.com/mmagnusen/friendlyfaces
@@ -97,10 +120,10 @@ class Resources extends Component {
                             </li>
                         </ul>
                     </section>
-                </section>
+
             </section>
-        )    
-    }
-}
+        </section>
+    </Fragment>
+);
 
 export default Resources;

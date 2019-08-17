@@ -1,0 +1,40 @@
+@import '../../../constants/styles/sass-variables/breakpoints';
+@import '../../../constants/styles/sass-variables/colors';
+
+$module: 'DesktopNavigation';
+
+.#{$module} { 
+    &-inner {
+        height: 90px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        width: 80%;
+        margin: 0 auto;
+        @media screen and (min-width: $tabletBreakpoint) {
+            width: 80%;
+        }
+
+        h1 {
+            color: $turquoise;    
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+
+    &-resources {
+        display: flex;
+        justify-content: flex-end;
+  
+
+          a, a:visited {
+              margin-left: 1rem;
+              color: $ashGrey; 
+          }
+          a:hover {
+            color: $turquoise;  
+          }
+    }
+}

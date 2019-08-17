@@ -1,0 +1,68 @@
+@import '../../../constants/styles/sass-variables/breakpoints';
+@import '../../../constants/styles/sass-variables/colors';
+
+$module: 'MobileNavigation';
+
+.#{$module} { 
+    &-inner {
+        height: 90px;
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        @media screen and (min-width: $tabletBreakpoint) {
+            width: 80%;
+        }
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            color: $turquoise;    
+        }
+    }
+
+    &-drawer {
+        width: 290px;
+    }
+
+    &-dropdown {
+        color: $white;
+        background-color: #18002a;
+        height: 100vh;
+        padding: 1rem;
+
+        li {
+            background: none !important;
+            margin-left: 1.5rem;
+            color: $white;
+        }
+    }
+
+    &-link {
+        color: $white;
+        cursor: pointer;
+    }
+    
+    &-burger {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-burgerInner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    &-burgerRow {
+        height: 2px;
+        width: 100%;
+        background: black;
+    }
+}

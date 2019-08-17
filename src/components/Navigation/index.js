@@ -1,36 +1,42 @@
 import React, { Component } from 'react';
-import { Link } from '../index'
-import { LINK_TYPE } from '../../constants'
-import './Navigation.scss';
+import { MobileNavigation, DesktopNavigation } from '../../components/';
+import { Responsive} from 'semantic-ui-react';
 
 class Navigation extends Component {
-    render() {
-        return (
-            <div className='Navigation'>
-                <div className='Navigation-inner'>
-                    <Link to='/' type={LINK_TYPE.INTERNAL}>
-                        <h1>TDD</h1>
-                    </Link>
-                    <div className='Navigation-resources'>
-                        <Link to='/jest' type={LINK_TYPE.INTERNAL}> 
-                            <p>Jest</p>
-                        </Link>
-                        {/*
-                        <Link to='/enzyme' type={LINK_TYPE.INTERNAL}>
-                            <p>Enzyme</p>
-                        </Link>
-                        */}
-                        <Link to='/selenium' type={LINK_TYPE.INTERNAL}> 
-                        <p>Selenium</p>
-                        </Link>
-                        <Link to='/resources' type={LINK_TYPE.INTERNAL}>
-                            <p>Resources</p>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        );
+
+  state = {
+    navigationDropDownOpen: false
+  }
+
+  toggleNavigationDropdown = () => {
+    this.setState({
+        navigationDropDownOpen: !this.state.navigationDropDownOpen
+    })
+
+    if (!this.state.navigationDropDownOpen) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        document.body.style.overflow = 'scroll'
     }
+}
+
+  render() {
+
+    const { navigationDropDownOpen } = this.state;
+
+    return (
+        <nav className='Navigation'>
+            <Responsive maxWidth={992}>
+                <MobileNavigation 
+                    toggleNavigationDropdown={this.toggleNavigationDropdown} 
+                    navigationDropDownOpen={navigationDropDownOpen} />
+            </Responsive>
+            <Responsive minWidth={993}>
+                <DesktopNavigation />
+            </Responsive> 
+        </nav>
+    );
+  }
 }
 
 export default Navigation;

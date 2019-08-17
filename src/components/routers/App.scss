@@ -1,4 +1,5 @@
 @import '../../constants/styles/sass-variables/breakpoints';
+@import '../../constants/styles/sass-variables/colors';
 
 body {
   margin: 0;
@@ -28,16 +29,21 @@ code {
     monospace;
 }
 
-.App {
-  color: black;
-  margin: 0;
+li  {
+  margin: 0.6rem 0;
+  line-height: 1.6rem;
 }
 
 a,
 a:visited {
-  color: #ba55bf; 
+  color: $pink; 
   text-decoration: none;
   font-weight: 700;
+}
+
+.App {
+  color: $black;
+  margin: 0;
 }
 
 .container {
@@ -45,26 +51,33 @@ a:visited {
   margin: 0 auto;
   padding: 1rem 0;
   @media screen and (min-width: $tabletBreakpoint) {
-      width: 70%;
+      width: 80%;
   }
 }
 
+
 .white-content {
-  background: #fff;
+  background: $white;
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 4px;
 }
 
 .variable {
-  background: #f5f2f2;
-  color: #e42d2d;
+  background: $lightGrey;
+  color: $red;
   padding: 0.19rem 0.3rem;
-  color: #e42d2d;
 }
 
 .page-title {
   margin: 0 0 1rem  0;
 }
 
-
+.page-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  @media screen and (min-width: $tabletBreakpoint) {
+    grid-template-columns: 180px 1fr;
+  }
+}
