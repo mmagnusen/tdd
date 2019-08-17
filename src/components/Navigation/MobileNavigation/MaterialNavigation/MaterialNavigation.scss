@@ -10,6 +10,10 @@ $module: 'MaterialNavigation';
     cursor: pointer;
     width: fit-content;
 
+    @media screen and (min-width: $tabletBreakpoint) {
+        display: none;
+    }
+
     i {
         font-size: 30px;
         cursor: pointer;
