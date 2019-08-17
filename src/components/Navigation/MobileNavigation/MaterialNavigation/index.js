@@ -4,19 +4,17 @@ import { Link } from '../../../';
 import './MaterialNavigation.scss';
 
 class MaterialNavigation extends Component {
-
     state = {
         navOpen: false
     }
 
     toggleMobileNavigation = () => {
         this.setState({
-            navOpen: !this.state.navOpen
+            navOpen: !this.state.navOpen,
         })
     }
 
     getDropdownMenu = () => {
-    
         const { navOpen } = this.state;
         const { links } = this.props;
     
@@ -30,7 +28,6 @@ class MaterialNavigation extends Component {
                                 <li onClick={() => {
                                     link.onClick()
                                     this.toggleMobileNavigation()
-                               
                                 }}>{link.text}</li>
                             </Link>
                         ))}

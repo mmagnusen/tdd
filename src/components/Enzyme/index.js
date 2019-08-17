@@ -6,7 +6,6 @@ import navigationActionGenerators from './../../redux/actions/navigationActionGe
 import './Enzyme.scss';
 
 class Enzyme extends Component {
-
     componentDidMount() {
         const slug = this.props.match.params.slug;
         this.updateActiveIndex(getNavigationIndex('selenium', slug));
@@ -19,7 +18,7 @@ class Enzyme extends Component {
 
 
     updateActiveIndex = (activeIndex) => {
-        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'selenium', activeIndex}))
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'selenium', activeIndex}));
     }
 
     render() {
@@ -39,13 +38,12 @@ class Enzyme extends Component {
                 </div>
             </Fragment>
         )
-
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.selenium.activeIndex
+        activeIndex: state.navigation.selenium.activeIndex,
     }
 };
 

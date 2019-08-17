@@ -19,9 +19,8 @@ class Mechanics extends Component {
     }
 
     updateActiveIndex = (activeIndex) => {
-        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'mechanics', activeIndex}))
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'mechanics', activeIndex}));
     }
-
 
     navigationLinks = [
         {
@@ -29,21 +28,21 @@ class Mechanics extends Component {
             type: LINK_TYPE.INTERNAL,
             onClick: this.updateActiveIndex,
             text: 'Syntax Parser',
-            activeIndex: 0
+            activeIndex: 0,
         },
         {
             to: '/javascript-mechanics/lexical-environment',
             type: LINK_TYPE.INTERNAL,
             onClick: this.updateActiveIndex,
             text: 'Lexical Environment',
-            activeIndex: 1
+            activeIndex: 1,
         },
         {
             to: '/javascript-mechanics/execution-context',
             type: LINK_TYPE.INTERNAL,
             onClick: this.updateActiveIndex,
             text: 'Execution Context',
-            activeIndex: 2
+            activeIndex: 2,
         },
     ]
 
@@ -71,7 +70,7 @@ class Mechanics extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.mechanics.activeIndex
+        activeIndex: state.navigation.mechanics.activeIndex,
     }
 };
 

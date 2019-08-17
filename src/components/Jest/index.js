@@ -20,33 +20,31 @@ class Jest extends Component {
 
 
     updateActiveIndex = (activeIndex) => {
-        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'jest', activeIndex}))
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'jest', activeIndex}));
     }
-
 
     navigationLinks = [
         {
             to: '/jest/what-is-jest',
             type: LINK_TYPE.INTERNAL,
             onClick: this.updateActiveIndex(0),
-            text: 'What is Jest?'
+            text: 'What is Jest?',
         },
         {
             to: '/jest/snapshot-tests',
             type: LINK_TYPE.INTERNAL,
             onClick: this.updateActiveIndex(1),
-            text: 'Snapshot tests'
+            text: 'Snapshot tests',
         },
         {
             to: '/jest/writing-a-test',
             type: LINK_TYPE.INTERNAL,
             onClick: this.updateActiveIndex(2),
-            text: 'Writing a test'
+            text: 'Writing a test',
         },
     ]
 
     render() {
-
         const { activeIndex } = this.props;
 
         return (
@@ -69,7 +67,7 @@ class Jest extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.jest.activeIndex
+        activeIndex: state.navigation.jest.activeIndex,
     }
 };
 

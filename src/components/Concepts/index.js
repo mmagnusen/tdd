@@ -10,7 +10,7 @@ import './Concepts.scss';
 class Concepts extends Component {
     componentDidMount() {
         const slug = this.props.match.params.slug;
-        const activeIndex = getNavigationIndex('concepts', slug)
+        const activeIndex = getNavigationIndex('concepts', slug);
         this.updateActiveIndex(activeIndex);
     }
 
@@ -20,7 +20,7 @@ class Concepts extends Component {
     }
 
     updateActiveIndex = (activeIndex) => {
-        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'concepts', activeIndex}))
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'concepts', activeIndex}));
     }
 
     navigationLinks = [
@@ -29,54 +29,53 @@ class Concepts extends Component {
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Classes',
-            activeIndex: 0
+            activeIndex: 0,
         },
         {
             to: '/concepts/javascript/scope',
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Scope',
-            activeIndex: 1
+            activeIndex: 1,
         },
         {
             to: '/concepts/javascript/this',
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'This',
-            activeIndex: 2
+            activeIndex: 2,
         },
         {
             to: '/concepts/javascript/var-let-const',
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Var, Let, Const',
-            activeIndex: 3
+            activeIndex: 3,
         },
         {
             to: '/concepts/javascript/data-types',
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Data types',
-            activeIndex: 4
+            activeIndex: 4,
         },
         {
             to: '/concepts/javascript/prototypes',
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Prototypes',
-            activeIndex: 5
+            activeIndex: 5,
         },
         {
             to: '/concepts/javascript/synchronous',
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Synchronous',
-            activeIndex: 6
+            activeIndex: 6,
         }
     ]  
 
     render() {
-
         const { activeIndex } = this.props;
 
         return (
@@ -104,7 +103,7 @@ class Concepts extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.concepts.activeIndex
+        activeIndex: state.navigation.concepts.activeIndex,
     }
 };
 

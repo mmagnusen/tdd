@@ -19,7 +19,7 @@ class HowTo extends Component {
     }
 
     updateActiveIndex = (activeIndex) => {
-        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'howTo', activeIndex}))
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'howTo', activeIndex}));
     }
 
     navigationLinks = [
@@ -28,26 +28,25 @@ class HowTo extends Component {
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Add JavaScript',
-            activeIndex: 0
+            activeIndex: 0,
         },
         {
             to: '/how-to/add-sass',
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Add Sass',
-            activeIndex: 1
+            activeIndex: 1,
         },
         {
             to: '/how-to/run-a-local-server',
             type: LINK_TYPE.INTERNAL,
             onClick:this.updateActiveIndex,
             text: 'Run Local Server',
-            activeIndex: 2
+            activeIndex: 2,
         },
     ]
 
     render() {
-
         const { activeIndex } = this.props;
 
         return (
@@ -71,7 +70,7 @@ class HowTo extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.howTo.activeIndex
+        activeIndex: state.navigation.howTo.activeIndex,
     }
 };
 

@@ -8,7 +8,6 @@ import navigationActionGenerators from './../../redux/actions/navigationActionGe
 import './Selenium.scss';
 
 class Selenium extends Component {
-
     componentDidMount() {
         const slug = this.props.match.params.slug;
         this.updateActiveIndex(getNavigationIndex('selenium', slug));
@@ -21,7 +20,7 @@ class Selenium extends Component {
 
 
     updateActiveIndex = (activeIndex) => {
-        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'selenium', activeIndex}))
+        this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'selenium', activeIndex}));
     }
 
     navigationLinks = [
@@ -29,18 +28,17 @@ class Selenium extends Component {
             to: '/selenium/what-is-selenium',
             type: LINK_TYPE.INTERNAL,
             onClick: this.updateActiveIndex(0),
-            text: 'What is Selenium?'
+            text: 'What is Selenium?',
         },
         {
             to: '/selenium/selenium-and-react',
             type: LINK_TYPE.INTERNAL,
             onClick: this.updateActiveIndex(1),
-            text: 'Selenium and React'
+            text: 'Selenium and React',
         },
     ]
     
     render() {
-        
         const { activeIndex } = this.props;
 
         return (
@@ -48,7 +46,6 @@ class Selenium extends Component {
                 <div className='container'>
                     <div className='Selenium-content'>
                         <PageNavigation links={this.navigationLinks} />
-
                         <div className='Selenium-rightSection'>
                             {activeIndex === 0 && <WhatIsSelenium />}
                             {activeIndex === 1 && <SeleniumAndReact />}
@@ -62,7 +59,7 @@ class Selenium extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        activeIndex: state.navigation.selenium.activeIndex
+        activeIndex: state.navigation.selenium.activeIndex,
     }
 };
 
