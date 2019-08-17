@@ -34,8 +34,9 @@ li  {
   line-height: 1.6rem;
 }
 
-a, li {
+a, a:visited, li {
   overflow-wrap: break-word;
+  word-wrap:break-word;
 }
 
 a,
