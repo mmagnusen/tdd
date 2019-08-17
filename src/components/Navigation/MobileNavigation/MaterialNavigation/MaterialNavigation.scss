@@ -9,7 +9,8 @@ $module: 'MaterialNavigation';
     bottom: 10px;
     cursor: pointer;
     width: fit-content;
-
+    background: $turquoise;
+    border-radius: 50%;
     @media screen and (min-width: $tabletBreakpoint) {
         display: none;
     }
