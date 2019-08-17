@@ -27,20 +27,23 @@ class Jest extends Component {
         {
             to: '/jest/what-is-jest',
             type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex(0),
+            onClick: this.updateActiveIndex,
             text: 'What is Jest?',
+            activeIndex: 0,
         },
         {
             to: '/jest/snapshot-tests',
             type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex(1),
+            onClick: this.updateActiveIndex,
             text: 'Snapshot tests',
+            activeIndex: 1,
         },
         {
             to: '/jest/writing-a-test',
             type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex(2),
+            onClick: this.updateActiveIndex,
             text: 'Writing a test',
+            activeIndex: 2,
         },
     ]
 
