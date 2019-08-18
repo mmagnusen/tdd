@@ -32,7 +32,7 @@ const DataTypes = () => (
                         const middleName = "Holderness";
 
                         // backticks 
-                        const surName = 'Ashton';
+                        const surName = \`Ashton\`;
                     `
                 }
             </CodeBlock>

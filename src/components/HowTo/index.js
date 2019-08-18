@@ -55,7 +55,7 @@ class HowTo extends Component {
                     <div className='page-content'>
                         <PageNavigation links={this.navigationLinks} />
 
-                        <div className='HowTo-rightSection'>
+                        <div className='page-contentRight'>
                             {activeIndex === 0 && <AddJavaScript />}
                             {activeIndex === 1 && <AddSass />}
                             {activeIndex === 2 && <RunServer />}

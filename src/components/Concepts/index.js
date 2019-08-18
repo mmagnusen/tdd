@@ -84,7 +84,7 @@ class Concepts extends Component {
                     <div className='page-content'>
                         <PageNavigation links={this.navigationLinks} />
 
-                        <div className='Concepts-rightSection'>
+                        <div className='page-contentRight'>
                             {activeIndex === 0 && <Classes />}
                             {activeIndex === 1 && <Scope />}
                             {activeIndex === 2 && <This />}

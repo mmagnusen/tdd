@@ -8,7 +8,13 @@ $module: 'CodeBlock';
 
     &-lineNumber {
         color: rgba(27,31,35,.3);
-        padding: 0 1rem 0.5rem 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &-rowContent {
+        display: flex;
+        align-items: center;
     }
 
     &-fileName {
@@ -24,13 +30,20 @@ $module: 'CodeBlock';
         top: -34px;
     }
 
-    table {
+    .table {
         background: $whisperGrey;
         padding: 1rem;
         box-sizing: border-box;
         border: 1px solid;
         border-color: #ddd #ddd #ccc;
         border-radius: 3px;
+        overflow-x: scroll;
+    }
+    .row {
+        display: grid;
+        grid-template-columns: 20px 1fr;
+        margin-bottom: 0.1rem;
+        min-height: 2rem;
     }
 
     code {

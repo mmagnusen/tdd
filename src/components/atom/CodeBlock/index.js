@@ -55,25 +55,22 @@ class  CodeBlock extends Component {
             <div>
                 <div className='CodeBlock'>
                     <div className='CodeBlock-fileName'>{fileName}</div>
-                    <table>
-                        <tbody>
-                            {
-                                rows && rows.map((row, index) => {
-                                    //console.log('row', row);
-                                    return (<tr>
-                                        <td className='CodeBlock-lineNumber'>{index + 1}</td>
-                                        <td>
-                                            <pre>
-                                                <code>{row}</code>
-                                            </pre>
-                                        </td>
-                                        
-                                    </tr>)
-                                }
-                                )
-                            }
-                        </tbody>
-                    </table>
+                    <section className='table'>
+                    {
+                        rows && rows.map((row, index) => {
+                            return (
+                                <section className='row'>
+                                <div className='CodeBlock-lineNumber'>{index + 1}</div>
+                                <div className='CodeBlock-rowContent'>
+                                    <pre>
+                                        <code>{row}</code>
+                                    </pre>
+                                </div>
+                                
+                            </section>)
+                        })
+                    }
+                    </section>
                 </div>
             </div>
         )

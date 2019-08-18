@@ -56,7 +56,7 @@ class Jest extends Component {
                     <div className='page-content'>
                         <PageNavigation links={this.navigationLinks} />
 
-                        <div className='Jest-rightSection'>
+                        <div className='page-contentRight'>
                             {activeIndex === 0 && <WhatIsJest />}
                             {activeIndex === 1 && <SnapshotTests />}
                             {activeIndex === 2 && <WritingATest />}

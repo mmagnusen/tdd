@@ -1,4 +1,5 @@
 @import '../../constants/styles/sass-variables/colors';
+@import '../../constants/styles/sass-variables/breakpoints';
 
 $module: 'CourseNavigation';
 
@@ -7,6 +8,10 @@ $module: 'CourseNavigation';
     height: min-content;
     min-height: 300px;
     border-radius: 4px;
+    display: none;
+    @media screen and (min-width: $tabletBreakpoint) {
+        display: block;
+    }
 
     &-courseTitle {
         padding: 0.5rem 1rem;

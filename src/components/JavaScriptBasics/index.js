@@ -151,10 +151,10 @@ class JavaScriptBasics extends Component {
         return (
             <div className='JavaScriptBasics'>
                 <div className='container'> 
-                    <div className='JavaScriptBasics-content'>
+                    <div className='page-content'>
                         <CourseNavigation courseTitle='JavaScript Basics'>{this.updateNavigation()}</CourseNavigation>
 
-                        <div className='JavaScriptBasics-rightSection'>
+                        <div className='page-contentRight'>
                             {activeChapter.chapter === 'introduction' && <Introduction activeChapter={activeChapter} slug={match.params.slug} />}
                             {activeChapter.chapter === 'basic-definition' && <BasicDefinition activeChapter={activeChapter} slug={match.params.slug} />}
                             {activeChapter.chapter === 'adding-javascript' && <AddingJavaScript activeChapter={activeChapter} slug={match.params.slug} />}

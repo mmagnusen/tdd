@@ -46,7 +46,7 @@ class Selenium extends Component {
                 <div className='container'>
                     <div className='Selenium-content'>
                         <PageNavigation links={this.navigationLinks} />
-                        <div className='Selenium-rightSection'>
+                        <div className='page-contentRight'>
                             {activeIndex === 0 && <WhatIsSelenium />}
                             {activeIndex === 1 && <SeleniumAndReact />}
                         </div>

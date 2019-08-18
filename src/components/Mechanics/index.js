@@ -55,7 +55,7 @@ class Mechanics extends Component {
                     <div className='page-content'>
                     <PageNavigation links={this.navigationLinks} />
 
-                        <div className='Mechanics-rightSection'>
+                        <div className='page-contentRight'>
                             {activeIndex === 0 && <SyntaxParser />}
                             {activeIndex === 1 && <LexicalEnvironment />}
                             {activeIndex === 2 && <ExecutionContext />}

@@ -141,7 +141,7 @@ const Scope = () => (
                         
                             const setCandles = () => {
                                 age++
-                                console.log('You will get ${'age'} candles');
+                                console.log(\`You will get \${age} candles\`);
                             }
                         
                             setCandles()
