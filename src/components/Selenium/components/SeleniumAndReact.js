@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { Link, Command, CodeBlock } from '../../../components';
-import { ChromeDriver, ChromeIndex } from '../../../assets'
 import { LINK_TYPE } from '../../../constants';
 
 const SeleniumAndReact = () => (

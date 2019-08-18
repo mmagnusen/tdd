@@ -12,7 +12,19 @@ const Class = () => (
             <h1>What is a class?</h1>
             <p>We create a class with the <span className='variable'>class</span> keyword.</p>
             <p>What data type is a <span className='variable'>class</span>? We can do a simple test to verify this.</p>
-            <Gist id='7199d0607eaac1a6501076e9539d3baa' />
+            <CodeBlock>
+            {
+        `
+class Person {
+
+}
+
+console.log(typeof Person)
+        
+//function`
+        }
+            </CodeBlock>
+            
             <p>We see in the console that the type is a <span className='variable'>function</span>.</p>
             <p>A class is a function which enables you to create objects. These objects can share similar traits.</p>
             <p>One way is to think of this <span className='variable'>function</span> is an ice tray. You can make as many ice cubes as you want with just one tray.</p>
@@ -21,6 +33,8 @@ const Class = () => (
         <section className='white-content'>
             <h1>Creating a new instance</h1>
             <p>We create a new instance of a <span className='variable'>class</span> by using the <span className='variable'>new</span> keyword.</p>
+            
+            
             <Gist id='a5ed748f222974af380d8711d3f40a5d'/>
             <p>We see from the console log that each time we create a new instance of a class, we are creating a new <span className='variable'>object</span>.</p>
 
@@ -46,7 +60,9 @@ const Class = () => (
             <h4>Default Values</h4>
             <p>To pass a default value in a regular function, we would use the <span className='variable'>assignment operator</span> and write something like this:</p>
             <CodeBlock>
-                const calculateArea = (length = 2, width = 5) => return length * width;
+{`
+const calculateArea = (length = 2, width = 5) => return length * width;
+`}
             </CodeBlock>
             <p>As a <span className='variable'>class</span> is also a function, we can do the same thing:</p>
             <Gist id='6c710c9ec32fa3e2fb521ec2bb9d7264' />

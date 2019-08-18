@@ -1,10 +1,21 @@
-import React from 'react';
-import { Gist as ExternalGist, GlobalLayout } from '../'
+import React, { Component } from 'react';
+import { CodeBlock, GlobalLayout } from '../'
 
-const Gist = () => (
-    <GlobalLayout>
-        <ExternalGist id='eec68864323b449911352b506eaa81b6' />
-    </GlobalLayout>
-);
+class Gist extends Component {
+    render() {
+        return (
+            <GlobalLayout>
+
+            <CodeBlock>
+            {
+        `
+let hello = 'marilyn';
+    my name is marilyn;`
+        }
+            </CodeBlock>
+            </GlobalLayout>
+        )
+    }
+}
 
 export default Gist;

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Command, CodeBlock, CodeLine, Link, Gist, Helmet } from '../../../components';
+import { Command, CodeBlock, Link, Gist, Helmet } from '../../../components';
 import { NoTests, smoke, BlankSlate, AppTest, TestRenderer, AppSnapshot, AppSnapshotTerminal } from '../../../assets';
 import { LINK_TYPE } from '../../../constants'; 
 
@@ -73,9 +73,9 @@ const SnapshotTests = () => (
             <p>This is an example taken from the react-test-renderer documentation:</p>
 
             <CodeBlock>
-                <CodeLine>
-                    const calculateArea = (length = 2, width = 5) => return length * width;
-                </CodeLine>
+{`
+const calculateArea = (length = 2, width = 5) => return length * width;
+`}
             </CodeBlock>
 
             <Gist id='27dc0ed8ab5b76a88e881641e8afe97b' />
