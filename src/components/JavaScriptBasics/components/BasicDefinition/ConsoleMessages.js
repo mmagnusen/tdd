@@ -22,48 +22,48 @@ const ConsoleMessages = () => (
         <section className='white-content'>
             <h4>Console.log</h4>
             <CodeBlock>
-            {
-`
-console.log('hello, this is a console log');
-`
-        }
-        </CodeBlock>
+                {
+                    `
+                        console.log('hello, this is a console log');
+                    `
+                }
+            </CodeBlock>
             <img src={ConsoleLog} alt='console log'/>
         </section>
 
         <section className='white-content'>
             <h4>Console.info</h4>
             <CodeBlock>
-            {
-`
-console.info('hello, this is a console info');
-`
-        }
-        </CodeBlock>
+                {
+                    `
+                    console.info('hello, this is a console info');
+                    `
+                }
+            </CodeBlock>
             <img src={ConsoleInfo} alt='console info'/>
         </section>
 
         <section className='white-content'>
             <h4>Console.warn</h4>
             <CodeBlock>
-            {
-`
-console.warn('hello, this is a console warning');
-`
-        }
-        </CodeBlock>
+                {
+                    `
+                        console.warn('hello, this is a console warning');
+                    `
+                }
+            </CodeBlock>
             <img src={ConsoleWarning} alt='console warning'/>
         </section>
 
         <section className='white-content'>
             <h4>Console.error</h4>
             <CodeBlock>
-            {
-`
-console.error('hello, this is a console error');
-`
-        }
-        </CodeBlock>
+                {
+                    `
+                    console.error('hello, this is a console error');
+                    `
+                }
+            </CodeBlock>
             <img src={ConsoleError} alt='console error'/>
         </section>
     </Fragment>

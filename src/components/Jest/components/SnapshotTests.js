@@ -73,36 +73,37 @@ const SnapshotTests = () => (
             <p>This is an example taken from the react-test-renderer documentation:</p>
 
             <CodeBlock>
-{`
-const calculateArea = (length = 2, width = 5) => return length * width;
-`}
+                {
+                    `
+                        const calculateArea = (length = 2, width = 5) => return length * width;
+                    `
+                }
             </CodeBlock>
 
             <CodeBlock>
-            {
-`
+                {
+                    `
+                        import TestRenderer from 'react-test-renderer';
 
-import TestRenderer from 'react-test-renderer';
+                        function Link(props) {
+                        return <a href={props.page}>{props.children}</a>;
+                        }
 
-function Link(props) {
-  return <a href={props.page}>{props.children}</a>;
-}
+                        const testRenderer = TestRenderer.create(
+                        <Link page="https://www.facebook.com/">Facebook</Link>
+                        );
 
-const testRenderer = TestRenderer.create(
-  <Link page="https://www.facebook.com/">Facebook</Link>
-);
-
-console.log(testRenderer.toJSON());
-/*
-  { 
-    type: 'a',
-    props: { href: 'https://www.facebook.com/' },
-    children: [ 'Facebook' ] 
-  }
-*/
-`
-        }
-        </CodeBlock>
+                        console.log(testRenderer.toJSON());
+                        /*
+                        { 
+                            type: 'a',
+                            props: { href: 'https://www.facebook.com/' },
+                            children: [ 'Facebook' ] 
+                        }
+                        */
+                    `
+                }
+            </CodeBlock>
 
             <p>Replace the contents of <span className='variable'>App.test.js</span> with the following:</p>
             <img src={TestRenderer} alt='test renderer screenshot'/>

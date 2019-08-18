@@ -8,13 +8,13 @@ $module: 'CodeBlock';
 
     &-lineNumber {
         color: rgba(27,31,35,.3);
-        padding-right: 1rem;
+        padding: 0 1rem 0.5rem 0;
     }
 
     &-fileName {
         width: fit-content;
         border-radius: 3px 3px 0 0;
-        background: $lightGrey;
+        background: $whisperGrey;
         border-color: #ddd #ddd transparent #ccc;
         border-style: solid;
         border-width: 1px 1px 0 1px;
@@ -25,7 +25,7 @@ $module: 'CodeBlock';
     }
 
     table {
-        background: $lightGrey;
+        background: $whisperGrey;
         padding: 1rem;
         box-sizing: border-box;
         border: 1px solid;
@@ -51,5 +51,13 @@ $module: 'CodeBlock';
 
     .blue {
         color: blue;
+    }
+
+    .grey {
+        color: $grey;
+    }
+
+    .purple {
+        color: purple;
     }
 }

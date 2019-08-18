@@ -13,22 +13,22 @@ const Variables = () => (
             <p>In JavaScript, we create a variable using the <span className='variable'>var</span> keyword.</p>
             
             <CodeBlock>
-            {
-        `
-var name = 'Marilyn';
+                {
+                    `
+                        var name = 'Marilyn';
 
-var age = 32;
+                        var age = 32;
 
-var hungry = true;
+                        var hungry = true;
 
-var family = {
-    mother: 'Diana',
-    father: 'Zeus'
-};
+                        var family = {
+                            mother: 'Diana',
+                            father: 'Zeus'
+                        };
 
-var favouriteFood = ['Jolloff rice',, 'Hummus'];
-        `
-        }
+                        var favouriteFood = ['Jolloff rice',, 'Hummus'];
+                    `
+                }
             </CodeBlock>
         
             <p><span className='variable'>name</span>, <span className='variable'>age</span>, <span className='variable'>hungry</span>, <span className='variable'>family</span> and <span className='variable'>favouriteFood</span> are all variables. Those variables can hold any data type such as a word or a number.</p>

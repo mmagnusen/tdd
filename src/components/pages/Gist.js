@@ -8,11 +8,15 @@ class Gist extends Component {
 
             <CodeBlock>
             {
-        `
-let hello = 'marilyn';
-    my name is marilyn;`
-        }
+                `
+                let hello = 'marilyn';
+                    my name is marilyn;
+                `
+            }
+
+
             </CodeBlock>
+
             </GlobalLayout>
         )
     }

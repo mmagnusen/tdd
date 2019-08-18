@@ -54,46 +54,46 @@ const AddJavaScript = () => (
             </ul>
 
             <CodeBlock>
-            {
-`
-<!doctype html>
-<html lang="en">
+                {
+                    `
+                    <!doctype html>
+                    <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <title>Boilerplate Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="HTML Boilerplate Template">
-    <meta name="author" content="Clearli">
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        console.log('hello, this is a log coming from index.html head')
-    </script>
-</head>
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Boilerplate Template</title>
+                        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                        <meta name="description" content="HTML Boilerplate Template">
+                        <meta name="author" content="Clearli">
+                        <link rel="stylesheet" href="styles.css">
+                        <script>
+                            console.log('hello, this is a log coming from index.html head')
+                        </script>
+                    </head>
 
-<body>
-    <script>
-        console.log('hello, this is a log coming from index.html at the start of the body')
-    </script>
-    <p>Hello world!</p>
+                    <body>
+                        <script>
+                            console.log('hello, this is a log coming from index.html at the start of the body')
+                        </script>
+                        <p>Hello world!</p>
 
-    <p>This is an HTML template</p>
+                        <p>This is an HTML template</p>
 
-    <script>
-        console.log('hello, this is a log coming from index.html in the middle of the body')
-    </script>
+                        <script>
+                            console.log('hello, this is a log coming from index.html in the middle of the body')
+                        </script>
 
-    <p>Some more text here</p>
+                        <p>Some more text here</p>
 
-    <script>
-            console.log('hello, this is a log coming from index.html at the end of the body')
-    </script>
-</body>
+                        <script>
+                                console.log('hello, this is a log coming from index.html at the end of the body')
+                        </script>
+                    </body>
 
-</html>
-`
-        }
-        </CodeBlock>
+                    </html>
+                    `
+                }
+            </CodeBlock>
 
         </section>
 
@@ -102,35 +102,35 @@ const AddJavaScript = () => (
 
             <p>Replace the code in <span className='variable'>index.html</span> with:</p>
             <CodeBlock>
-            {
-`
-<!doctype html>
-<html lang="en">
+                {
+                    `
+                        <!doctype html>
+                        <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <title>Boilerplate Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="HTML Boilerplate Template">
-    <meta name="author" content="Clearli">
-    <link rel="stylesheet" href="styles.css">
-    <script src="headJavaScript.js"></script>
-</head>
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Boilerplate Template</title>
+                            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                            <meta name="description" content="HTML Boilerplate Template">
+                            <meta name="author" content="Clearli">
+                            <link rel="stylesheet" href="styles.css">
+                            <script src="headJavaScript.js"></script>
+                        </head>
 
-<body>
-    <p>Hello world!</p>
+                        <body>
+                            <p>Hello world!</p>
 
-    <p>This is an HTML template</p>
+                            <p>This is an HTML template</p>
 
-    <p>Some more text here</p>
-    
-    <script src="mainJavaScript.js"></script>
-</body>
+                            <p>Some more text here</p>
+                            
+                            <script src="mainJavaScript.js"></script>
+                        </body>
 
-</html>
-`
-        }
-        </CodeBlock>
+                        </html>
+                    `
+                }
+            </CodeBlock>
     
             <p>The link to the separate file can be put in the head (line 11) or the body (line 21) of the <span className='variable'>html.</span></p>
             <p>Our JavaScript code is contained within files called <span className='variable'>headJavaScript.js</span> and  <span className='variable'>mainJavaScript.js</span>so we provide the name and path to these files as the source of our scripts.</p>

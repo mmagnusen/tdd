@@ -57,15 +57,15 @@ const ExecutionContext = () => (
             <p>Global in JavaScript, means something which is not inside a function.</p>
             <p>When you create a variable in JavaScript and it's not inside a function, it becomes a <span className='variable'>global</span> variable.</p>
             <CodeBlock>
-            {
-`
-var name = "Marilyn";
-function namedGreeting() {
+                {
+                    `
+                        var name = "Marilyn";
+                        function namedGreeting() {
 
-}
-`
-        }
-        </CodeBlock>
+                        }
+                    `
+                }
+            </CodeBlock>
             <p>If we run this from a web browser, we see that our two variables <span className='variable'>name</span> and <span className='variable'>namedGreeting</span> have been attached to the global object (the window object).</p>
             <img src={NameGlobal} alt='this object in window'/>
             
@@ -77,35 +77,35 @@ function namedGreeting() {
             <p>Normally when code runs, it runs from top to bottom, left to right.</p>
             <p>Taking a look at this code, what would we expect to see when it is run?</p>
             <CodeBlock>
-            {
-`
-var name = "Marilyn";
-function namedGreeting() {
-    console.log('namedGreeting called')
-}
+                {
+                    `
+                        var name = "Marilyn";
+                        function namedGreeting() {
+                            console.log('namedGreeting called')
+                        }
 
-console.log(name)
-namedGreeting();
-`
-        }
-        </CodeBlock>
+                        console.log(name)
+                        namedGreeting();
+                    `
+                }
+            </CodeBlock>
             <p>As expected, we see <span className='variable'>name</span> logged first, then our function log</p>
             <img src={HoistedGreetingOne} alt='hoisted variables' />
 
             <p>What happens if we switch these around so we invoke our function and log our variable before they are declared?</p>
             <CodeBlock>
-            {
-`
-console.log(name)
-namedGreeting();
+                {
+                    `
+                        console.log(name)
+                        namedGreeting();
 
-var name = "Marilyn";
-function namedGreeting() {
-    console.log('namedGreeting called')
-}
-`
-        }
-        </CodeBlock>
+                        var name = "Marilyn";
+                        function namedGreeting() {
+                            console.log('namedGreeting called')
+                        }
+                    `
+                }
+            </CodeBlock>
             <p>Interestingly, this doesn't throw an error:</p>
             <img src={HoistedGreetingOne} alt='hoisted variables' />
 
@@ -114,19 +114,18 @@ function namedGreeting() {
             <p><span className='variable'>namedGreeting()</span> is being called before it is declared. This works because the <span className='variable'>namedGreeting()</span> function has been hoisted to the top, and so is available from the first line of the script.</p>
             <p>Important: only function declarations are hoisted, not function expressions. Our example above works because it is a function declaration. The code below does not work because it is a function expression:</p>
             <CodeBlock>
-            {
-`
+                {
+                    `
+                        console.log(name)
+                        namedGreeting();
 
-console.log(name)
-namedGreeting();
-
-var name = "Marilyn";
-const namedGreeting = () => {
-    console.log('namedGreeting called')
-}
-`
-        }
-        </CodeBlock>
+                        var name = "Marilyn";
+                        const namedGreeting = () => {
+                            console.log('namedGreeting called')
+                        }
+                    `
+                }
+            </CodeBlock>
             <p>We receive a reference error:</p>
             <img src={HoistingReferenceError} alt='hoisting reference error' />
             <p>For this reason, it's best not to rely on hoisting. You should always make sure your variables are declared before you try to access them.</p>
@@ -154,16 +153,16 @@ const namedGreeting = () => {
             <p>We call a function by typing out the name of the function, followed immediately by a set of paranthesis eg <span className='variable'>myFunction()</span></p>
         
             <CodeBlock>
-            {
-`
-const hello = () => {
-    console.log('hello');
-  }
-  
-  hello();
-`
-        }
-        </CodeBlock>
+                {
+                    `
+                        const hello = () => {
+                            console.log('hello');
+                        }
+                        
+                        hello();
+                    `
+                }
+            </CodeBlock>
             <p>We create the function on line 1</p>
             <p>We call the function on line 5</p>
                     
@@ -171,53 +170,51 @@ const hello = () => {
             <p>A new function execution context is created each time a function is called.</p>
             <p>What would you expect to see logged to the console here?</p>
             <CodeBlock>
-            {
-`
+                {
+                    `
+                        const a = () => {
+                            console.log('a')
+                        }
 
-const a = () => {
-    console.log('a')
-}
+                        const b = () => {
+                            console.log('b')
+                        }
 
-const b = () => {
-    console.log('b')
-}
+                        const c = () => {
+                            console.log('c')
+                        }
 
-const c = () => {
-    console.log('c')
-}
-
-a()
-b()
-c()
-`
-        }
-        </CodeBlock>
+                        a()
+                        b()
+                        c()
+                    `
+                }
+            </CodeBlock>
             <p>answer:</p>
             <img src={ExecutionStackOne} alt='execution stack logged to console'/>
 
             <p>Let's switch up the order of the calls</p>
             <CodeBlock>
-            {
-`
+                {
+                    `
+                        const a = () => {   
+                            b()
+                            console.log('a')
+                        }
 
-const a = () => {   
-    b()
-    console.log('a')
-}
+                        const b = () => {
+                            console.log('b')
+                        }
 
-const b = () => {
-    console.log('b')
-}
+                        const c = () => {
+                            a()
+                            console.log('c')
+                        }
 
-const c = () => {
-    a()
-    console.log('c')
-}
-
-c()
-`
-        }
-        </CodeBlock>
+                        c()
+                    `
+                }
+            </CodeBlock>
             <p>Can you guess what will be printed to the console?</p>
             <p>answer:</p>
             <img src={ExecutionStackTwo} alt='execution stack logged to console'/>

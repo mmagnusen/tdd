@@ -15,23 +15,22 @@ const WritingATest = () => (
             <p>Writing our first test - you can see the full code here: <Link to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/calculator</Link></p>
             <p>This is an example of a test:</p>
             <CodeBlock fileName='example-test.spec.js'>
-            {
-`
+                {
+                    `
+                        describe('calculate the area', () => {
 
-describe('calculate the area', () => {
+                            const calculateArea = (length, width) => {
+                                return length * width;
+                            }
 
-    const calculateArea = (length, width) => {
-        return length * width;
-    }
+                            const area = calculateArea(2, 2);
 
-    const area = calculateArea(2, 2);
+                            expect(area).toBe(4);
 
-    expect(area).toBe(4);
-
-})
-`
-        }
-        </CodeBlock>
+                        })
+                    `
+                }
+            </CodeBlock>
 
             <h1>What is happening here?</h1>
             <p><span className='variable'>describe()</span> is a method. It accepts two parameters. The first parameter is a short description of the test. We have written our description as <span className='variable'>calculate the area</span></p>

@@ -53,46 +53,46 @@ const ScriptTags = () => (
             </ul>
 
             <CodeBlock>
-            {
-`
-<!doctype html>
-<html lang="en">
+                {
+                    `
+                        <!doctype html>
+                        <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <title>Boilerplate Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="HTML Boilerplate Template">
-    <meta name="author" content="Clearli">
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        console.log('hello, this is a log coming from index.html head')
-    </script>
-</head>
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Boilerplate Template</title>
+                            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                            <meta name="description" content="HTML Boilerplate Template">
+                            <meta name="author" content="Clearli">
+                            <link rel="stylesheet" href="styles.css">
+                            <script>
+                                console.log('hello, this is a log coming from index.html head')
+                            </script>
+                        </head>
 
-<body>
-    <script>
-        console.log('hello, this is a log coming from index.html at the start of the body')
-    </script>
-    <p>Hello world!</p>
+                        <body>
+                            <script>
+                                console.log('hello, this is a log coming from index.html at the start of the body')
+                            </script>
+                            <p>Hello world!</p>
 
-    <p>This is an HTML template</p>
+                            <p>This is an HTML template</p>
 
-    <script>
-        console.log('hello, this is a log coming from index.html in the middle of the body')
-    </script>
+                            <script>
+                                console.log('hello, this is a log coming from index.html in the middle of the body')
+                            </script>
 
-    <p>Some more text here</p>
+                            <p>Some more text here</p>
 
-    <script>
-            console.log('hello, this is a log coming from index.html at the end of the body')
-    </script>
-</body>
+                            <script>
+                                    console.log('hello, this is a log coming from index.html at the end of the body')
+                            </script>
+                        </body>
 
-</html>
-`
-        }
-        </CodeBlock>
+                        </html>
+                    `
+                }
+            </CodeBlock>
 
         </section>
     </Fragment>

@@ -15,20 +15,20 @@ const AssignmentOperator = () => (
             <p>In programming, assignment means to transfer a value to a variable. We do this using the assignment operator: <span className='variable'>=</span></p>
             <p>Here, we have created a variable called <span className='variable'>age</span> and assigned it a value of 21:</p>
             <CodeBlock>
-            {
-`
-var age = 21;
-`
-        }
-        </CodeBlock>
+                {
+                    `
+                        var age = 21;
+                    `
+                }
+            </CodeBlock>
             <p>Here is another example, where we create a variable called <span className='variable'>name</span> and assigned it a value of 'Marilyn'</p>
             <CodeBlock>
-            {
-`
-var name = 'Marilyn';
-`
-        }
-        </CodeBlock>
+                {
+                    `
+                        var name = 'Marilyn';
+                    `
+                }
+            </CodeBlock>
         </section>
     </Fragment>
 );
