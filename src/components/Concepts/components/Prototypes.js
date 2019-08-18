@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Gist, Helmet, Link } from '../../../components';
+import { CodeBlock, Helmet, Link } from '../../../components';
 import { LINK_TYPE } from '../../../constants' 
 
 const Prototypes = () => (
@@ -17,7 +17,51 @@ const Prototypes = () => (
             </ul>
             <p>You can view a value's prototype by accessing the <span className='variable'>.prototype</span> property</p>
             <p>Let's start by finding out what data types have prototypes</p>
-            <Gist id='eec68864323b449911352b506eaa81b6' />
+            <CodeBlock>
+                {
+                    `
+                    const name = 'Marilyn';
+
+                    console.log(typeof name);
+                    //string
+
+                    console.log(typeof name.prototype);
+                    // undefined
+
+                    const age = 21;
+
+                    console.log(typeof age);
+                    //number
+
+                    console.log(typeof age.prototype);
+                    // undefined
+
+                    const isAlive = true;
+
+                    console.log(typeof isAlive);
+                    //boolean
+
+                    console.log(typeof isAlive.prototype);
+                    // undefined
+
+                    const nullValue = null;
+
+                    console.log(typeof nullValue);
+                    // object
+
+                    console.log(typeof nullValue.prototype);
+                    // TypeError: Cannot read property 'prototype' of null
+
+                    const unknown = undefined;
+
+                    console.log(typeof unknown);
+                    // undefined
+
+                    console.log(typeof unknown.prototype);
+                    // TypeError: Cannot read property 'prototype' of undefined
+                    `
+                }
+            </CodeBlock>
             <p>So far we've found out that primitive data types do not have prototypes.</p>
         </section>
 
@@ -25,19 +69,92 @@ const Prototypes = () => (
             <h1>Object Prototypes</h1>
 
             <h4>Arrays</h4>
-            <Gist id='6692a14f979f4db7573f386265d3611d' />
+            <CodeBlock>
+                {
+                    `
+                    const shoppingList = ['hummus', 'avocado', 'batteries'];
+
+                    console.log(typeof shoppingList);
+                    //object
+
+                    console.log(typeof shoppingList.prototype);
+                    `
+                }
+            </CodeBlock>
             <p>We can see from above that arrays don't have prototypes</p>
 
             <h4>Plain objects</h4>
-            <Gist id='4659076d4cea66e2d25c57bebf9a0925' />
+            <CodeBlock>
+                {
+                    `
+                        const obectOfMyAffection = {
+                            name: 'Anonymous',
+                            address: 'Never you mind'
+                        }
+                        
+                        console.log(typeof obectOfMyAffection);
+                        //object
+                        
+                        console.log(typeof obectOfMyAffection.prototype);
+                        // undefined
+                    `
+                }
+            </CodeBlock>
             <p>We can see from above that plain objects do not have prototypes</p>
 
             <h4>Functions</h4>
-            <Gist id='0921889853ed70bb45bc15938d407df0' />
+            <CodeBlock>
+                {
+                    `
+                        //function declaration
+                        const makeMe  = function () {
+                            console.log('make me');
+                        }
+
+                        console.log(typeof makeMe);
+                        // function
+
+                        console.log(typeof makeMe.prototype);
+                        // object
+
+                        //arrow function
+                        const dareMe = () => {
+                            console.log('dare me');
+                        }
+
+                        console.log(typeof dareMe);
+                        // function
+
+                        console.log(typeof dareMe.prototype);
+                        // undefined
+                    `
+                }
+            </CodeBlock>
             <p>Function declarations have prototypes but arrow functions do not.</p>
 
             <h4>Classes</h4>
-            <Gist id='7b1e1dcf280cc7596af2a66c03d78fff' />
+            <CodeBlock>
+                {
+                    `
+                        class ClassyPerson {
+                        }
+
+                        console.log(typeof ClassyPerson);
+                        // function
+
+                        console.log(typeof ClassyPerson.prototype);
+                        //object
+
+                        const newClassyPerson = new ClassyPerson();
+
+                        console.log(typeof newClassyPerson);
+                        // object
+
+                        console.log(typeof newClassyPerson.prototype);
+                        //undefined
+                    `
+                }
+            </CodeBlock>
 
             <ul>
                 <li><span className='variable'>classes</span> are functions which create objects. This is confirmed on line 5, we see that <span className='variable'>ClassyPerson</span> is a function. The <span className='variable'>class</span> keyword is syntax sugar for a function declaration.</li>
@@ -59,7 +176,49 @@ const Prototypes = () => (
             <p><span className='variable'>A constructor function</span> is a function which you can call, to create new objects.</p>
             <p>They should always be capatalised. This is how we differentiate them from regular functions.</p>
             <p>Example of a constructor function:</p>
-            <Gist id='989312fcaf0fd476d29f456a871ee55c' />
+            <CodeBlock>
+                {
+                    `
+                        function Car(make = 'default make', model = 'default model') {
+                            this.make = make;
+                            this.model = model;
+                        }
+
+                        const customCar = new Car('custom make', 'custom model');
+
+                        console.log(customCar.make, customCar.model);
+                        // custom make custom model
+
+                        Car.prototype.drive = function() {
+                            console.log('vroom!');
+                        }
+
+                        console.log(Car.prototype.hasOwnProperty('drive'));
+                        // true
+
+                        console.log(customCar.prototype.hasOwnProperty('drive'));
+                        //TypeError: Cannot read property 'hasOwnProperty' of undefined
+
+                        console.log(Car.hasOwnProperty('drive'));
+                        // false
+
+                        console.log(customCar.hasOwnProperty('drive'));
+                        //false
+
+
+                        Car.prototype.drive();
+                        //vroom!
+
+                        customCar.drive();
+                        //vroom!
+
+                        /* SETTING A PROTOTYPE*/
+                        customCar.__proto__ = Car;
+                        console.log(customCar.prototype.hasOwnProperty('drive'));
+                        //true
+                    `
+                }
+            </CodeBlock>
 
             <p>We are seeing prototypal inheritance at play here.</p>
             <p>When a new instance of an object is created, if you try to call a method on that instance, in the following order this will happen:</p>

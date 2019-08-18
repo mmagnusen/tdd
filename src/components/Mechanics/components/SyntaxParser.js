@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Helmet, Link, Gist } from '../../';
+import { CodeBlock, Helmet, Link } from '../../';
 import { LINK_TYPE } from '../../../constants';
 
 const SyntaxParser = () => (
@@ -17,7 +17,28 @@ const SyntaxParser = () => (
         <section className='white-content'>
             <h1>Return statements</h1>
             <p>One of the cool things about the JavaScript parser is that you don't need to add a semicolon after each expression. If you leave it out, the parser will automatically insert it for you. This has some unintended consequences. Take this code example:</p>
-            <Gist id='28721779491a2304ddc300ee5af0059b' />
+            <CodeBlock>
+                {
+                    `
+                        const greeting = () => {
+                            return
+                            'Hello';
+                        }
+
+                        const printGreeting = greeting();
+                        console.log(printGreeting)
+                        // undefined
+
+                        const greeting = () => {
+                            return 'Hello';
+                        }
+
+                        const printGreeting = greeting();
+                        console.log(printGreeting)
+                        // Hello
+                    `
+                }
+            </CodeBlock>
             <p>At line 2, the parser will add a semicolon <span className='variable'>;</span> directly after the <span className='variable'>return</span> keyword.</p>
             <p>This means the parser has interpreted the code to read <span className='variable'>return;</span>, which means to return nothing.</p>
             <p>For this reason, you should remember to keep the <span className='variable'>return</span> keyword and the return value on the same line.</p>

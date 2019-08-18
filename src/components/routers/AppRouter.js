@@ -15,7 +15,6 @@ import {
     JavaScriptBasicsPage
 } from '../../components';
 
-import Gist from '../pages/Gist'
 import './App.scss';
 
 class AppRouter extends Component {
@@ -25,7 +24,6 @@ class AppRouter extends Component {
                 <BrowserRouter>
                     <Switch>
                         <Route path='/' component={HomePage} exact={true} />
-                        <Route path='/gist' component={Gist} exact={true} />
                         <Route path='/jest/:slug' component={JestPage} />
                         <Route path='/enzyme/:slug' component={EnzymePage} />
                         <Route path='/selenium/:slug' component={SeleniumPage} />
@@ -34,7 +32,6 @@ class AppRouter extends Component {
                         <Route path='/how-to/:slug' component={HowToPage} />
                         <Route path='/concepts/javascript/:slug' component={ConceptsPage} />
                         <Route path='/courses/:course/:chapter/:slug' component={JavaScriptBasicsPage} />
-
                     </Switch>
                 </BrowserRouter>
             </Provider>

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Command, CodeBlock, CodeLine, Link, Gist, Helmet } from '../../../components';
+import { CodeBlock, Command, Helmet, Link  } from '../../../components';
 import { NoTests, smoke, BlankSlate, AppTest, TestRenderer, AppSnapshot, AppSnapshotTerminal } from '../../../assets';
 import { LINK_TYPE } from '../../../constants'; 
 
@@ -73,12 +73,37 @@ const SnapshotTests = () => (
             <p>This is an example taken from the react-test-renderer documentation:</p>
 
             <CodeBlock>
-                <CodeLine>
-                    const calculateArea = (length = 2, width = 5) => return length * width;
-                </CodeLine>
+                {
+                    `
+                        const calculateArea = (length = 2, width = 5) => return length * width;
+                    `
+                }
             </CodeBlock>
 
-            <Gist id='27dc0ed8ab5b76a88e881641e8afe97b' />
+            <CodeBlock>
+                {
+                    `
+                        import TestRenderer from 'react-test-renderer';
+
+                        function Link(props) {
+                        return <a href={props.page}>{props.children}</a>;
+                        }
+
+                        const testRenderer = TestRenderer.create(
+                        <Link page="https://www.facebook.com/">Facebook</Link>
+                        );
+
+                        console.log(testRenderer.toJSON());
+                        /*
+                        { 
+                            type: 'a',
+                            props: { href: 'https://www.facebook.com/' },
+                            children: [ 'Facebook' ] 
+                        }
+                        */
+                    `
+                }
+            </CodeBlock>
 
             <p>Replace the contents of <span className='variable'>App.test.js</span> with the following:</p>
             <img src={TestRenderer} alt='test renderer screenshot'/>

@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { Link, Command, CodeBlock } from '../../../components';
-import { ChromeDriver, ChromeIndex } from '../../../assets'
 import { LINK_TYPE } from '../../../constants';
 
 const SeleniumAndReact = () => (
@@ -35,23 +34,23 @@ const SeleniumAndReact = () => (
             <p>Create a file called <span className='variable'>seleniumTest.js</span> within the <span className='variable'>src</span> folder of your project.</p>
             <p>Paste in the following:</p>
             <CodeBlock>
-            {`
-const {Builder, By, Key, until} = require('selenium-webdriver');
+                {
+                    `
+                        const {Builder, By, Key, until} = require('selenium-webdriver');
 
-(async function example() {
-    let driver = await new Builder().forBrowser('chrome').build();
-    try {
-    await driver.get('http://www.google.com/ncr');
-    await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
-    await driver.wait(until.titleIs('webdriver - Google Search'), 8000);
-    } finally {
-    await driver.quit();
-    }
-})();
-            
-            `}
-                                    
-                    </CodeBlock>
+                        (async function example() {
+                            let driver = await new Builder().forBrowser('chrome').build();
+                            try {
+                            await driver.get('http://www.google.com/ncr');
+                            await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
+                            await driver.wait(until.titleIs('webdriver - Google Search'), 8000);
+                            } finally {
+                            await driver.quit();
+                            }
+                        })();
+                    `
+                }                    
+            </CodeBlock>
 
             <p>Let us now run the test:</p>
             <p>In the terminal, navigate to the src folder of your project. Type in:</p>

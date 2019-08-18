@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Command, Gist, Link, Helmet } from '../../../components';
+import { CodeBlock, Command, Helmet, Link } from '../../../components';
 import { LINK_TYPE } from '../../../constants';
 import { calculate } from '../../../assets';
 
@@ -14,7 +14,23 @@ const WritingATest = () => (
 
             <p>Writing our first test - you can see the full code here: <Link to='https://github.com/mmagnusen/calculator/blob/master/src/calculator.test.js' type={LINK_TYPE.EXTERNAL}>https://github.com/mmagnusen/calculator</Link></p>
             <p>This is an example of a test:</p>
-            <Gist id='7fbc71cc6e7e9c34cdd0b4e6ac5bc56a' />
+            <CodeBlock fileName='example-test.spec.js'>
+                {
+                    `
+                        describe('calculate the area', () => {
+
+                            const calculateArea = (length, width) => {
+                                return length * width;
+                            }
+
+                            const area = calculateArea(2, 2);
+
+                            expect(area).toBe(4);
+
+                        })
+                    `
+                }
+            </CodeBlock>
 
             <h1>What is happening here?</h1>
             <p><span className='variable'>describe()</span> is a method. It accepts two parameters. The first parameter is a short description of the test. We have written our description as <span className='variable'>calculate the area</span></p>

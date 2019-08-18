@@ -1,0 +1,55 @@
+@import '../../../constants/styles/sass-variables/breakpoints';
+@import '../../../constants/styles/sass-variables/colors';
+
+$module: 'MaterialNavigation';
+
+.#{$module} { 
+    // small button to open mobile page navigation 
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    width: fit-content;
+    background: $turquoise;
+    border-radius: 50%;
+    @media screen and (min-width: $tabletBreakpoint) {
+        display: none;
+    }
+
+    i {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    &-drawer {
+        width: 290px;
+    }
+
+    &-dropdown {
+        color: $white;
+        background-color: #18002a;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    &-dropdownInner {
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            margin-left: 1.5rem;
+            color: $white;
+            list-style: none;
+        }
+
+        h1 {
+            color: $turquoise;    
+        }
+    }
+}

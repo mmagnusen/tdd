@@ -12,14 +12,8 @@ $module: 'JavaScriptBasics';
     }
 
     &-pageTitle {
-     background: $ashGrey;;
-     color: $white;
-     padding: 0.5rem 1rem;
-    }
-
-    &-content {
-        display: grid;
-        grid-template-columns: 220px 1fr;
-        grid-column-gap: 10px;
+        background: $ashGrey;;
+        color: $white;
+        padding: 0.5rem 1rem;
     }
 }

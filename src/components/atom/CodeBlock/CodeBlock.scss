@@ -3,7 +3,74 @@
 $module: 'CodeBlock';
 
 .#{$module} { 
-    background: $lightGrey;
-    padding: 1rem;
-    box-sizing: border-box
+    position: relative;
+    margin: 3rem 0 1rem 0;
+
+    &-lineNumber {
+        color: rgba(27,31,35,.3);
+        display: flex;
+        align-items: center;
+    }
+
+    &-rowContent {
+        display: flex;
+        align-items: center;
+    }
+
+    &-fileName {
+        width: fit-content;
+        border-radius: 3px 3px 0 0;
+        background: $whisperGrey;
+        border-color: #ddd #ddd transparent #ccc;
+        border-style: solid;
+        border-width: 1px 1px 0 1px;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        left: 0;
+        top: -34px;
+    }
+
+    .table {
+        background: $whisperGrey;
+        padding: 1rem;
+        box-sizing: border-box;
+        border: 1px solid;
+        border-color: #ddd #ddd #ccc;
+        border-radius: 3px;
+        overflow-x: scroll;
+    }
+    .row {
+        display: grid;
+        grid-template-columns: 20px 1fr;
+        margin-bottom: 0.1rem;
+        min-height: 2rem;
+    }
+
+    code {
+        line-height: 10px;    
+    }
+
+    pre {
+        margin: 0;
+    }
+
+    .word {
+        margin: 0 0.2rem;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    .grey {
+        color: $grey;
+    }
+
+    .purple {
+        color: purple;
+    }
 }

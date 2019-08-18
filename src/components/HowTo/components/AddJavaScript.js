@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link, Gist, Helmet } from '../../../components';
+import { CodeBlock, Helmet, Link } from '../../../components';
 import { LINK_TYPE } from '../../../constants';
 import { BoilerPlate } from '../../../assets';
 
@@ -53,7 +53,47 @@ const AddJavaScript = () => (
                 <li>At the end of the body: lines 30-32: console.log('hello, this is a log coming from index.html at the end of the body')</li>
             </ul>
 
-            <Gist id='3d9570d44cb13490e12accb265f27647' />
+            <CodeBlock>
+                {
+                    `
+                    <!doctype html>
+                    <html lang="en">
+
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Boilerplate Template</title>
+                        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                        <meta name="description" content="HTML Boilerplate Template">
+                        <meta name="author" content="Clearli">
+                        <link rel="stylesheet" href="styles.css">
+                        <script>
+                            console.log('hello, this is a log coming from index.html head')
+                        </script>
+                    </head>
+
+                    <body>
+                        <script>
+                            console.log('hello, this is a log coming from index.html at the start of the body')
+                        </script>
+                        <p>Hello world!</p>
+
+                        <p>This is an HTML template</p>
+
+                        <script>
+                            console.log('hello, this is a log coming from index.html in the middle of the body')
+                        </script>
+
+                        <p>Some more text here</p>
+
+                        <script>
+                                console.log('hello, this is a log coming from index.html at the end of the body')
+                        </script>
+                    </body>
+
+                    </html>
+                    `
+                }
+            </CodeBlock>
 
         </section>
 
@@ -61,7 +101,36 @@ const AddJavaScript = () => (
             <h4>The better way is to put your JavaScript code inside a separate file, and link to it from your index file.</h4>
 
             <p>Replace the code in <span className='variable'>index.html</span> with:</p>
-            <Gist id='e86064c777d01766caf250e4743e996b' />
+            <CodeBlock>
+                {
+                    `
+                        <!doctype html>
+                        <html lang="en">
+
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Boilerplate Template</title>
+                            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                            <meta name="description" content="HTML Boilerplate Template">
+                            <meta name="author" content="Clearli">
+                            <link rel="stylesheet" href="styles.css">
+                            <script src="headJavaScript.js"></script>
+                        </head>
+
+                        <body>
+                            <p>Hello world!</p>
+
+                            <p>This is an HTML template</p>
+
+                            <p>Some more text here</p>
+                            
+                            <script src="mainJavaScript.js"></script>
+                        </body>
+
+                        </html>
+                    `
+                }
+            </CodeBlock>
     
             <p>The link to the separate file can be put in the head (line 11) or the body (line 21) of the <span className='variable'>html.</span></p>
             <p>Our JavaScript code is contained within files called <span className='variable'>headJavaScript.js</span> and  <span className='variable'>mainJavaScript.js</span>so we provide the name and path to these files as the source of our scripts.</p>
