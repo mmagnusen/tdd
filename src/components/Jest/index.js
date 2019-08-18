@@ -13,12 +13,6 @@ class Jest extends Component {
         this.updateActiveIndex(getNavigationIndex('jest', slug));
     }
 
-    componentDidUpdate() {
-        const slug = this.props.match.params.slug;
-        this.updateActiveIndex(getNavigationIndex('jest', slug));
-    }
-
-
     updateActiveIndex = (activeIndex) => {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'jest', activeIndex}));
     }

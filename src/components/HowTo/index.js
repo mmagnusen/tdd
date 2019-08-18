@@ -13,11 +13,6 @@ class HowTo extends Component {
         this.updateActiveIndex(getNavigationIndex('how-to', slug));
     }
 
-    componentDidUpdate() {
-        const slug = this.props.match.params.slug;
-        this.updateActiveIndex(getNavigationIndex('how-to', slug));
-    }
-
     updateActiveIndex = (activeIndex) => {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'howTo', activeIndex}));
     }
@@ -31,21 +26,21 @@ class HowTo extends Component {
                 {
                     to: '/how-to/add-javascript',
                     type: LINK_TYPE.INTERNAL,
-                    onClick:this.updateActiveIndex,
+                    onClick: this.updateActiveIndex,
                     text: 'Add JavaScript',
                     activeIndex: 0,
                 },
                 {
                     to: '/how-to/add-sass',
                     type: LINK_TYPE.INTERNAL,
-                    onClick:this.updateActiveIndex,
+                    onClick: this.updateActiveIndex,
                     text: 'Add Sass',
                     activeIndex: 1,
                 },
                 {
                     to: '/how-to/run-a-local-server',
                     type: LINK_TYPE.INTERNAL,
-                    onClick:this.updateActiveIndex,
+                    onClick: this.updateActiveIndex,
                     text: 'Run Local Server',
                     activeIndex: 2,
                 },

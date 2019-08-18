@@ -3,15 +3,19 @@ import { MaterialNavigation } from '../';
 import Chapter from './Chapter';
 import './PageNavigation.scss';
 
-const PageNavigation = ({ navigationChapters }) => (
+const PageNavigation = ({ courseTitle, navigationChapters }) => (
     <Fragment>
-    {/*
-        <MaterialNavigation links={links}/>
-    */}
+    
+        <MaterialNavigation navigationChapters={navigationChapters}/>
+
         <div className='PageNavigation'>
-                <ul>
-                    {navigationChapters.map((chapter) => <Chapter key={chapter.name}chapter={chapter}/>)}
-                </ul>
+            {courseTitle && (<section className='PageNavigation-title'>   
+                <h4>{courseTitle}</h4>
+            </section>
+            )}
+            <ul>
+                {navigationChapters.map((chapter) => <Chapter key={chapter.name} chapter={chapter}/>)}
+            </ul>
         </div>
     </Fragment>
 );

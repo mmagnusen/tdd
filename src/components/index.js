@@ -8,8 +8,6 @@ export { default as Table } from './atom/Table';
 
 // larger components
 export { default as Concepts } from './Concepts';
-export { default as CourseNavigation } from './CourseNavigation';
-export { default as CourseNavigationChapter } from './CourseNavigation/Chapter';
 export { default as Enzyme } from './Enzyme';
 export { default as Footer } from './Footer';
 export { default as Helmet } from './Helmet';
@@ -23,7 +21,7 @@ export { default as Resources } from './Resources';
 export { default as Selenium } from './Selenium';
 export { default as MobileNavigation } from './Navigation/MobileNavigation/';
 export { default as DesktopNavigation } from './Navigation/DesktopNavigation/';
-export { default as MaterialNavigation } from './Navigation/MobileNavigation/MaterialNavigation';
+export { default as MaterialNavigation } from './PageNavigation/MaterialNavigation/';
 
 // courses
 export { default as JavaScriptBasics } from './JavaScriptBasics';

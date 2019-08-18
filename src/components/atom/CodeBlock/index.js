@@ -39,7 +39,7 @@ class  CodeBlock extends Component {
                 const shouldBeBlue = blueWords.includes(word.trim());
                 const shouldBeGrey = greyWords.includes(word.trim()) || previousWord === '//';
                 const shouldBePurple = purpleWords.includes(word.trim());
-                return (<span className={Classnames('word', {'red': shouldBeRed}, {'blue': shouldBeBlue}, {'grey': shouldBeGrey}, {'purple': shouldBePurple})}>{word}</span>)
+                return (<span key={`${rowNumber}/${word}/${wordIndex}`} className={Classnames('word', {'red': shouldBeRed}, {'blue': shouldBeBlue}, {'grey': shouldBeGrey}, {'purple': shouldBePurple})}>{word}</span>)
             });
             return wordsMap
         })
@@ -49,7 +49,7 @@ class  CodeBlock extends Component {
 
     render() {
         const { fileName = 'index.js'  } = this.props;
-        const rows = this.getRows()
+        const rows = this.getRows();
 
         return (
             <div>
@@ -57,9 +57,8 @@ class  CodeBlock extends Component {
                     <div className='CodeBlock-fileName'>{fileName}</div>
                     <section className='table'>
                     {
-                        rows && rows.map((row, index) => {
-                            return (
-                                <section className='row'>
+                        rows && rows.map((row, index) => (
+                            <section className='row' key={index}>
                                 <div className='CodeBlock-lineNumber'>{index + 1}</div>
                                 <div className='CodeBlock-rowContent'>
                                     <pre>
@@ -67,8 +66,8 @@ class  CodeBlock extends Component {
                                     </pre>
                                 </div>
                                 
-                            </section>)
-                        })
+                            </section>
+                        ))
                     }
                     </section>
                 </div>

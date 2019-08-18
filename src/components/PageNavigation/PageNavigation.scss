@@ -13,6 +13,18 @@ $module: 'PageNavigation';
         display: block;
     }
 
+    &-title {
+        padding: 0.5rem 1rem;
+        background: $ashGrey;
+        color: $white;
+    }
+
+    &-chapterHeading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     ul {
         margin: 0;
         padding: 0.5rem;

@@ -13,11 +13,6 @@ class Mechanics extends Component {
         this.updateActiveIndex(getNavigationIndex('javascript-mechanics', slug));
     }
 
-    componentDidUpdate() {
-        const slug = this.props.match.params.slug;
-        this.updateActiveIndex(getNavigationIndex('javascript-mechanics', slug));
-    }
-
     updateActiveIndex = (activeIndex) => {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'mechanics', activeIndex}));
     }

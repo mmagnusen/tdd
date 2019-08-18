@@ -12,20 +12,15 @@ class Chapter extends Component {
         })
     }
 
-    renderChapterLinks = () => {
-
-    }
-
     render() {
-        const { chapterHeading, chapterLinks, type } = this.props.chapter;
+        const { toggleMobileNavigation, chapter } = this.props;
+        const { chapterHeading, chapterLinks, type } = chapter;
         const { chapterOpen } = this.state;
-
-        console.log(this.props)
-
+        
          return (
             <div>
                 {chapterHeading && (
-                    <div className='CourseNavigation-chapterHeading' onClick={this.toggleChapter}>
+                    <div className='PageNavigation-chapterHeading' onClick={this.toggleChapter}>
                         <h4>{chapterHeading}</h4>
                         {<i className={chapterOpen ? "fas fa-chevron-up" : "fas fa-chevron-down"} />}
                     </div>
@@ -35,7 +30,14 @@ class Chapter extends Component {
                         {
                             chapterLinks.map(link => (
                                 <Link type={link.type} to={link.to} key={link.text}>
-                                    <li onClick={link.onClick}>{link.text}</li>
+                                    <li onClick={() => { 
+                                        if (type === 'basic') {
+                                            link.onClick(link.activeIndex)
+                                        } else {
+                                            link.onClick(this.props.chapter.name, link.activeIndex)
+                                        }
+                                        toggleMobileNavigation && toggleMobileNavigation()
+                                    }}>{link.text}</li>
                                 </Link>
                             ))
                         }
