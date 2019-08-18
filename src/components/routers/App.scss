@@ -35,8 +35,9 @@ li  {
 }
 
 a, a:visited, li {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+  // overflow-wrap: break-word;
+  // word-wrap: break-word;
+  word-break: break-all;
 }
 
 a,
