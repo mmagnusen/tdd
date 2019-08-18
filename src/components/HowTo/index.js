@@ -22,28 +22,35 @@ class HowTo extends Component {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'howTo', activeIndex}));
     }
 
-    navigationLinks = [
+    navigationChapters = [        
         {
-            to: '/how-to/add-javascript',
-            type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex,
-            text: 'Add JavaScript',
-            activeIndex: 0,
-        },
-        {
-            to: '/how-to/add-sass',
-            type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex,
-            text: 'Add Sass',
-            activeIndex: 1,
-        },
-        {
-            to: '/how-to/run-a-local-server',
-            type: LINK_TYPE.INTERNAL,
-            onClick:this.updateActiveIndex,
-            text: 'Run Local Server',
-            activeIndex: 2,
-        },
+            name: 'how-to',
+            type: 'basic',
+            chapterHeading: null,
+            chapterLinks: [
+                {
+                    to: '/how-to/add-javascript',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick:this.updateActiveIndex,
+                    text: 'Add JavaScript',
+                    activeIndex: 0,
+                },
+                {
+                    to: '/how-to/add-sass',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick:this.updateActiveIndex,
+                    text: 'Add Sass',
+                    activeIndex: 1,
+                },
+                {
+                    to: '/how-to/run-a-local-server',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick:this.updateActiveIndex,
+                    text: 'Run Local Server',
+                    activeIndex: 2,
+                },
+            ],
+        }
     ]
 
     render() {
@@ -53,7 +60,7 @@ class HowTo extends Component {
             <div className='HowTo'>
                 <div className='container'> 
                     <div className='page-content'>
-                        <PageNavigation links={this.navigationLinks} />
+                        <PageNavigation navigationChapters={this.navigationChapters} />
 
                         <div className='page-contentRight'>
                             {activeIndex === 0 && <AddJavaScript />}

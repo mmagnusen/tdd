@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from '../';
 
 class Chapter extends Component {
     state = {
@@ -11,17 +12,35 @@ class Chapter extends Component {
         })
     }
 
+    renderChapterLinks = () => {
+
+    }
+
     render() {
-        const { chapterHeading, children } = this.props;
+        const { chapterHeading, chapterLinks, type } = this.props.chapter;
         const { chapterOpen } = this.state;
+
+        console.log(this.props)
 
          return (
             <div>
-                <div className='CourseNavigation-chapterHeading' onClick={this.toggleChapter}>
-                    <h4>{chapterHeading}</h4>
-                    {<i className={chapterOpen ? "fas fa-chevron-up" : "fas fa-chevron-down"} />}
-                </div>
-                {chapterOpen ? <div>chapter</div> : null}
+                {chapterHeading && (
+                    <div className='CourseNavigation-chapterHeading' onClick={this.toggleChapter}>
+                        <h4>{chapterHeading}</h4>
+                        {<i className={chapterOpen ? "fas fa-chevron-up" : "fas fa-chevron-down"} />}
+                    </div>
+                )}
+                {(type === 'basic' || chapterOpen) ? 
+                    <div>
+                        {
+                            chapterLinks.map(link => (
+                                <Link type={link.type} to={link.to} key={link.text}>
+                                    <li onClick={link.onClick}>{link.text}</li>
+                                </Link>
+                            ))
+                        }
+                    </div>
+                     : null}
             </div>
         )
     }

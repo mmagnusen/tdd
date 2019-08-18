@@ -22,28 +22,35 @@ class Mechanics extends Component {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'mechanics', activeIndex}));
     }
 
-    navigationLinks = [
-        {
-            to: '/javascript-mechanics/syntax-parser',
-            type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex,
-            text: 'Syntax Parser',
-            activeIndex: 0,
-        },
-        {
-            to: '/javascript-mechanics/lexical-environment',
-            type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex,
-            text: 'Lexical Environment',
-            activeIndex: 1,
-        },
-        {
-            to: '/javascript-mechanics/execution-context',
-            type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex,
-            text: 'Execution Context',
-            activeIndex: 2,
-        },
+    navigationChapters = [
+        {  
+            name: 'mechanics',
+            type: 'basic',
+            chapterHeading: null,
+            chapterLinks: [
+                {
+                    to: '/javascript-mechanics/syntax-parser',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Syntax Parser',
+                    activeIndex: 0,
+                },
+                {
+                    to: '/javascript-mechanics/lexical-environment',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Lexical Environment',
+                    activeIndex: 1,
+                },
+                {
+                    to: '/javascript-mechanics/execution-context',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Execution Context',
+                    activeIndex: 2,
+                },
+            ]
+        }
     ]
 
     render() {
@@ -53,7 +60,7 @@ class Mechanics extends Component {
             <div className='Mechanics'>
                 <div className='container'> 
                     <div className='page-content'>
-                    <PageNavigation links={this.navigationLinks} />
+                    <PageNavigation navigationChapters={this.navigationChapters} />
 
                         <div className='page-contentRight'>
                             {activeIndex === 0 && <SyntaxParser />}

@@ -23,28 +23,36 @@ class Jest extends Component {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'jest', activeIndex}));
     }
 
-    navigationLinks = [
+    navigationChapters = [
         {
-            to: '/jest/what-is-jest',
-            type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex,
-            text: 'What is Jest?',
-            activeIndex: 0,
-        },
-        {
-            to: '/jest/snapshot-tests',
-            type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex,
-            text: 'Snapshot tests',
-            activeIndex: 1,
-        },
-        {
-            to: '/jest/writing-a-test',
-            type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex,
-            text: 'Writing a test',
-            activeIndex: 2,
-        },
+            name: 'jest',
+            type: 'basic',
+            chapterHeading: null,
+            chapterLinks: [
+                {
+                    to: '/jest/what-is-jest',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'What is Jest?',
+                    activeIndex: 0,
+                },
+                {
+                    to: '/jest/snapshot-tests',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Snapshot tests',
+                    activeIndex: 1,
+                },
+                {
+                    to: '/jest/writing-a-test',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Writing a test',
+                    activeIndex: 2,
+                },
+            ]
+        }
+
     ]
 
     render() {
@@ -54,7 +62,7 @@ class Jest extends Component {
             <div className='Jest'>
                 <div className='container'> 
                     <div className='page-content'>
-                        <PageNavigation links={this.navigationLinks} />
+                        <PageNavigation navigationChapters={this.navigationChapters} />
 
                         <div className='page-contentRight'>
                             {activeIndex === 0 && <WhatIsJest />}

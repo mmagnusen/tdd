@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react';
-import { MaterialNavigation, Link } from '../';
+import { MaterialNavigation } from '../';
+import Chapter from './Chapter';
 import './PageNavigation.scss';
 
-const PageNavigation = ({ links }) => (
+const PageNavigation = ({ navigationChapters }) => (
     <Fragment>
+    {/*
         <MaterialNavigation links={links}/>
+    */}
         <div className='PageNavigation'>
                 <ul>
-                    {links.map((link) => (
-                        <Link type={link.type} to={link.to} key={link.text}>
-                            <li onClick={link.onClick}>{link.text}</li>
-                        </Link>
-                    ))}
+                    {navigationChapters.map((chapter) => <Chapter key={chapter.name}chapter={chapter}/>)}
                 </ul>
         </div>
     </Fragment>

@@ -23,19 +23,26 @@ class Selenium extends Component {
         this.props.dispatch(navigationActionGenerators.updateNavigation({item: 'selenium', activeIndex}));
     }
 
-    navigationLinks = [
+    navigationChapters = [
         {
-            to: '/selenium/what-is-selenium',
-            type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex(0),
-            text: 'What is Selenium?',
-        },
-        {
-            to: '/selenium/selenium-and-react',
-            type: LINK_TYPE.INTERNAL,
-            onClick: this.updateActiveIndex(1),
-            text: 'Selenium and React',
-        },
+            name: 'jest',
+            type: 'basic',
+            chapterHeading: null,
+            chapterLinks: [
+                {
+                    to: '/selenium/what-is-selenium',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex(0),
+                    text: 'What is Selenium?',
+                },
+                {
+                    to: '/selenium/selenium-and-react',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex(1),
+                    text: 'Selenium and React',
+                },
+            ]
+        }
     ]
     
     render() {
@@ -45,7 +52,7 @@ class Selenium extends Component {
             <div className='Selenium'>
                 <div className='container'>
                     <div className='Selenium-content'>
-                        <PageNavigation links={this.navigationLinks} />
+                        <PageNavigation navigationChapters={this.navigationChapters} />
                         <div className='page-contentRight'>
                             {activeIndex === 0 && <WhatIsSelenium />}
                             {activeIndex === 1 && <SeleniumAndReact />}
