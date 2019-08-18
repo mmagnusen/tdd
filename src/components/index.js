@@ -1,7 +1,6 @@
 
 // atoms 
 export { default as CodeBlock } from './atom/CodeBlock';
-export { default as CodeLine } from './atom/CodeLine';
 export { default as Command } from './atom/Command';
 export { default as Link } from './atom/Link';
 export { default as Table } from './atom/Table';
