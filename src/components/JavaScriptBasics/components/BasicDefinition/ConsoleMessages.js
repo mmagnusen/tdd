@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Helmet, Gist, Link } from '../../../../components/';
+import { CodeBlock, Helmet, Link } from '../../../../components/';
 import { ConsoleLog, ConsoleInfo, ConsoleWarning, ConsoleError } from '../../../../assets';
 import { LINK_TYPE } from '../../../../constants/';
 
@@ -21,29 +21,49 @@ const ConsoleMessages = () => (
 
         <section className='white-content'>
             <h4>Console.log</h4>
-            <Gist id='7c17f099058a1bc7dee1f958dd333cb4'/>
-
+            <CodeBlock>
+            {
+`
+console.log('hello, this is a console log');
+`
+        }
+        </CodeBlock>
             <img src={ConsoleLog} alt='console log'/>
         </section>
 
         <section className='white-content'>
             <h4>Console.info</h4>
-            <p></p>
-            <Gist id='c18ac4d85f172f1db6d6cb8e71270638'/>
+            <CodeBlock>
+            {
+`
+console.info('hello, this is a console info');
+`
+        }
+        </CodeBlock>
             <img src={ConsoleInfo} alt='console info'/>
         </section>
 
         <section className='white-content'>
             <h4>Console.warn</h4>
-            <p></p>
-            <Gist id='dc3215dcbbf615fe7295285ec5cfe602'/>
+            <CodeBlock>
+            {
+`
+console.warn('hello, this is a console warning');
+`
+        }
+        </CodeBlock>
             <img src={ConsoleWarning} alt='console warning'/>
         </section>
 
         <section className='white-content'>
             <h4>Console.error</h4>
-            <p></p>
-            <Gist id='fcde34ae051af52a0c3a91753d9727f6'/>
+            <CodeBlock>
+            {
+`
+console.error('hello, this is a console error');
+`
+        }
+        </CodeBlock>
             <img src={ConsoleError} alt='console error'/>
         </section>
     </Fragment>

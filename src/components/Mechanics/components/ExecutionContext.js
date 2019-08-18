@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Helmet, Gist, Command, Link } from '../../';
+import { CodeBlock, Command, Helmet, Link } from '../../';
 import { ThisGlobal, NameGlobal, ReturnNameGlobal, HoistedGreetingOne, HoistingReferenceError, ExecutionStackOne, ExecutionStackTwo } from '../../../assets/';
 import { LINK_TYPE } from '../../../constants/';
 
@@ -56,7 +56,16 @@ const ExecutionContext = () => (
             <h4>Definition of Global</h4>
             <p>Global in JavaScript, means something which is not inside a function.</p>
             <p>When you create a variable in JavaScript and it's not inside a function, it becomes a <span className='variable'>global</span> variable.</p>
-            <Gist id='ae7512ecaeb3235a7afe70cca04d7238' />
+            <CodeBlock>
+            {
+`
+var name = "Marilyn";
+function namedGreeting() {
+
+}
+`
+        }
+        </CodeBlock>
             <p>If we run this from a web browser, we see that our two variables <span className='variable'>name</span> and <span className='variable'>namedGreeting</span> have been attached to the global object (the window object).</p>
             <img src={NameGlobal} alt='this object in window'/>
             
@@ -67,12 +76,36 @@ const ExecutionContext = () => (
             <p>Hoisting is a feature provided by the global execution context at the creation stage.</p>
             <p>Normally when code runs, it runs from top to bottom, left to right.</p>
             <p>Taking a look at this code, what would we expect to see when it is run?</p>
-            <Gist id='dc704a65525c5cfe7966d519810076e7' />
+            <CodeBlock>
+            {
+`
+var name = "Marilyn";
+function namedGreeting() {
+    console.log('namedGreeting called')
+}
+
+console.log(name)
+namedGreeting();
+`
+        }
+        </CodeBlock>
             <p>As expected, we see <span className='variable'>name</span> logged first, then our function log</p>
             <img src={HoistedGreetingOne} alt='hoisted variables' />
 
             <p>What happens if we switch these around so we invoke our function and log our variable before they are declared?</p>
-            <Gist id='b24e38125d523957fa739294d6bf4c55' />
+            <CodeBlock>
+            {
+`
+console.log(name)
+namedGreeting();
+
+var name = "Marilyn";
+function namedGreeting() {
+    console.log('namedGreeting called')
+}
+`
+        }
+        </CodeBlock>
             <p>Interestingly, this doesn't throw an error:</p>
             <img src={HoistedGreetingOne} alt='hoisted variables' />
 
@@ -80,7 +113,20 @@ const ExecutionContext = () => (
          
             <p><span className='variable'>namedGreeting()</span> is being called before it is declared. This works because the <span className='variable'>namedGreeting()</span> function has been hoisted to the top, and so is available from the first line of the script.</p>
             <p>Important: only function declarations are hoisted, not function expressions. Our example above works because it is a function declaration. The code below does not work because it is a function expression:</p>
-            <Gist id='819e065edf475397490f610147fdb1b6' />
+            <CodeBlock>
+            {
+`
+
+console.log(name)
+namedGreeting();
+
+var name = "Marilyn";
+const namedGreeting = () => {
+    console.log('namedGreeting called')
+}
+`
+        }
+        </CodeBlock>
             <p>We receive a reference error:</p>
             <img src={HoistingReferenceError} alt='hoisting reference error' />
             <p>For this reason, it's best not to rely on hoisting. You should always make sure your variables are declared before you try to access them.</p>
@@ -107,19 +153,71 @@ const ExecutionContext = () => (
             <p>Function invocation means to call a function. This is also known as executing a funtion.</p>
             <p>We call a function by typing out the name of the function, followed immediately by a set of paranthesis eg <span className='variable'>myFunction()</span></p>
         
-            <Gist id='6c3c0eb5cf27c42c964d13840c932da9' />
+            <CodeBlock>
+            {
+`
+const hello = () => {
+    console.log('hello');
+  }
+  
+  hello();
+`
+        }
+        </CodeBlock>
             <p>We create the function on line 1</p>
             <p>We call the function on line 5</p>
                     
             <h4>The function execution stack</h4>
             <p>A new function execution context is created each time a function is called.</p>
             <p>What would you expect to see logged to the console here?</p>
-            <Gist id='1522666fba5dde6a63e3440e491282cb' />
+            <CodeBlock>
+            {
+`
+
+const a = () => {
+    console.log('a')
+}
+
+const b = () => {
+    console.log('b')
+}
+
+const c = () => {
+    console.log('c')
+}
+
+a()
+b()
+c()
+`
+        }
+        </CodeBlock>
             <p>answer:</p>
             <img src={ExecutionStackOne} alt='execution stack logged to console'/>
 
             <p>Let's switch up the order of the calls</p>
-            <Gist id='19b66672a107347a1b4288b8d07188c7' />
+            <CodeBlock>
+            {
+`
+
+const a = () => {   
+    b()
+    console.log('a')
+}
+
+const b = () => {
+    console.log('b')
+}
+
+const c = () => {
+    a()
+    console.log('c')
+}
+
+c()
+`
+        }
+        </CodeBlock>
             <p>Can you guess what will be printed to the console?</p>
             <p>answer:</p>
             <img src={ExecutionStackTwo} alt='execution stack logged to console'/>

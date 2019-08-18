@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Helmet, Link, Gist } from '../../../../components/';
+import { CodeBlock, Helmet, Link } from '../../../../components/';
 import { LINK_TYPE } from '../../../../constants/';
 import { BoilerPlate } from '../../../../assets';
 
@@ -52,7 +52,47 @@ const ScriptTags = () => (
                 <li>At the end of the body: lines 30-32: console.log('hello, this is a log coming from index.html at the end of the body')</li>
             </ul>
 
-            <Gist id='3d9570d44cb13490e12accb265f27647' />
+            <CodeBlock>
+            {
+`
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Boilerplate Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="HTML Boilerplate Template">
+    <meta name="author" content="Clearli">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        console.log('hello, this is a log coming from index.html head')
+    </script>
+</head>
+
+<body>
+    <script>
+        console.log('hello, this is a log coming from index.html at the start of the body')
+    </script>
+    <p>Hello world!</p>
+
+    <p>This is an HTML template</p>
+
+    <script>
+        console.log('hello, this is a log coming from index.html in the middle of the body')
+    </script>
+
+    <p>Some more text here</p>
+
+    <script>
+            console.log('hello, this is a log coming from index.html at the end of the body')
+    </script>
+</body>
+
+</html>
+`
+        }
+        </CodeBlock>
 
         </section>
     </Fragment>
