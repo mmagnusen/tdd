@@ -54,6 +54,17 @@ export const URL_MAP = {
                 4: 'logical-operator',
                 5: 'maths-operator'
             },
+            'data-types': {
+                0: 'introduction',
+                1: 'string',
+                2: 'number',
+                3: 'boolean',
+                4: 'null',
+                5: 'undefined',
+                6: 'object',
+                7: 'array',
+                8: 'function',
+            },
             'document-object-model': {
                 0: 'what-is-the-dom',
                 1: 'manipulating-the-dom',

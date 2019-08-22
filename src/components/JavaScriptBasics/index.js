@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { PageNavigation } from '../../components/';
 import navigationActionGenerators from './../../redux/actions/navigationActionGenerators';
 import { LINK_TYPE } from '../../constants';
-import { Introduction, AddingJavaScript, DocumentObjectModel, Operators } from './components';
+import { Introduction, AddingJavaScript, DocumentObjectModel, Operators, DataTypes } from './components';
 import { getNavigationIndex } from '../../utils';
 import './JavaScriptBasics.scss';
 import BasicDefinition from './components/BasicDefinition';
@@ -147,6 +147,76 @@ class JavaScriptBasics extends Component {
                     activeIndex: 5,
                 },
             ]
+        },
+        {
+            name: 'data-types',
+            type: 'course',
+            chapterHeading: 'Data types',
+            chapterLinks: [
+                {
+                    to: '/courses/javascript-basics/operators/introduction',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Introduction',
+                    activeIndex: 0,
+                },
+                {
+                    to: '/courses/javascript-basics/data-types/string',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'String',
+                    activeIndex: 1,
+                },
+                {
+                    to: '/courses/javascript-basics/data-types/number',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Number',
+                    activeIndex: 2,
+                },
+                {
+                    to: '/courses/javascript-basics/data-types/boolean',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Boolean',
+                    activeIndex: 3,
+                },
+                {
+                    to: '/courses/javascript-basics/data-types/null',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Null',
+                    activeIndex: 4,
+                },
+                {
+                    to: '/courses/javascript-basics/data-types/undefined',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Undefined',
+                    activeIndex: 5,
+                },
+                {
+                    to: '/courses/javascript-basics/data-types/object',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Object',
+                    activeIndex: 6,
+                },
+                {
+                    to: '/courses/javascript-basics/data-types/array',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Array',
+                    activeIndex: 7,
+                },
+                {
+                    to: '/courses/javascript-basics/data-types/function',
+                    type: LINK_TYPE.INTERNAL,
+                    onClick: this.updateActiveIndex,
+                    text: 'Function',
+                    activeIndex: 8,
+                },
+             ]
         }
     ]  
 
@@ -165,6 +235,7 @@ class JavaScriptBasics extends Component {
                             {activeChapter.chapter === 'basic-definition' && <BasicDefinition activeChapter={activeChapter} slug={match.params.slug} />}
                             {activeChapter.chapter === 'adding-javascript' && <AddingJavaScript activeChapter={activeChapter} slug={match.params.slug} />}
                             {activeChapter.chapter === 'operators' && <Operators activeChapter={activeChapter} slug={match.params.slug} />}
+                            {activeChapter.chapter === 'data-types' && <DataTypes activeChapter={activeChapter} slug={match.params.slug} />}
                             {activeChapter.chapter === 'document-object-model' && <DocumentObjectModel activeChapter={activeChapter} slug={match.params.slug} />}
                         </div>
 

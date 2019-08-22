@@ -74,31 +74,23 @@ const Overview = () => (
                     <td>Maths operators</td>
                 </tr>
             </Table>
-            {/*
+       
             <Table tableHead='Data Types'>
                 <tr>
-                    <td>13</td>
-                    <td>String</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>Number</td>
-                </tr>
-                <tr>
                     <td>15</td>
-                    <td>Boolean</td>
+                    <td>Introduction</td>
                 </tr>
                 <tr>
                     <td>16</td>
-                    <td>Array</td>
+                    <td>String</td>
                 </tr>
                 <tr>
                     <td>17</td>
-                    <td>Function</td>
+                    <td>Number</td>
                 </tr>
                 <tr>
                     <td>18</td>
-                    <td>Undefined</td>
+                    <td>Boolean</td>
                 </tr>
                 <tr>
                     <td>19</td>
@@ -106,10 +98,22 @@ const Overview = () => (
                 </tr>
                 <tr>
                     <td>20</td>
-                    <td>Objects</td>
+                    <td>Undefined</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Object</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Array</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Functions</td>
                 </tr>
             </Table>
-        
+             {/*
             <Table tableHead='Classes'></Table>
             <Table tableHead='Conditionals'></Table>
             <Table tableHead='The DOM'></Table>
